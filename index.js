@@ -211,9 +211,7 @@ app.get('/:cityName', async (req,res) => {
                             
                         });
 
-                        $('.epsEZ', html).each(function () {
-
-
+                        
 
                         for (let i = 0; i < travelGuideDatas[0].restaurants.length; i++) {
                             travelGuideDatas[0].restaurants[i].tel = restaurant_phones[i];
