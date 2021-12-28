@@ -216,7 +216,7 @@ app.get('/:cityName', async (req,res) => {
                                 text: $(this).text()
                             });
                         });
-                        console.log(restaurant_descriptions)
+
                         for (let i = 0; i < travelGuideDatas[0].restaurants.length; i++) {
                             travelGuideDatas[0].restaurants[i].tel = restaurant_phones[i];
                             travelGuideDatas[0].restaurants[i].address = restaurant_addresses[i];
