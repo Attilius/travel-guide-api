@@ -1,0 +1,25 @@
+{
+  "name": "travel-guide-api",
+  "version": "1.0.0",
+  "description": "This api giving datas of restaurants, and hotels and attractions all over the world.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Attilius/travel-guide-api.git"
+  },
+  "keywords": [],
+  "author": "Attila Fanczi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Attilius/travel-guide-api/issues"
+  },
+  "homepage": "https://github.com/Attilius/travel-guide-api#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "*",
+    "express": "^4.17.2"
+  }
+}
