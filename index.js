@@ -161,7 +161,7 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
         }).catch(err => console.log(err));
 });
 
-
+//Request of restaurants
 
 app.get('/addresses/restaurants/:cityName', async (req, res) => {
 
