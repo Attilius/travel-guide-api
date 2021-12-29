@@ -88,7 +88,6 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
     const cityId = cities.filter(city => city.name == cityName)[0].id;
 
     
-
     axios.get(`https://www.kayak.com/${cityName}-Hotels.${cityId}.hotel.ksp`)
         .then((response) => {
             const html = response.data;
