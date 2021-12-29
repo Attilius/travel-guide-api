@@ -77,7 +77,6 @@ app.get('/', (req, res) => {
 //Request of hotels
 
 app.get('/addresses/hotels/:cityName', async (req, res) => {
-    
     const links = [];
 
     const phone_numbers = [];
