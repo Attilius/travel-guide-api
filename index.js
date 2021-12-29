@@ -82,7 +82,6 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
     const hotel_addresses = [];
     const hotel_names = [];
     const descriptions = [];
-
     const hotel_pics = [];
     
 
