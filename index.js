@@ -84,7 +84,6 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
     const descriptions = [];
     const hotel_pics = [];
     
-
     const cityName = req.params.cityName;
     const cityId = cities.filter(city => city.name == cityName)[0].id;
 
