@@ -74,6 +74,8 @@ app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
 
+//Request of hotels
+
 app.get('/addresses/hotels/:cityName', async (req, res) => {
     
     const links = [];
@@ -92,7 +94,7 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
     const cityId = cities.filter(city => city.name == cityName)[0].id;
 
-    //Hotels
+    
 
     axios.get(`https://www.kayak.com/${cityName}-Hotels.${cityId}.hotel.ksp`)
         .then((response) => {
