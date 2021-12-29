@@ -111,7 +111,6 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
                         const html = response.data;
                         const $ = cheerio.load(html);
                         
-
                         travelGuideHotels[0].hotels.push({
                             id: i + 1,
                             label: "hotel",
