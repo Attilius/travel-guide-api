@@ -43,8 +43,7 @@ const cities = [
     },
     {
         name: "New-York",
-        id: "15830",
-        restaurantsUrl: "https://www.tripadvisor.com/Restaurants-g60763-New_York_City_New_York.html"
+        id: "15830"
     },
     {
         name: "Paris",
@@ -159,97 +158,4 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
             }
 
         }).catch(err => console.log(err));
-});
-
-//Request of restaurants
-
-app.get('/addresses/restaurants/:cityName', async (req, res) => {
-
-    const restaurantsLinks = [];
-
-    const restaurant_phones = [];
-
-    const restaurant_addresses = [];
-
-    const restaurant_names = [];
-
-    //const restaurant_descriptions = [];
-
-    //const restaurant_pics = [];
-
-    const cityName = req.params.cityName;
-    const restaurantsUrl = cities.filter(city => city.name == cityName)[0].restaurantsUrl;
-    travelGuideRestaurantsDatas[0].city = cityName;
-
-    // Restaurants
-
-    axios.get(restaurantsUrl)
-        .then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
-
-            $('.bHGqj', html).each(function () {
-                restaurantsLinks.push($(this).attr('href'));
-            });
-
-            for (let i = 0; i < 10; i++) {
-                axios.get(`https://www.tripadvisor.com${restaurantsLinks[i]}`).then((response) => {
-                    const html = response.data;
-                    const $ = cheerio.load(html);
-
-                    travelGuideRestaurantsDatas[0].restaurants.push({
-                        id: i + 1,
-                        label: "restaurant",
-                        style: "",
-                        name: "",
-                        address: "",
-                        web: "",
-                        tel: "",
-                        image: "",
-                        description: ""
-                    });
-
-                    $('.fHibz', html).each(function () {
-                        restaurant_names.push($(this).text());
-                    });
-
-                    $('.dOGcA', html).each(function () {
-                        if (!$(this).first('span').text().includes("Website") &&
-                            !$(this).first('span').text().includes("Menu") &&
-                            !$(this).first('span').text().includes("Order online") &&
-                            !$(this).first('span').text().includes("See events") &&
-                            !$(this).first('span').text().includes("Reserve")) {
-                            restaurant_addresses.push($(this).first('span').text());
-                        }
-
-                    });
-
-                    $('.iPqaD', html).each(function () {
-                        if ($(this).attr('href').includes("tel:")) {
-                            restaurant_phones.push($(this).attr('href').split(":")[1]);
-                        }
-
-                    });
-
-
-
-                    for (let i = 0; i < travelGuideRestaurantsDatas[0].restaurants.length; i++) {
-                        travelGuideRestaurantsDatas[0].restaurants[i].tel = restaurant_phones[i];
-                        travelGuideRestaurantsDatas[0].restaurants[i].address = restaurant_addresses[i];
-                        travelGuideRestaurantsDatas[0].restaurants[i].name = restaurant_names[i];
-                        // travelGuideRestaurantsDatas[0].restaurants[i].description = descriptions[i].text;
-                        // travelGuideRestaurantsDatas[0].restaurants[i].image = restaurant_pics[i];
-                    }
-
-                }).catch((err) => console.log(err));
-
-            }
-
-        }).catch((err) => console.log(err));
-
-    res.json(travelGuideRestaurantsDatas);
-});
-
-app.listen(PORT, () => {
-    console.log(`Server running on PORT: ${PORT}`);
 });
