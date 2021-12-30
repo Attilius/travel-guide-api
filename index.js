@@ -159,3 +159,7 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
 
         }).catch(err => console.log(err));
 });
+
+app.listen(PORT, () => {
+    console.log(`Server running on PORT: ${PORT}`);
+});
