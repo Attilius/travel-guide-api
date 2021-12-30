@@ -1,6 +1,9 @@
 {
   "name": "travel-guide-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "description": "This api giving datas of restaurants, and hotels and attractions all over the world.",
   "main": "index.js",
   "scripts": {
