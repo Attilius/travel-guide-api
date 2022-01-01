@@ -60,16 +60,6 @@ const cities = [
     }
 ];
 
-
-
-const travelGuideRestaurantsDatas = [
-    {
-        city: "",
-        restaurants: []
-    }
-];
-
-
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
