@@ -91,10 +91,21 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
                 hotels: [],
                 restaurants: []
             }
-          
 
+            $('.YVj9w', html).each(function () {
+                const image = $(this).attr('src');
+                const label = "hotel";
+                let id = travelGuide.hotels.length + 1;
+                if (image) {
+                    travelGuide.hotels.push({
+                    id,
+                    image,
+                    label
+                });
+                }
+            });
             
-res.json(travelGuide);
+        res.json(travelGuide);
         }).catch(err => console.log(err));
 });
 
