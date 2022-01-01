@@ -120,26 +120,49 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                         }
                     })
 
-                    switch (service) {
-                        case "attraction":
-                            res.json(travelGuide.attractions);
-                            break;
+                    axios.get('https://www.randomtextgenerator.com/')
+                        .then((response) => {
+                            const html = response.data;
+                            const $ = cheerio.load(html);
+                            const texts = [];
+                            let counter = 0;
 
-                        case "hotel":
-                            res.json(travelGuide.hotels);
-                            break;
 
-                        case "restaurant":
-                            res.json(travelGuide.restaurants);
-                            break;
-                    
-                        default:
-                            res.json(`Error: /${service} Request is not exist!`);
-                            break;
-                    }
-                    
+                            $('#randomtext_box', html).each(function () {
+                                while (counter < travelGuide.hotels.length) {
+                                    const text = $(this).text().trim();
+                                    texts.push(text);
+
+                                    counter++;
+                                }
+                                for (let i = 0; i < travelGuide.hotels.length; i++) {
+                                    travelGuide.hotels[i].description = texts[i];
+                                }
+                            });
+
+
+
+                            switch (service) {
+                                case "attraction":
+                                    res.json(travelGuide.attractions);
+                                    break;
+
+                                case "hotel":
+                                    res.json(travelGuide.hotels);
+                                    break;
+
+                                case "restaurant":
+                                    res.json(travelGuide.restaurants);
+                                    break;
+
+                                default:
+                                    res.json(`Error: /${service} Request is not exist!`);
+                                    break;
+                            }
+
+                        }).catch(err => console.log(err));
+
                 }).catch(err => console.log(err));
-
 
         }).catch(err => console.log(err));
 });
