@@ -119,7 +119,25 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             travelGuide.hotels[i].name = names[i];
                         }
                     })
-                    res.json(travelGuide);
+
+                    switch (service) {
+                        case "attraction":
+                            res.json(travelGuide.attractions);
+                            break;
+
+                        case "hotel":
+                            res.json(travelGuide.hotels);
+                            break;
+
+                        case "restaurant":
+                            res.json(travelGuide.restaurants);
+                            break;
+                    
+                        default:
+                            res.json(`Error: /${service} Request is not exist!`);
+                            break;
+                    }
+                    
                 }).catch(err => console.log(err));
 
 
