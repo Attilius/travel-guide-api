@@ -84,7 +84,6 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
         hotels: [],
         restaurants: []
     }
-    const names = [];
 
     axios.get(`https://unsplash.com/s/photos/hotel-${cityName}`)
         .then((response) => {
@@ -94,27 +93,34 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
             $('.YVj9w', html).each(function () {
                 const image = $(this).attr('src');
                 const label = "hotel";
-  
-                axios.get('https://thestoryshack.com/tools/hotel-name-generator/random-hotel-names/')
-                    .then((response) => {
-                        const html = response.data;
-                        const $ = cheerio.load(html);
+                const id = travelGuide.hotels.length + 1;
 
-                        $('.ideas li').each(function () {
-                            const name = $(this).text();
-                            const id = travelGuide.hotels.length + 1;
-                            if (image) {
-                                travelGuide.hotels.push({
-                                    id,
-                                    image,
-                                    label,
-                                    name
-                                });
-                            }
-                        })
-                        res.json(travelGuide);
-                    }).catch(err => console.log(err));
+                if (image) {
+                    travelGuide.hotels.push({
+                        id,
+                        image,
+                        label
+                    });
+                }
             });
+
+            axios.get('https://thestoryshack.com/tools/hotel-name-generator/random-hotel-names/')
+                .then((response) => {
+                    const html = response.data;
+                    const $ = cheerio.load(html);
+                    const names = [];
+
+                    $('.ideas li').each(function () {
+                        const name = $(this).text();
+                        names.push(name);
+
+                        for (let i = 0; i < travelGuide.hotels.length; i++) {
+                            travelGuide.hotels[i].name = names[i];
+                        }
+                    })
+                    res.json(travelGuide);
+                }).catch(err => console.log(err));
+
 
         }).catch(err => console.log(err));
 });
