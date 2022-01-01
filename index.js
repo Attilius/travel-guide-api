@@ -9,57 +9,6 @@ const req = require('express/lib/request');
 
 const app = express();
 
-const cities = [
-    {
-        name: "Athens",
-        id: "24560"
-    },
-    {
-        name: "Barcelona",
-        id: "22567"
-    },
-    {
-        name: "Cairo",
-        id: "9087"
-    },
-    {
-        name: "Istanbul",
-        id: "3430"
-    },
-    {
-        name: "Lisbon",
-        id: "2172"
-    },
-    {
-        name: "London",
-        id: "28501"
-    },
-    {
-        name: "Munich",
-        id: "14057"
-    },
-    {
-        name: "Montreal",
-        id: "6966"
-    },
-    {
-        name: "New-York",
-        id: "15830"
-    },
-    {
-        name: "Paris",
-        id: "36014"
-    },
-    {
-        name: "Rome",
-        id: "25465"
-    },
-    {
-        name: "Zurich",
-        id: "16623"
-    }
-];
-
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
