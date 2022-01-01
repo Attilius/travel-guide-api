@@ -77,7 +77,6 @@ app.get('/', (req, res) => {
 //Request of hotels
 
 app.get('/addresses/hotels/:cityName', async (req, res) => {
-    const links = [];
     const cityName = req.params.cityName;
     //const cityId = cities.filter(city => city.name == cityName)[0].id;
 
@@ -95,7 +94,8 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
             $('.YVj9w', html).each(function () {
                 const image = $(this).attr('src');
                 const label = "hotel";
-                let id = travelGuide.hotels.length + 1;
+                const id = travelGuide.hotels.length + 1;
+
                 if (image) {
                     travelGuide.hotels.push({
                     id,
@@ -104,7 +104,7 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
                 });
                 }
             });
-            
+
         res.json(travelGuide);
         }).catch(err => console.log(err));
 });
