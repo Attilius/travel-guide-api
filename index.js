@@ -76,8 +76,9 @@ app.get('/', (req, res) => {
 
 //Request of hotels
 
-app.get('/addresses/hotels/:cityName', async (req, res) => {
+app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
+    const service = req.params.service;
     //const cityId = cities.filter(city => city.name == cityName)[0].id;
     const travelGuide = {
         attractions: [],
@@ -85,7 +86,7 @@ app.get('/addresses/hotels/:cityName', async (req, res) => {
         restaurants: []
     }
 
-    axios.get(`https://unsplash.com/s/photos/hotel-${cityName}`)
+    axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
