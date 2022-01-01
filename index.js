@@ -79,7 +79,6 @@ app.get('/', (req, res) => {
 app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
     const service = req.params.service;
-    //const cityId = cities.filter(city => city.name == cityName)[0].id;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -127,7 +126,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             const texts = [];
                             let counter = 0;
 
-
                             $('#randomtext_box', html).each(function () {
                                 while (counter < travelGuide.hotels.length) {
                                     const text = $(this).text().trim();
@@ -139,8 +137,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                                     travelGuide.hotels[i].description = texts[i];
                                 }
                             });
-
-
 
                             switch (service) {
                                 case "attraction":
