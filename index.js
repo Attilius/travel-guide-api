@@ -79,33 +79,43 @@ app.get('/', (req, res) => {
 app.get('/addresses/hotels/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
     //const cityId = cities.filter(city => city.name == cityName)[0].id;
+    const travelGuide = {
+        attractions: [],
+        hotels: [],
+        restaurants: []
+    }
+    const names = [];
 
-    
     axios.get(`https://unsplash.com/s/photos/hotel-${cityName}`)
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
-            const travelGuide = {
-                attractions: [],
-                hotels: [],
-                restaurants: []
-            }
 
             $('.YVj9w', html).each(function () {
                 const image = $(this).attr('src');
                 const label = "hotel";
-                const id = travelGuide.hotels.length + 1;
+  
+                axios.get('https://thestoryshack.com/tools/hotel-name-generator/random-hotel-names/')
+                    .then((response) => {
+                        const html = response.data;
+                        const $ = cheerio.load(html);
 
-                if (image) {
-                    travelGuide.hotels.push({
-                    id,
-                    image,
-                    label
-                });
-                }
+                        $('.ideas li').each(function () {
+                            const name = $(this).text();
+                            const id = travelGuide.hotels.length + 1;
+                            if (image) {
+                                travelGuide.hotels.push({
+                                    id,
+                                    image,
+                                    label,
+                                    name
+                                });
+                            }
+                        })
+                        res.json(travelGuide);
+                    }).catch(err => console.log(err));
             });
 
-        res.json(travelGuide);
         }).catch(err => console.log(err));
 });
 
