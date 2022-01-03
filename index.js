@@ -19,7 +19,86 @@ const cities = [
         city_code: "(212)",
         city_iso: "NYC",
         currency: "US Dollar",
-        language: "English"
+        language: "English",
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 8) {
+                if (numbers.length == 3) {
+                    numbers.push("-");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode} ${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Avenue", "Boulevard", "Street"];
+            const sides = ["East", "West"];
+            const zipCodesStart = ["10016","10018","10019","10021","10023"];
+            const namesOfBlvd = ["Madison", "Manhattan", "Lexington", "Riverside", "Malcolm"];
+            const zipCodesEnd = [];
+            const index = Math.floor(Math.random() * typeOfPlaces.length);
+            const numberOfAvenue = Math.floor(Math.random() * 11) + 1;
+            const numberOfStreet = Math.floor(Math.random() * 189) + 1;
+            const houseNumber = Math.floor(Math.random() * 998) + 1;
+            let zipCodeEnd = "";
+            let address = "";
+
+            while (zipCodesEnd.length < 4) {
+                if (!zipCodesEnd.length) {
+                    zipCodesEnd.push(Math.floor(Math.random() * 9) + 1).toString();
+                } else {
+                    zipCodesEnd.push(Math.floor(Math.random() * 10)).toString();
+                }
+            }
+
+            zipCodesEnd.forEach(code => {
+                zipCodeEnd += code;
+            });
+
+            const endOfNumbers = (number) => {
+                const numberStr = number.toString();
+                
+                if (numberStr.slice(-1) === "1") {
+                    return number + "st"
+                } else if (numberStr.slice(-1) === "2") {
+                    return number + "nd"
+                } else if (numberStr.slice(-1) === "3") {
+                    return number + "rd"
+                } else {
+                    return number + "th"
+                }
+            }
+
+            switch (typeOfPlaces[index]) {
+                case "Avenue":
+                    address = `${houseNumber} ${endOfNumbers(numberOfAvenue)} Avenue, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
+                    break; 
+            
+                case "Boulevard":
+                    address = `${houseNumber} ${namesOfBlvd[Math.floor(Math.random() * 5)]} Boulevard, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
+                    break; 
+            
+                case "Street":
+                    address = `${houseNumber} ${sides[Math.floor(Math.random() * 2)]} ${endOfNumbers(numberOfStreet)} Street, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
+                    break; 
+            
+                default:
+                    break;
+            }
+
+            return address;
+
+        }
     },
     {
         name: "Paris",
@@ -28,15 +107,29 @@ const cities = [
         city_code: "(1)",
         city_iso: "Par",
         currency: "Euro",
-        language: "French"
+        language: "French",
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 12) {
+                if (numbers.length % 3 == 0) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode} ${result.trim()}`;
+        }
     },
 ];
-
-// Functions
-
-const getPhoneNumber = (countryCode, cityCode) => {
-    return `${countryCode} ${cityCode} 111-2222`;
-}
 
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
@@ -49,6 +142,8 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     const service = req.params.service;
     const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
     const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
+    const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
+    const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -64,14 +159,16 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 const image = $(this).attr('src');
                 const label = "hotel";
                 const id = travelGuide.hotels.length + 1;
-                const tel = getPhoneNumber(countryCode, cityCode);
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
 
                 if (image) {
                     travelGuide.hotels.push({
                         id,
                         image,
                         label,
-                        tel
+                        tel,
+                        address
                     });
                 }
             });
