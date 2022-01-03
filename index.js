@@ -9,6 +9,26 @@ const req = require('express/lib/request');
 
 const app = express();
 
+// Database
+
+const cities = [
+    {
+        name: "New York",
+        country: "United States Of America",
+        country_code: "+1",
+        city_code: "(212)",
+        city_iso: "NYC",
+        currency: "US Dollar",
+        language: "English"
+    }
+];
+
+// Functions
+
+const phoneNumber = () => {
+    return "+1 (212) 111-2222";
+}
+
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
@@ -33,12 +53,14 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 const image = $(this).attr('src');
                 const label = "hotel";
                 const id = travelGuide.hotels.length + 1;
+                const tel = phoneNumber();
 
                 if (image) {
                     travelGuide.hotels.push({
                         id,
                         image,
-                        label
+                        label,
+                        tel
                     });
                 }
             });
