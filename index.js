@@ -20,6 +20,14 @@ const cities = [
         city_iso: "NYC",
         currency: "US Dollar",
         language: "English",
+        hotelNames: [
+            {
+                first: ["Union", "Hotel", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "The", "Garden", "Liberty", "Best", "Intercontinental", "Westhouse"],
+                second: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
+                third: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
+                fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"]
+            }
+        ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
@@ -43,10 +51,10 @@ const cities = [
         getRandomAddress: () => {
             const typeOfPlaces = ["Avenue", "Boulevard", "Street"];
             const sides = ["East", "West"];
-            const zipCodesStart = ["10016","10018","10019","10021","10023"];
+            const zipCodesStart = ["10016", "10018", "10019", "10021", "10023"];
             const namesOfBlvd = ["Madison", "Manhattan", "Lexington", "Riverside", "Malcolm"];
             const zipCodesEnd = [];
-            const index = Math.floor(Math.random() * typeOfPlaces.length);
+            const index = Math.floor(Math.random() * typeOfPlaces.length); // Set index for switch
             const numberOfAvenue = Math.floor(Math.random() * 11) + 1;
             const numberOfStreet = Math.floor(Math.random() * 189) + 1;
             const houseNumber = Math.floor(Math.random() * 998) + 1;
@@ -65,9 +73,11 @@ const cities = [
                 zipCodeEnd += code;
             });
 
+            // I'll check and adjust the end of serial number
+
             const endOfNumbers = (number) => {
                 const numberStr = number.toString();
-                
+
                 if (numberStr.slice(-1) === "1") {
                     return number + "st"
                 } else if (numberStr.slice(-1) === "2") {
@@ -79,19 +89,21 @@ const cities = [
                 }
             }
 
+            // It choose and set the type of place and set return variable
+
             switch (typeOfPlaces[index]) {
                 case "Avenue":
                     address = `${houseNumber} ${endOfNumbers(numberOfAvenue)} Avenue, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break; 
-            
+                    break;
+
                 case "Boulevard":
                     address = `${houseNumber} ${namesOfBlvd[Math.floor(Math.random() * 5)]} Boulevard, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break; 
-            
+                    break;
+
                 case "Street":
                     address = `${houseNumber} ${sides[Math.floor(Math.random() * 2)]} ${endOfNumbers(numberOfStreet)} Street, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break; 
-            
+                    break;
+
                 default:
                     break;
             }
@@ -127,6 +139,16 @@ const cities = [
             });
 
             return `${countryCode} ${cityCode} ${result.trim()}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Avenue", "Boulevard", "Rue"];
+            const namesOfStreet = ["de Richelieu", "de Villiers", "La Fayette", "de la Chapelle", "Voltaire", "d'Oran", "Championnet", "Belliard", "Lafontaine", "Godefroy", "Emile Zola", "Victor Hugo", "des Marronniers"];
+            const zipCode = "750" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 222) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${houseNumber} ${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]}, ${zipCode} Paris - France`;
         }
     },
 ];
