@@ -22,10 +22,10 @@ const cities = [
         language: "English",
         hotelNames: [
             {
-                first: ["Union", "Hotel", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "The", "Garden", "Liberty", "Best", "Intercontinental", "Westhouse"],
+                first: ["Union", "Hotel", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "The", "Garden", "Liberty", "Best", "Intercontinental", "Westhouse", "Millenium"],
                 second: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
                 third: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
-                fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"]
+                fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Stars", "Stella", "Hall", "Westhouse"]
             }
         ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
@@ -153,6 +153,72 @@ const cities = [
     },
 ];
 
+//Functions
+
+const getRandomName = (paramArray) => {
+    const array = paramArray;
+    const lengthOfWords = Math.floor(Math.random() * 3) + 2;
+    const firstIndex = Math.floor(Math.random() * array[0].first.length);
+    const secondIndex = Math.floor(Math.random() * array[0].second.length);
+    const thirdIndex = Math.floor(Math.random() * array[0].third.length);
+    const fourthIndex = Math.floor(Math.random() * array[0].fourth.length);
+    let name = [];
+    let result = "";
+
+    switch (lengthOfWords) {
+        case 2:
+            if (array[0].second[secondIndex] === "Of") {
+                name.push(
+                    array[0].first[firstIndex],
+                    array[0].second[secondIndex + 1]
+                );
+            } else {
+                name.push(
+                    array[0].first[firstIndex],
+                    array[0].second[secondIndex]
+                );
+            }
+            name = [...new Set(name)];
+            break;
+
+        case 3:
+            if (array[0].third[thirdIndex] === "Of") {
+                name.push(
+                    array[0].first[firstIndex],
+                    array[0].second[secondIndex],
+                    array[0].third[thirdIndex + 1]
+                )
+            } else {
+                name.push(
+                    array[0].first[firstIndex],
+                    array[0].second[secondIndex],
+                    array[0].third[thirdIndex]
+                );
+            }
+            name = [...new Set(name)];
+            break;
+
+        case 4:
+            name.push(
+                array[0].first[firstIndex],
+                array[0].second[secondIndex],
+                array[0].third[thirdIndex],
+                array[0].fourth[fourthIndex]
+            );
+            name = [...new Set(name)];
+            break;
+
+        default:
+            break;
+    }
+
+    name.forEach(item => {
+        result += item + " ";
+    });
+
+    return result.trim();
+}
+
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
@@ -166,6 +232,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
     const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
     const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
+    const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -183,71 +250,56 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 const id = travelGuide.hotels.length + 1;
                 const tel = getRandomPhoneNumber(countryCode, cityCode);
                 const address = getRandomAddress();
+                const name = getRandomName(hotelNames);
 
                 if (image) {
                     travelGuide.hotels.push({
                         id,
-                        image,
                         label,
+                        name,
+                        address,
                         tel,
-                        address
+                        image
                     });
                 }
             });
 
-            axios.get('https://thestoryshack.com/tools/hotel-name-generator/random-hotel-names/')
+            axios.get('https://www.randomtextgenerator.com/')
                 .then((response) => {
                     const html = response.data;
                     const $ = cheerio.load(html);
-                    const names = [];
+                    const texts = [];
+                    let counter = 0;
 
-                    $('.ideas li').each(function () {
-                        const name = $(this).text();
-                        names.push(name);
+                    $('#randomtext_box', html).each(function () {
+                        while (counter < travelGuide.hotels.length) {
+                            const text = $(this).text().trim();
+                            texts.push(text);
 
-                        for (let i = 0; i < travelGuide.hotels.length; i++) {
-                            travelGuide.hotels[i].name = names[i];
+                            counter++;
                         }
-                    })
+                        for (let i = 0; i < travelGuide.hotels.length; i++) {
+                            travelGuide.hotels[i].description = texts[i];
+                        }
+                    });
 
-                    axios.get('https://www.randomtextgenerator.com/')
-                        .then((response) => {
-                            const html = response.data;
-                            const $ = cheerio.load(html);
-                            const texts = [];
-                            let counter = 0;
+                    switch (service) {
+                        case "attraction":
+                            res.json(travelGuide.attractions);
+                            break;
 
-                            $('#randomtext_box', html).each(function () {
-                                while (counter < travelGuide.hotels.length) {
-                                    const text = $(this).text().trim();
-                                    texts.push(text);
+                        case "hotel":
+                            res.json(travelGuide.hotels);
+                            break;
 
-                                    counter++;
-                                }
-                                for (let i = 0; i < travelGuide.hotels.length; i++) {
-                                    travelGuide.hotels[i].description = texts[i];
-                                }
-                            });
+                        case "restaurant":
+                            res.json(travelGuide.restaurants);
+                            break;
 
-                            switch (service) {
-                                case "attraction":
-                                    res.json(travelGuide.attractions);
-                                    break;
-
-                                case "hotel":
-                                    res.json(travelGuide.hotels);
-                                    break;
-
-                                case "restaurant":
-                                    res.json(travelGuide.restaurants);
-                                    break;
-
-                                default:
-                                    res.json(`Error: /${service} Request is not exist!`);
-                                    break;
-                            }
-
-                        }).catch(err => console.log(err));
+                        default:
+                            res.json(`Error: /${service} Request is not exist!`);
+                            break;
+                    }
 
                 }).catch(err => console.log(err));
 
