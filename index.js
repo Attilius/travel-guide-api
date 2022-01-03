@@ -123,7 +123,7 @@ const cities = [
         hotelNames: [
             {
                 first: ["Le", "Hotel", "Maison", "L'Empire", "Chouette"],
-                second: ["Marianne", "Rouge", "Paris", "Jardin", "Hotel", "Elysee", "Chateau", "L'Antoine", "d'Or", "Petit"],
+                second: ["Marianne", "Rouge", "Paris", "Jardin", "Elysia", "Elysee", "Chateau", "L'Antoine", "d'Or", "Petit"],
                 third: ["Mademoiselle", "Hotel", "Bellechasse", "Rouge", "Grands", "Etoile"],
                 fourth: ["Hotel"]
             }
@@ -256,10 +256,12 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 const image = $(this).attr('src');
                 const tel = getRandomPhoneNumber(countryCode, cityCode);
                 const address = getRandomAddress();
+
                 if (service === "hotel") {
                     const name = getRandomName(hotelNames);
                     const label = "hotel";
                     const id = travelGuide.hotels.length + 1;
+                    const web = `https://www.${name.replaceAll(/'/g, " ").replaceAll(" ","-").toLowerCase()}.com`;
                     if (image) {
                         travelGuide.hotels.push({
                             id,
@@ -267,6 +269,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             name,
                             address,
                             tel,
+                            web,
                             image
                         });
                     }
