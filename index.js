@@ -261,7 +261,8 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const name = getRandomName(hotelNames);
                     const label = "hotel";
                     const id = travelGuide.hotels.length + 1;
-                    const web = `https://www.${name.replaceAll(/'/g, " ").replaceAll(" ","-").toLowerCase()}.com`;
+                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
                     if (image) {
                         travelGuide.hotels.push({
                             id,
@@ -270,6 +271,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             address,
                             tel,
                             web,
+                            email,
                             image
                         });
                     }
