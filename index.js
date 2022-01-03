@@ -120,6 +120,14 @@ const cities = [
         city_iso: "Par",
         currency: "Euro",
         language: "French",
+        hotelNames: [
+            {
+                first: ["Le", "Hotel", "Maison", "L'Empire", "Chouette"],
+                second: ["Marianne", "Rouge", "Paris", "Jardin", "Hotel", "Elysee", "Chateau", "L'Antoine", "d'Or", "Petit"],
+                third: ["Mademoiselle", "Hotel", "Bellechasse", "Rouge", "Grands", "Etoile"],
+                fourth: ["Hotel"]
+            }
+        ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
