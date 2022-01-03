@@ -254,22 +254,24 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
 
             $('.YVj9w', html).each(function () {
                 const image = $(this).attr('src');
-                const label = "hotel";
-                const id = travelGuide.hotels.length + 1;
                 const tel = getRandomPhoneNumber(countryCode, cityCode);
                 const address = getRandomAddress();
-                const name = getRandomName(hotelNames);
-
-                if (image) {
-                    travelGuide.hotels.push({
-                        id,
-                        label,
-                        name,
-                        address,
-                        tel,
-                        image
-                    });
+                if (service === "hotel") {
+                    const name = getRandomName(hotelNames);
+                    const label = "hotel";
+                    const id = travelGuide.hotels.length + 1;
+                    if (image) {
+                        travelGuide.hotels.push({
+                            id,
+                            label,
+                            name,
+                            address,
+                            tel,
+                            image
+                        });
+                    }
                 }
+
             });
 
             axios.get('https://www.randomtextgenerator.com/')
