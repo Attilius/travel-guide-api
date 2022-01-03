@@ -13,20 +13,29 @@ const app = express();
 
 const cities = [
     {
-        name: "New York",
+        name: "New-York",
         country: "United States Of America",
         country_code: "+1",
         city_code: "(212)",
         city_iso: "NYC",
         currency: "US Dollar",
         language: "English"
-    }
+    },
+    {
+        name: "Paris",
+        country: "France",
+        country_code: "+33",
+        city_code: "(1)",
+        city_iso: "Par",
+        currency: "Euro",
+        language: "French"
+    },
 ];
 
 // Functions
 
-const phoneNumber = () => {
-    return "+1 (212) 111-2222";
+const getPhoneNumber = (countryCode, cityCode) => {
+    return `${countryCode} ${cityCode} 111-2222`;
 }
 
 app.get('/', (req, res) => {
@@ -38,6 +47,8 @@ app.get('/', (req, res) => {
 app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
     const service = req.params.service;
+    const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
+    const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -53,7 +64,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 const image = $(this).attr('src');
                 const label = "hotel";
                 const id = travelGuide.hotels.length + 1;
-                const tel = phoneNumber();
+                const tel = getPhoneNumber(countryCode, cityCode);
 
                 if (image) {
                     travelGuide.hotels.push({
