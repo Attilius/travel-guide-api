@@ -235,6 +235,11 @@ app.get('/', (req, res) => {
 
 app.get('/addresses/all/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
+    const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
+    const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
+    const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
+    const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
+    const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
 })
 
 //Request of hotels or restaurants or attractions
