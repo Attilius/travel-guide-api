@@ -472,23 +472,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         }
 
                     } else {
-                        const name = getRandomName(restaurantNames);
-                        const label = "restaurant";
-                        const id = travelGuide.restaurants.length + 1;
-                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                        const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                        if (image) {
-                            travelGuide.restaurants.push({
-                                id,
-                                label,
-                                name,
-                                address,
-                                tel,
-                                web,
-                                email,
-                                image
-                            });
-                        }
+                        fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
                     }
                 });
 
