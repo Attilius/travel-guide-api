@@ -395,6 +395,26 @@ const getRandomName = (paramArray) => {
     return result.trim();
 }
 
+const fillResponseArray = (paramArray, paramName, image, tel, address) => {
+    const name = getRandomName(paramName);
+    const label = "restaurant";
+    const id = paramArray.length + 1;
+    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+    const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+    if (image) {
+        paramArray.push({
+            id,
+            label,
+            name,
+            address,
+            tel,
+            web,
+            email,
+            image
+        });
+    }
+}
+
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
@@ -572,23 +592,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             });
                         }
                     } else {
-                        const name = getRandomName(restaurantNames);
-                        const label = "restaurant";
-                        const id = travelGuide.restaurants.length + 1;
-                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                        const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                        if (image) {
-                            travelGuide.restaurants.push({
-                                id,
-                                label,
-                                name,
-                                address,
-                                tel,
-                                web,
-                                email,
-                                image
-                            });
-                        }
+                        fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
                     }
 
                 });
