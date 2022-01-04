@@ -536,6 +536,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
     const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
     const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
+    const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -560,6 +561,24 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                         const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
                         if (image) {
                             travelGuide.hotels.push({
+                                id,
+                                label,
+                                name,
+                                address,
+                                tel,
+                                web,
+                                email,
+                                image
+                            });
+                        }
+                    } else {
+                        const name = getRandomName(restaurantNames);
+                        const label = "restaurant";
+                        const id = travelGuide.restaurants.length + 1;
+                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        if (image) {
+                            travelGuide.restaurants.push({
                                 id,
                                 label,
                                 name,
