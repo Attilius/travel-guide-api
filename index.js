@@ -102,7 +102,14 @@ const cities = [
                 fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Stars", "Stella", "Hall", "Westhouse"]
             }
         ],
-        restaurantNames: [],
+        restaurantNames: [
+            {
+                first: ["Manhattan", "Harlem", "Tiffany's", "Stella", "Giuseppe", "Luxory", "Thai", "Asia", "French", "Sea", "City", "Garden", "Secret", "Golden", "Liberty", "Park", "State", "Empire", "Gourmet", "Delicious", "American", "Papa Joe", "Taste of", "Lucky"],
+                second: ["Inn", "Kitchen", "Taste", "Restaurant", "Dream", "Coffe", "Magic", "Dreams", "Dinner", "Corner"],
+                third: ["Coffe", "Restaurant", "Inn", "Taste", "Dinner"],
+                fourth: ["Coffe", "Restaurant", "Inn", "Taste", "Dinner"]
+            }
+        ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
@@ -316,6 +323,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
     const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
     const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
     const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
+    const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
     const travelGuide = {
         attractions: [],
         hotels: [],
@@ -372,20 +380,20 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         });
                     }
                 } else {
-                   // const name = getRandomName(restaurantNames);
+                    const name = getRandomName(restaurantNames);
                     const label = "restaurant";
                     const id = travelGuide.restaurants.length + 1;
-                    //const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    //const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
                     if (image) {
                         travelGuide.restaurants.push({
                             id,
                             label,
-                            //name,
-                            //address,
-                            //tel,
-                            //web,
-                            //email,
+                            name,
+                            address,
+                            tel,
+                            web,
+                            email,
                             image
                         });
                     }
