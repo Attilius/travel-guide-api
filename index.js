@@ -352,6 +352,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     const id = travelGuide.hotels.length + 1;
                     const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
                     const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+
                     if (image) {
                         travelGuide.hotels.push({
                             id,
@@ -364,21 +365,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                             image
                         });
                     }
-                } else if (link.includes("attraction")) {
-                    //const name = getRandomName();
-                    const label = "attraction";
-                    const id = travelGuide.attractions.length + 1;
-                   // const email = `info@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    if (image) {
-                        travelGuide.attractions.push({
-                            id,
-                            label,
-                            //name,
-                            //tel,
-                            //email,
-                            image
-                        });
-                    }
+
                 } else {
                     const name = getRandomName(restaurantNames);
                     const label = "restaurant";
@@ -398,8 +385,26 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         });
                     }
                 }
-
             });
+
+            if (link.includes("attraction")) {
+                const attractions = cities.filter(city => city.name == cityName)[0].attractions;
+
+                for (let i = 0; i < attractions.length; i++) {
+                    const id = i + 1;
+                    const label = "attraction";
+                    const name = attractions[i].name;
+                    const image = attractions[i].img;
+
+                    travelGuide.attractions.push({
+                        id,
+                        label,
+                        name,
+                        image
+                    });
+                    
+                }
+            }
 
             axios.get('https://www.randomtextgenerator.com/')
                 .then((response) => {
@@ -415,16 +420,20 @@ app.get('/addresses/all/:cityName', async (req, res) => {
 
                             counter++;
                         }
+
                         for (let i = 0; i < travelGuide.hotels.length; i++) {
                             travelGuide.hotels[i].description = texts[i];
                         }
+
                         for (let i = 0; i < travelGuide.attractions.length; i++) {
                             travelGuide.attractions[i].description = texts[i];
                         }
+                        
                         for (let i = 0; i < travelGuide.restaurants.length; i++) {
                             travelGuide.restaurants[i].description = texts[i];
                         }
                     });
+
                     res.json(travelGuide);
                 }).catch(err => console.log(err));
 
