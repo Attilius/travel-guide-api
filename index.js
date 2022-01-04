@@ -210,7 +210,14 @@ const cities = [
                 fourth: ["Hotel"]
             }
         ],
-        restaurantNames: [],
+        restaurantNames: [
+            {
+                first: ["Gourmet", "Les Collations", "Cafe", "La Grotte", "Epicure", "La Table", "Bistrot", "Petite", "La Grande", "Le Chasseur", "Le Canard"],
+                second: ["Restaurant", "Gourmandes", "De Paris", "Alliance", "Fleur", "Ourse", "Magique", "Tulipes"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
@@ -402,7 +409,6 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                             name,
                             image
                         });
-
                     }
                 }
 
