@@ -452,25 +452,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     const address = getRandomAddress();
 
                     if (link.includes("hotel")) {
-                        const name = getRandomName(hotelNames);
-                        const label = "hotel";
-                        const id = travelGuide.hotels.length + 1;
-                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                        const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-
-                        if (image) {
-                            travelGuide.hotels.push({
-                                id,
-                                label,
-                                name,
-                                address,
-                                tel,
-                                web,
-                                email,
-                                image
-                            });
-                        }
-
+                        fillResponseArray(travelGuide.hotels, hotelNames, image, tel, address);
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
                     }
