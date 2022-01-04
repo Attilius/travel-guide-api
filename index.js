@@ -202,6 +202,84 @@ const cities = [
         city_iso: "Par",
         currency: "Euro",
         language: "French",
+        attractions: [
+            {
+                name: "Eiffel Tower",
+                img = "https://unsplash.com/photos/QAwciFlS1g4"
+            },
+            {
+                name: "Assemblée Nationale - Palais Bourbon",
+                img = "https://unsplash.com/photos/-foXddRnxfc"
+            },
+            {
+                name: "Louvre Museum, Rue de Rivoli",
+                img = "https://unsplash.com/photos/8S_dUIYfVkI"
+            },
+            {
+                name: "L'Arc de Triomphe de l'Etoile",
+                img = "https://unsplash.com/photos/hsgNoiFYgSk"
+            },
+            {
+                name: "Place Vendôme",
+                img = "https://unsplash.com/photos/jxLd50GtR0c"
+            },
+            {
+                name: "Champs-Élysées",
+                img = "https://unsplash.com/photos/unk8y_XYgto"
+            },
+            {
+                name: "Tuileries Garden",
+                img = "https://unsplash.com/photos/6xJ9GUbbFEo"
+            },
+            {
+                name: "L'Arc de Triomphe de l'Etoile",
+                img = "https://unsplash.com/photos/milUxSbp4_A"
+            },
+            {
+                name: "Rue de Cremieux",
+                img = "https://unsplash.com/photos/I9RJT5tOXyM"
+            },
+            {
+                name: "Saint Etienne du Mont",
+                img = "https://unsplash.com/photos/_ptuPpue6E4"
+            },
+            {
+                name: "Fontaine des Mers, Place de la Concorde",
+                img = "https://unsplash.com/photos/nOazvDB3t1M"
+            },
+            {
+                name: "Jardin des Tuileries",
+                img = "https://unsplash.com/photos/NIGy5J-pQJs"
+            },
+            {
+                name: "Notre Dame de Paris",
+                img = "https://unsplash.com/photos/qv9DvC2hh44"
+            },
+            {
+                name: "Route du Moulin Rouge",
+                img = "https://unsplash.com/photos/rdYzi6d7bLE"
+            },
+            {
+                name: "Versailles",
+                img = "https://unsplash.com/photos/CjpcbF_osZ0"
+            },
+            {
+                name: "Cathédrale Notre-Dame de Paris",
+                img = "https://unsplash.com/photos/suRvdiwP9Pk"
+            },
+            {
+                name: "Saint-Germain-l'Auxerrois, Paris, Île-de-France",
+                img = "https://unsplash.com/photos/vxk-ghi-WZU"
+            },
+            {
+                name: "Parc Monceau",
+                img = "https://unsplash.com/photos/ppSBbi47UoY"
+            },
+            {
+                name: "Sacre-Coeur",
+                img = "https://unsplash.com/photos/s7w0Zzc8SPk"
+            },
+        ],
         hotelNames: [
             {
                 first: ["Le", "Hotel", "Maison", "L'Empire", "Chouette"],
