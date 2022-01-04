@@ -337,109 +337,109 @@ app.get('/addresses/all/:cityName', async (req, res) => {
 
     links.forEach(link => {
         axios.get(link)
-        .then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
+            .then((response) => {
+                const html = response.data;
+                const $ = cheerio.load(html);
 
-            $('.YVj9w', html).each(function () {
-                const image = $(this).attr('src');
-                const tel = getRandomPhoneNumber(countryCode, cityCode);
-                const address = getRandomAddress();
+                $('.YVj9w', html).each(function () {
+                    const image = $(this).attr('src');
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
 
-                if (link.includes("hotel")) {
-                    const name = getRandomName(hotelNames);
-                    const label = "hotel";
-                    const id = travelGuide.hotels.length + 1;
-                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    if (link.includes("hotel")) {
+                        const name = getRandomName(hotelNames);
+                        const label = "hotel";
+                        const id = travelGuide.hotels.length + 1;
+                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
 
-                    if (image) {
-                        travelGuide.hotels.push({
+                        if (image) {
+                            travelGuide.hotels.push({
+                                id,
+                                label,
+                                name,
+                                address,
+                                tel,
+                                web,
+                                email,
+                                image
+                            });
+                        }
+
+                    } else {
+                        const name = getRandomName(restaurantNames);
+                        const label = "restaurant";
+                        const id = travelGuide.restaurants.length + 1;
+                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        if (image) {
+                            travelGuide.restaurants.push({
+                                id,
+                                label,
+                                name,
+                                address,
+                                tel,
+                                web,
+                                email,
+                                image
+                            });
+                        }
+                    }
+                });
+
+                if (link.includes("attraction")) {
+                    const attractions = cities.filter(city => city.name == cityName)[0].attractions;
+
+                    for (let i = 0; i < attractions.length; i++) {
+                        const id = i + 1;
+                        const label = "attraction";
+                        const name = attractions[i].name;
+                        const image = attractions[i].img;
+
+                        travelGuide.attractions.push({
                             id,
                             label,
                             name,
-                            address,
-                            tel,
-                            web,
-                            email,
                             image
                         });
-                    }
 
-                } else {
-                    const name = getRandomName(restaurantNames);
-                    const label = "restaurant";
-                    const id = travelGuide.restaurants.length + 1;
-                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    if (image) {
-                        travelGuide.restaurants.push({
-                            id,
-                            label,
-                            name,
-                            address,
-                            tel,
-                            web,
-                            email,
-                            image
+                    }
+                }
+
+                axios.get('https://www.randomtextgenerator.com/')
+                    .then((response) => {
+                        const html = response.data;
+                        const $ = cheerio.load(html);
+                        const texts = [];
+                        let counter = 0;
+
+                        $('#randomtext_box', html).each(function () {
+                            while (counter < travelGuide.hotels.length || counter < travelGuide.attractions.length || counter < travelGuide.restaurants.length) {
+                                const text = $(this).text().trim();
+                                texts.push(text);
+
+                                counter++;
+                            }
+
+                            for (let i = 0; i < travelGuide.hotels.length; i++) {
+                                travelGuide.hotels[i].description = texts[i];
+                            }
+
+                            for (let i = 0; i < travelGuide.attractions.length; i++) {
+                                travelGuide.attractions[i].description = texts[i];
+                            }
+
+                            for (let i = 0; i < travelGuide.restaurants.length; i++) {
+                                travelGuide.restaurants[i].description = texts[i];
+                            }
                         });
-                    }
-                }
-            });
 
-            if (link.includes("attraction")) {
-                const attractions = cities.filter(city => city.name == cityName)[0].attractions;
+                        res.json(travelGuide);
+                    }).catch(err => console.log(err));
 
-                for (let i = 0; i < attractions.length; i++) {
-                    const id = i + 1;
-                    const label = "attraction";
-                    const name = attractions[i].name;
-                    const image = attractions[i].img;
-
-                    travelGuide.attractions.push({
-                        id,
-                        label,
-                        name,
-                        image
-                    });
-                    
-                }
-            }
-
-            axios.get('https://www.randomtextgenerator.com/')
-                .then((response) => {
-                    const html = response.data;
-                    const $ = cheerio.load(html);
-                    const texts = [];
-                    let counter = 0;
-
-                    $('#randomtext_box', html).each(function () {
-                        while (counter < travelGuide.hotels.length || counter < travelGuide.attractions.length || counter < travelGuide.restaurants.length) {
-                            const text = $(this).text().trim();
-                            texts.push(text);
-
-                            counter++;
-                        }
-
-                        for (let i = 0; i < travelGuide.hotels.length; i++) {
-                            travelGuide.hotels[i].description = texts[i];
-                        }
-
-                        for (let i = 0; i < travelGuide.attractions.length; i++) {
-                            travelGuide.attractions[i].description = texts[i];
-                        }
-                        
-                        for (let i = 0; i < travelGuide.restaurants.length; i++) {
-                            travelGuide.restaurants[i].description = texts[i];
-                        }
-                    });
-
-                    res.json(travelGuide);
-                }).catch(err => console.log(err));
-
-        }).catch(err => console.log(err));
+            }).catch(err => console.log(err));
     })
-    
+
 })
 
 //Request of hotels or restaurants or attractions
@@ -457,79 +457,95 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         hotels: [],
         restaurants: []
     }
+    if (service != "attraction") {
+        axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
+            .then((response) => {
+                const html = response.data;
+                const $ = cheerio.load(html);
 
-    axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
-        .then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
+                $('.YVj9w', html).each(function () {
+                    const image = $(this).attr('src');
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
 
-            $('.YVj9w', html).each(function () {
-                const image = $(this).attr('src');
-                const tel = getRandomPhoneNumber(countryCode, cityCode);
-                const address = getRandomAddress();
-
-                if (service === "hotel") {
-                    const name = getRandomName(hotelNames);
-                    const label = "hotel";
-                    const id = travelGuide.hotels.length + 1;
-                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-                    if (image) {
-                        travelGuide.hotels.push({
-                            id,
-                            label,
-                            name,
-                            address,
-                            tel,
-                            web,
-                            email,
-                            image
-                        });
+                    if (service === "hotel") {
+                        const name = getRandomName(hotelNames);
+                        const label = "hotel";
+                        const id = travelGuide.hotels.length + 1;
+                        const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                        if (image) {
+                            travelGuide.hotels.push({
+                                id,
+                                label,
+                                name,
+                                address,
+                                tel,
+                                web,
+                                email,
+                                image
+                            });
+                        }
                     }
-                }
 
+                });
+
+                axios.get('https://www.randomtextgenerator.com/')
+                    .then((response) => {
+                        const html = response.data;
+                        const $ = cheerio.load(html);
+                        const texts = [];
+                        let counter = 0;
+
+                        $('#randomtext_box', html).each(function () {
+                            while (counter < travelGuide.hotels.length) {
+                                const text = $(this).text().trim();
+                                texts.push(text);
+
+                                counter++;
+                            }
+                            for (let i = 0; i < travelGuide.hotels.length; i++) {
+                                travelGuide.hotels[i].description = texts[i];
+                            }
+                        });
+
+                        switch (service) {
+                            case "hotel":
+                                res.json(travelGuide.hotels);
+                                break;
+
+                            case "restaurant":
+                                res.json(travelGuide.restaurants);
+                                break;
+
+                            default:
+                                res.json(`Error: /${service} Request is not exist!`);
+                                break;
+                        }
+
+                    }).catch(err => console.log(err));
+
+            }).catch(err => console.log(err));
+
+    } else {
+        const attractions = cities.filter(city => city.name == cityName)[0].attractions;
+
+        for (let i = 0; i < attractions.length; i++) {
+            const id = i + 1;
+            const label = "attraction";
+            const name = attractions[i].name;
+            const image = attractions[i].img;
+
+            travelGuide.attractions.push({
+                id,
+                label,
+                name,
+                image
             });
 
-            axios.get('https://www.randomtextgenerator.com/')
-                .then((response) => {
-                    const html = response.data;
-                    const $ = cheerio.load(html);
-                    const texts = [];
-                    let counter = 0;
-
-                    $('#randomtext_box', html).each(function () {
-                        while (counter < travelGuide.hotels.length) {
-                            const text = $(this).text().trim();
-                            texts.push(text);
-
-                            counter++;
-                        }
-                        for (let i = 0; i < travelGuide.hotels.length; i++) {
-                            travelGuide.hotels[i].description = texts[i];
-                        }
-                    });
-
-                    switch (service) {
-                        case "attraction":
-                            res.json(travelGuide.attractions);
-                            break;
-
-                        case "hotel":
-                            res.json(travelGuide.hotels);
-                            break;
-
-                        case "restaurant":
-                            res.json(travelGuide.restaurants);
-                            break;
-
-                        default:
-                            res.json(`Error: /${service} Request is not exist!`);
-                            break;
-                    }
-
-                }).catch(err => console.log(err));
-
-        }).catch(err => console.log(err));
+        }
+        res.json(travelGuide.attractions);
+    }
 });
 
 app.listen(PORT, () => {
