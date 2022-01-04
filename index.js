@@ -20,6 +20,80 @@ const cities = [
         city_iso: "NYC",
         currency: "US Dollar",
         language: "English",
+        attractions: [
+            {
+                name: "Brooklyn bridge tour",
+                img: "https://unsplash.com/photos/yg5pcRgyxtM"
+            },
+            {
+                name: "Statue of Liberty National Monument",
+                img: "https://unsplash.com/photos/l0ySsmZ6ZG4"
+            },
+            {
+                name: "Grand Central Terminal",
+                img: "https://unsplash.com/photos/dF4qSZKJw_g"
+            },
+            {
+                name: "St. Patrick's Cathedral",
+                img: "https://unsplash.com/photos/v8ppjpVTHVQ"
+            },
+            {
+                name: "Sightseeing walk at night in Manhattan",
+                img: "https://unsplash.com/photos/raXnREhb-uI"
+            },
+            {
+                name: "Boat trip around the city",
+                img: "https://unsplash.com/photos/diV_Xm1G6Vo"
+            },
+            {
+                name: "Times Square",
+                img: "https://unsplash.com/photos/TaCk3NspYe0"
+            },
+            {
+                name: "The Flatiron Building",
+                img: "https://unsplash.com/photos/l20rwt8S4Fs"
+            },
+            {
+                name: "9/11 memorial museum",
+                img: "https://unsplash.com/photos/92Y9kKPoWB0"
+            },
+            {
+                name: "Empire state building",
+                img: "https://unsplash.com/photos/bm5s7QmnfyI"
+            },
+            {
+                name: "One World Trade Center",
+                img: "https://unsplash.com/photos/bm5s7QmnfyI"
+            },
+            {
+                name: "City tour with an old taxi",
+                img: "https://unsplash.com/photos/hnckUVub7MY"
+            },
+            {
+                name: "Metropolitan Museum of Art, 5th Avenue",
+                img: "https://unsplash.com/photos/wRtN8AgpvLg"
+            },
+            {
+                name: "Central Park North",
+                img: "https://unsplash.com/photos/vMLfRVkWItI"
+            },
+            {
+                name: "Rockefeller Center, Rockefeller Plaza",
+                img: "https://unsplash.com/photos/x4rPMOmQXoY"
+            },
+            {
+                name: "Fifth Avenue",
+                img: "https://unsplash.com/photos/mw-8073ytdU"
+            },
+            {
+                name: "New York Public Library",
+                img: "https://unsplash.com/photos/nYToduYJH-c"
+            },
+            {
+                name: "Broadway",
+                img: "https://unsplash.com/photos/2dqaasndUKE"
+            },
+        ],
         hotelNames: [
             {
                 first: ["Union", "Hotel", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "The", "Garden", "Liberty", "Best", "Intercontinental", "Westhouse", "Millenium"],
@@ -28,6 +102,7 @@ const cities = [
                 fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Stars", "Stella", "Hall", "Westhouse"]
             }
         ],
+        restaurantNames: [],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
@@ -128,6 +203,7 @@ const cities = [
                 fourth: ["Hotel"]
             }
         ],
+        restaurantNames: [],
         getRandomPhoneNumber: (countryCode, cityCode) => {
             let counter = 0;
             const numbers = [];
@@ -245,6 +321,108 @@ app.get('/addresses/all/:cityName', async (req, res) => {
         hotels: [],
         restaurants: []
     }
+    const links = [
+        `https://unsplash.com/s/photos/attraction-${cityName}`,
+        `https://unsplash.com/s/photos/hotel-${cityName}`,
+        `https://unsplash.com/s/photos/restaurant-${cityName}`
+    ]
+
+    links.forEach(link => {
+        axios.get(link)
+        .then((response) => {
+            const html = response.data;
+            const $ = cheerio.load(html);
+
+            $('.YVj9w', html).each(function () {
+                const image = $(this).attr('src');
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+
+                if (link.includes("hotel")) {
+                    const name = getRandomName(hotelNames);
+                    const label = "hotel";
+                    const id = travelGuide.hotels.length + 1;
+                    const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    const email = `hotel@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    if (image) {
+                        travelGuide.hotels.push({
+                            id,
+                            label,
+                            name,
+                            address,
+                            tel,
+                            web,
+                            email,
+                            image
+                        });
+                    }
+                } else if (link.includes("attraction")) {
+                    //const name = getRandomName();
+                    const label = "attraction";
+                    const id = travelGuide.attractions.length + 1;
+                   // const email = `info@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    if (image) {
+                        travelGuide.attractions.push({
+                            id,
+                            label,
+                            //name,
+                            //tel,
+                            //email,
+                            image
+                        });
+                    }
+                } else {
+                   // const name = getRandomName(restaurantNames);
+                    const label = "restaurant";
+                    const id = travelGuide.restaurants.length + 1;
+                    //const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    //const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+                    if (image) {
+                        travelGuide.restaurants.push({
+                            id,
+                            label,
+                            //name,
+                            //address,
+                            //tel,
+                            //web,
+                            //email,
+                            image
+                        });
+                    }
+                }
+
+            });
+
+            axios.get('https://www.randomtextgenerator.com/')
+                .then((response) => {
+                    const html = response.data;
+                    const $ = cheerio.load(html);
+                    const texts = [];
+                    let counter = 0;
+
+                    $('#randomtext_box', html).each(function () {
+                        while (counter < travelGuide.hotels.length || counter < travelGuide.attractions.length || counter < travelGuide.restaurants.length) {
+                            const text = $(this).text().trim();
+                            texts.push(text);
+
+                            counter++;
+                        }
+                        for (let i = 0; i < travelGuide.hotels.length; i++) {
+                            travelGuide.hotels[i].description = texts[i];
+                        }
+                        for (let i = 0; i < travelGuide.attractions.length; i++) {
+                            travelGuide.attractions[i].description = texts[i];
+                        }
+                        for (let i = 0; i < travelGuide.restaurants.length; i++) {
+                            travelGuide.restaurants[i].description = texts[i];
+                        }
+                    });
+                    res.json(travelGuide);
+                }).catch(err => console.log(err));
+
+        }).catch(err => console.log(err));
+    })
+    
 })
 
 //Request of hotels or restaurants or attractions
