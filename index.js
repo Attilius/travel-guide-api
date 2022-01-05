@@ -550,7 +550,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         hotels: [],
         restaurants: []
     }
-    if (service != "attraction") {
+   // if (service != "attraction") {
         axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
             .then((response) => {
                 const html = response.data;
@@ -562,7 +562,9 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const address = getRandomAddress();
                     const label = service;
 
-                    if (service === "hotel") {
+                    if (service === "attraction") {
+                        fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                    } else if (service === "hotel") {
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
@@ -576,6 +578,9 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                         const $ = cheerio.load(html);
 
                         switch (service) {
+                            case "attraction":
+                                res.json(getRandomText(travelGuide.attractions, html, $));
+                                break;
                             case "hotel":
                                 res.json(getRandomText(travelGuide.hotels, html, $));
                                 break;
@@ -593,10 +598,10 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
 
             }).catch(err => console.log(err));
 
-    } else {
-        fillAttractionsArray(cities, travelGuide.attractions, cityName);
-        res.json(travelGuide.attractions);
-    }
+   // } else {
+        //fillAttractionsArray(cities, travelGuide.attractions, cityName);
+       // res.json(travelGuide.attractions);
+   // }
 });
 
 app.listen(PORT, () => {
