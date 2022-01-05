@@ -488,12 +488,13 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     if (link.includes("attraction")) {
                         fillAttractionsArray(cities, travelGuide.attractions)
                     } else if (link.includes("hotel")) {
-                        fillResponseArray(travelGuide.hotels, hotelNames, image, tel, address);
+                        const label = "hotel";
+                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
                     }
                 });
-                
+
                 axios.get('https://www.randomtextgenerator.com/')
                     .then((response) => {
                         const html = response.data;
