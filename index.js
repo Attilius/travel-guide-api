@@ -562,15 +562,17 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const address = getRandomAddress();
                     const label = service;
 
-                    if (service === "attraction") {
-                        fillAttractionsArray(cities, travelGuide.attractions, cityName);
-                    } else if (service === "hotel") {
+                    if (service === "hotel") {
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
 
                 });
+
+                if (service === "attraction") {
+                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                }
 
                 axios.get('https://www.randomtextgenerator.com/')
                     .then((response) => {
@@ -581,7 +583,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             case "attraction":
                                 res.json(getRandomText(travelGuide.attractions, html, $));
                                 break;
-                                
+
                             case "hotel":
                                 res.json(getRandomText(travelGuide.hotels, html, $));
                                 break;
