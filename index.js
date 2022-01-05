@@ -568,15 +568,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     .then((response) => {
                         const html = response.data;
                         const $ = cheerio.load(html);
-
                         
-                           /* if (service === "hotel") {
-                                getRandomText(travelGuide.hotels, $);
-                            } else {
-                                getRandomText(travelGuide.restaurants, $);
-                            }*/
-                        
-
                         switch (service) {
                             case "hotel":
                                 res.json(getRandomText(travelGuide.hotels, html, $));
