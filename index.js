@@ -395,9 +395,8 @@ const getRandomName = (paramArray) => {
     return result.trim();
 }
 
-const fillResponseArray = (paramArray, paramName, image, tel, address) => {
+const fillResponseArray = (paramArray, paramName, label, image, tel, address) => {
     const name = getRandomName(paramName);
-    const label = "restaurant";
     const id = paramArray.length + 1;
     const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
     const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
@@ -413,6 +412,23 @@ const fillResponseArray = (paramArray, paramName, image, tel, address) => {
             image
         });
     }
+}
+
+const getRandomText = (responseArray, html, $) => {
+    const texts = [];
+    let counter = 0;
+    $('#randomtext_box', html).each(function () {
+    while (counter < responseArray.length) {
+        const text = $(this).text().trim();
+        texts.push(text);
+
+        counter++;
+    }
+    for (let i = 0; i < responseArray.length; i++) {
+        responseArray[i].description = texts[i];
+    }
+});
+    return responseArray;
 }
 
 app.get('/', (req, res) => {
@@ -538,11 +554,12 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const image = $(this).attr('src');
                     const tel = getRandomPhoneNumber(countryCode, cityCode);
                     const address = getRandomAddress();
+                    const label = service;
 
                     if (service === "hotel") {
-                        fillResponseArray(travelGuide.hotels, hotelNames, image, tel, address);
+                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
-                        fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
+                        fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
 
                 });
@@ -551,28 +568,22 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     .then((response) => {
                         const html = response.data;
                         const $ = cheerio.load(html);
-                        const texts = [];
-                        let counter = 0;
 
-                        $('#randomtext_box', html).each(function () {
-                            while (counter < travelGuide.hotels.length) {
-                                const text = $(this).text().trim();
-                                texts.push(text);
-
-                                counter++;
-                            }
-                            for (let i = 0; i < travelGuide.hotels.length; i++) {
-                                travelGuide.hotels[i].description = texts[i];
-                            }
-                        });
+                        
+                           /* if (service === "hotel") {
+                                getRandomText(travelGuide.hotels, $);
+                            } else {
+                                getRandomText(travelGuide.restaurants, $);
+                            }*/
+                        
 
                         switch (service) {
                             case "hotel":
-                                res.json(travelGuide.hotels);
+                                res.json(getRandomText(travelGuide.hotels, html, $));
                                 break;
 
                             case "restaurant":
-                                res.json(travelGuide.restaurants);
+                                res.json(getRandomText(travelGuide.restaurants, html, $));
                                 break;
 
                             default:
