@@ -418,16 +418,16 @@ const getRandomText = (responseArray, html, $) => {
     const texts = [];
     let counter = 0;
     $('#randomtext_box', html).each(function () {
-    while (counter < responseArray.length) {
-        const text = $(this).text().trim();
-        texts.push(text);
+        while (counter < responseArray.length) {
+            const text = $(this).text().trim();
+            texts.push(text);
 
-        counter++;
-    }
-    for (let i = 0; i < responseArray.length; i++) {
-        responseArray[i].description = texts[i];
-    }
-});
+            counter++;
+        }
+        for (let i = 0; i < responseArray.length; i++) {
+            responseArray[i].description = texts[i];
+        }
+    });
     return responseArray;
 }
 
@@ -485,17 +485,15 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     const tel = getRandomPhoneNumber(countryCode, cityCode);
                     const address = getRandomAddress();
 
-                    if (link.includes("hotel")) {
+                    if (link.includes("attraction")) {
+                        fillAttractionsArray(cities, travelGuide.attractions)
+                    } else if (link.includes("hotel")) {
                         fillResponseArray(travelGuide.hotels, hotelNames, image, tel, address);
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
                     }
                 });
-
-                if (link.includes("attraction")) {
-                    fillAttractionsArray(cities, travelGuide.attractions)
-                }
-
+                
                 axios.get('https://www.randomtextgenerator.com/')
                     .then((response) => {
                         const html = response.data;
