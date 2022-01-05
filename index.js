@@ -581,6 +581,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                             case "attraction":
                                 res.json(getRandomText(travelGuide.attractions, html, $));
                                 break;
+                                
                             case "hotel":
                                 res.json(getRandomText(travelGuide.hotels, html, $));
                                 break;
