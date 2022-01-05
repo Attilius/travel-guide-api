@@ -530,9 +530,8 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     }).catch(err => console.log(err));
 
             }).catch(err => console.log(err));
-    })
-
-})
+    });
+});
 
 //Request of hotels or restaurants or attractions
 
@@ -550,7 +549,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         hotels: [],
         restaurants: []
     }
-   // if (service != "attraction") {
+
         axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
             .then((response) => {
                 const html = response.data;
@@ -567,7 +566,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     } else {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
-
                 });
 
                 if (service === "attraction") {
@@ -600,11 +598,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     }).catch(err => console.log(err));
 
             }).catch(err => console.log(err));
-
-   // } else {
-        //fillAttractionsArray(cities, travelGuide.attractions, cityName);
-       // res.json(travelGuide.attractions);
-   // }
 });
 
 app.listen(PORT, () => {
