@@ -431,6 +431,24 @@ const getRandomText = (responseArray, html, $) => {
     return responseArray;
 }
 
+const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
+    const attractions = databaseArray.filter(city => city.name == cityName)[0].attractions;
+
+    for (let i = 0; i < attractions.length; i++) {
+        const id = i + 1;
+        const label = "attraction";
+        const name = attractions[i].name;
+        const image = attractions[i].img;
+
+        responseArray.push({
+            id,
+            label,
+            name,
+            image
+        });
+    }
+}
+
 app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
@@ -475,21 +493,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                 });
 
                 if (link.includes("attraction")) {
-                    const attractions = cities.filter(city => city.name == cityName)[0].attractions;
-
-                    for (let i = 0; i < attractions.length; i++) {
-                        const id = i + 1;
-                        const label = "attraction";
-                        const name = attractions[i].name;
-                        const image = attractions[i].img;
-
-                        travelGuide.attractions.push({
-                            id,
-                            label,
-                            name,
-                            image
-                        });
-                    }
+                    fillAttractionsArray(cities, travelGuide.attractions)
                 }
 
                 axios.get('https://www.randomtextgenerator.com/')
@@ -568,7 +572,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     .then((response) => {
                         const html = response.data;
                         const $ = cheerio.load(html);
-                        
+
                         switch (service) {
                             case "hotel":
                                 res.json(getRandomText(travelGuide.hotels, html, $));
@@ -588,22 +592,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             }).catch(err => console.log(err));
 
     } else {
-        const attractions = cities.filter(city => city.name == cityName)[0].attractions;
-
-        for (let i = 0; i < attractions.length; i++) {
-            const id = i + 1;
-            const label = "attraction";
-            const name = attractions[i].name;
-            const image = attractions[i].img;
-
-            travelGuide.attractions.push({
-                id,
-                label,
-                name,
-                image
-            });
-
-        }
+        fillAttractionsArray(cities, travelGuide.attractions, cityName);
         res.json(travelGuide.attractions);
     }
 });
