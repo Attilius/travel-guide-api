@@ -472,7 +472,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
         `https://unsplash.com/s/photos/attraction-${cityName}`,
         `https://unsplash.com/s/photos/hotel-${cityName}`,
         `https://unsplash.com/s/photos/restaurant-${cityName}`
-    ]
+    ];
 
     links.forEach(link => {
         axios.get(link)
