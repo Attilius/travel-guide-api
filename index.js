@@ -491,7 +491,8 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         const label = "hotel";
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
-                        fillResponseArray(travelGuide.restaurants, restaurantNames, image, tel, address);
+                        const label = "restaurant";
+                        fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
                 });
 
