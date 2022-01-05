@@ -485,9 +485,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                     const tel = getRandomPhoneNumber(countryCode, cityCode);
                     const address = getRandomAddress();
 
-                    if (link.includes("attraction")) {
-                        fillAttractionsArray(cities, travelGuide.attractions)
-                    } else if (link.includes("hotel")) {
+                    if (link.includes("hotel")) {
                         const label = "hotel";
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     } else {
@@ -495,6 +493,10 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
                 });
+
+                if (link.includes("attraction")) {
+                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                }
 
                 axios.get('https://www.randomtextgenerator.com/')
                     .then((response) => {
