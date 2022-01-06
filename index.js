@@ -203,8 +203,8 @@ const cities = [
         ],
         restaurantNames: [
             {
-                first: ["London", "Taste", "Baclava", "Sultan", "Turkish", "Erhan", "Ayasofya", "Anatolian", "Ararat", "Constantine's", "Emir", "Sirin"],
-                second: ["Cafe", "Bistro", "Steakhouse", "Anatolian", "Palace", "Terrace"],
+                first: ["London", "Taste", "Chelsea", "Park", "The Shell", "Erhan", "Ayasofya", "Anatolian", "Ararat", "Constantine's", "Emir", "Sirin"],
+                second: ["Cafe", "Bistro", "Steakhouse", "Kitchen", "Palace", "Terrace"],
                 third: ["Restaurant"],
                 fourth: ["Restaurant"]
             }
