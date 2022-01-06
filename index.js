@@ -195,9 +195,9 @@ const cities = [
         ],
         hotelNames: [
             {
-                first: ["Hotel", "Bosphorus", "Sultanahmet", "Pasha", "Sahrazád", "Ottoman's", "Ramada", "Yilsam", "Hagia Sophia", "Pera", "Melek", "Osmanhan"],
-                second: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Dremas", "Garden", "Galata", "Plaza"],
-                third: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Taksim"],
+                first: ["Hotel", "The Royal", "Chelsea", "Millenium", "Sahrazád", "Ottoman's", "Ramada", "Yilsam", "Hagia Sophia", "Pera", "Melek", "Osmanhan"],
+                second: ["Hotel", "City", "London", "Grand", "Miracle", "Dremas", "Garden", "Galata", "Plaza"],
+                third: ["Hotel", "City", "London", "Grand", "Miracle", "Taksim"],
                 fourth: ["Hotel"]
             }
         ],
