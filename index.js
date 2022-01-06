@@ -9,13 +9,244 @@ const app = express();
 
 const cities = [
     {
+        name: "Istanbul",
+        country: "Turkey",
+        country_code: "+90",
+        city_code_asiaSide: "(216)",
+        city_code_europeSide: "(212)",
+        city_code: ["(212)", "(216)"],
+        attractions: [
+            {
+                name: "Ayasofya-i Kebîr Câmi-i Şerîfi",
+                img: "https://unsplash.com/photos/oibcDeiEYhY"
+            },
+            {
+                name: "Galata, Beyoğlu",
+                img: "https://unsplash.com/photos/IjLh_4OE5HY"
+            },
+            {
+                name: "Sultan Ahmet Camii",
+                img: "https://unsplash.com/photos/3-QB-YKxTKY"
+            },
+            {
+                name: "Music Instruments in the Grand Bazaar",
+                img: "https://unsplash.com/photos/4wlRmtvcic0"
+            },
+            {
+                name: "Bosphorus Coast",
+                img: "https://unsplash.com/photos/A8ypl75BNmU"
+            },
+            {
+                name: "Dolmabahçe Sarayi",
+                img: "https://unsplash.com/photos/NSwyO3jcbrA"
+            },
+            {
+                name: "Kadiköy, Istanbul, Turkey",
+                img: "https://unsplash.com/photos/oDGtMHERzeo"
+            },
+            {
+                name: "Old Bazaar, Istanbul, Turkey",
+                img: "https://unsplash.com/photos/fGxXDFvwsAw"
+            },
+            {
+                name: "The bridge of Istanbul connecting Asia and Europe.",
+                img: "https://unsplash.com/photos/reo4JMc4J0c"
+            },
+            {
+                name: "Scooter tour of Istanbul",
+                img: "https://unsplash.com/photos/ibWnBYTfdSg"
+            },
+            {
+                name: "Balat, Fatih",
+                img: "https://unsplash.com/photos/dAdp0IT0bZE"
+            },
+            {
+                name: "Caddebostan Sahili",
+                img: "https://unsplash.com/photos/GE-SjTeG6Ig"
+            },
+            {
+                name: "Carpet Shop, Istanbul, Turkey",
+                img: "https://unsplash.com/photos/1aURBvbvpQQ"
+            },
+            {
+                name: "Cankurtaran, Istanbul Archaeological Museums",
+                img: "https://unsplash.com/photos/toVnNWNUUlA"
+            },
+            {
+                name: "Beautiful sunset in Istanbul.",
+                img: "https://unsplash.com/photos/lCA-KQz53m0"
+            },
+        ],
+        hotelNames: [
+            {
+                first: ["Hotel", "Bosphorus", "Sultanahmet", "Pasha", "Sahrazád", "Ottoman's", "Ramada", "Yilsam", "Hagia Sophia", "Pera", "Melek", "Osmanhan"],
+                second: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Dremas", "Garden", "Galata", "Plaza"],
+                third: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Taksim"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantNames: [
+            {
+                first: ["Istanbul", "Ottoman", "Baclava", "Sultan", "Turkish", "Erhan", "Ayasofya", "Anatolian", "Ararat", "Constantine's", "Emir", "Sirin"],
+                second: ["Cafe", "Bistro", "Kebab", "Anatolian", "Palace", "Terrace"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            const citycode = cityCode[Math.floor(Math.random() * 2)];
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 9) {
+                if (numbers.length === 3 || numbers.length === 6) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${citycode} ${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Biv.", "Cd.", "Sk."];
+            const namesOfStreet = ["Kurtuluş Deresi", "Yaya Köprüsü", "Leylak", "Paşa Bakkal", "Çorbaci", "Tarlabaşi", "Gazhane Bostani", "İnönü", "Dolmabahçe", "İnşirah Sokaği", "Atatürk", "Yeni Riva Yolu", "Cengizhan"];
+            const zipCode = "340" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 111) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]} No:${houseNumber}, ${zipCode} Istanbul - Turkey`;
+        }
+
+    },
+    {
+        name: "London",
+        country: "United Kingdom",
+        country_code: "+44",
+        city_code: "(20)",
+        attractions: [
+            {
+                name: "Tower Bridge",
+                img: "https://unsplash.com/photos/Zn_TEtx7Tqg"
+            },
+            {
+                name: "Parliament and Big Ben",
+                img: "https://unsplash.com/photos/iXqTqC-f6jI"
+            },
+            {
+                name: "Covent Garden",
+                img: "https://unsplash.com/photos/jCHWT477xB4"
+            },
+            {
+                name: "Landscape of London",
+                img: "https://unsplash.com/photos/D68vlyckZhs"
+            },
+            {
+                name: "The London Eye",
+                img: "https://unsplash.com/photos/8Qqq7mlO1Vo"
+            },
+            {
+                name: "Temperate House at Kew Gardens",
+                img: "https://unsplash.com/photos/K7TOE1L8Q2g"
+            },
+            {
+                name: "Buckingham Palace",
+                img: "https://unsplash.com/photos/0ji5tjZQ2l4"
+            },
+            {
+                name: "Natural History Museum London",
+                img: "https://unsplash.com/photos/iqeG5xA96M4"
+            },
+            {
+                name: "Millennium Bridge",
+                img: "https://unsplash.com/photos/LDJcJAm5syA"
+            },
+            {
+                name: "Westminster Abbey",
+                img: "https://unsplash.com/photos/_bp_DfkaAJU"
+            },
+            {
+                name: "Sunset in London",
+                img: "https://unsplash.com/photos/VbUO94i6BU4"
+            },
+            {
+                name: "Greenwich",
+                img: "https://unsplash.com/photos/Nhlc0L--zYA"
+            },
+            {
+                name: "St. Paul's Cathedral",
+                img: "https://unsplash.com/photos/s-EkKaf208w"
+            },
+            {
+                name: "London Taxi",
+                img: "https://unsplash.com/photos/rBE0dKPGt2k"
+            },
+            {
+                name: "Spitalfields market in London",
+                img: "https://unsplash.com/photos/IVCI5Ed_GA0"
+            },
+        ],
+        hotelNames: [
+            {
+                first: ["Hotel", "Bosphorus", "Sultanahmet", "Pasha", "Sahrazád", "Ottoman's", "Ramada", "Yilsam", "Hagia Sophia", "Pera", "Melek", "Osmanhan"],
+                second: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Dremas", "Garden", "Galata", "Plaza"],
+                third: ["Hotel", "Bosphorus", "Istanbul", "Grand", "Miracle", "Taksim"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantNames: [
+            {
+                first: ["Istanbul", "Ottoman", "Baclava", "Sultan", "Turkish", "Erhan", "Ayasofya", "Anatolian", "Ararat", "Constantine's", "Emir", "Sirin"],
+                second: ["Cafe", "Bistro", "Kebab", "Anatolian", "Palace", "Terrace"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            const citycode = cityCode[Math.floor(Math.random() * 2)];
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 9) {
+                if (numbers.length === 3 || numbers.length === 6) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${citycode} ${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Biv.", "Cd.", "Sk."];
+            const namesOfStreet = ["Kurtuluş Deresi", "Yaya Köprüsü", "Leylak", "Paşa Bakkal", "Çorbaci", "Tarlabaşi", "Gazhane Bostani", "İnönü", "Dolmabahçe", "İnşirah Sokaği", "Atatürk", "Yeni Riva Yolu", "Cengizhan"];
+            const zipCode = "340" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 111) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]} No:${houseNumber}, ${zipCode} Istanbul - Turkey`;
+        }
+
+    },
+    {
         name: "New-York",
         country: "United States Of America",
         country_code: "+1",
         city_code: "(212)",
-        city_iso: "NYC",
-        currency: "US Dollar",
-        language: "English",
         attractions: [
             {
                 name: "Brooklyn bridge tour",
@@ -195,9 +426,6 @@ const cities = [
         country: "France",
         country_code: "+33",
         city_code: "(1)",
-        city_iso: "Par",
-        currency: "Euro",
-        language: "French",
         attractions: [
             {
                 name: "Eiffel Tower",
