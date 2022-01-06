@@ -2,10 +2,6 @@ const PORT = process.env.PORT || 3333;
 const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
-const { response } = require('express');
-const { children } = require('cheerio/lib/api/traversing');
-const e = require('express');
-const req = require('express/lib/request');
 
 const app = express();
 
@@ -116,7 +112,7 @@ const cities = [
             let result = "";
 
             while (counter < 8) {
-                if (numbers.length == 3) {
+                if (numbers.length === 3) {
                     numbers.push("-");
                 } else {
                     numbers.push(Math.floor(Math.random() * 10).toString());
@@ -302,7 +298,7 @@ const cities = [
             let result = "";
 
             while (counter < 12) {
-                if (numbers.length % 3 == 0) {
+                if (numbers.length % 3 === 0) {
                     numbers.push(" ");
                 } else {
                     numbers.push(Math.floor(Math.random() * 10).toString());
