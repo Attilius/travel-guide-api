@@ -230,14 +230,19 @@ const cities = [
             return `${countryCode} ${cityCode}${result}`;
         },
         getRandomAddress: () => {
-            const typeOfPlaces = ["Biv.", "Cd.", "Sk."];
-            const namesOfStreet = ["Kurtuluş Deresi", "Yaya Köprüsü", "Leylak", "Paşa Bakkal", "Çorbaci", "Tarlabaşi", "Gazhane Bostani", "İnönü", "Dolmabahçe", "İnşirah Sokaği", "Atatürk", "Yeni Riva Yolu", "Cengizhan"];
-            const zipCode = "340" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const typeOfPlaces = ["Ave","Rd.", "St.", "Way"];
+            const namesOfStreet = ["King Edward's", "Churchill", "Wightman", "Suffolk", "Wellington", "Warwick", "Anne Boleyn", "Kingsbury", "Stamford", "Robinson", "Stonefield", "Richmond", "Victoria"];
+            const postCode = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            const firstIndex = Math.floor(Math.random() * postCode.length);
+            const secondIndex = Math.floor(Math.random() * postCode.length);
+            const thirdIndex = Math.floor(Math.random() * postCode.length);
+            const fourthIndex = Math.floor(Math.random() * postCode.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+            const zipCode = `${postCode[firstIndex]}${Math.floor(Math.random() * 8) + 1}${postCode[secondIndex]} ${Math.floor(Math.random() * 8) + 1}${postCode[thirdIndex]}${postCode[fourthIndex]}`;
             const houseNumber = Math.floor(Math.random() * 111) + 1;
             const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
-            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
 
-            return `${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]} No:${houseNumber}, ${zipCode} Istanbul - Turkey`;
+            return `${houseNumber} ${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]}, London ${zipCode}, United Kingdom`;
         }
 
     },
