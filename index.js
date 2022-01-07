@@ -627,7 +627,7 @@ const fillResponseArray = (paramArray, paramName, label, image, tel, address) =>
     const name = getRandomName(paramName);
     const id = paramArray.length + 1;
     const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
-    const email = `restaurant@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
+    const email = `${label}@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
     if (image) {
         paramArray.push({
             id,
