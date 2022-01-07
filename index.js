@@ -2,6 +2,7 @@ const PORT = process.env.PORT || 3333;
 const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
+const { response } = require('express');
 
 const app = express();
 
@@ -666,14 +667,24 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
         const id = i + 1;
         const label = "attraction";
         const name = attractions[i].name;
-        const image = attractions[i].img;
+        let image = ""
+        
+        axios.get(attractions[i].img).then((response) => {
+            const html = response.data;
+            const $ = cheerio.load(html);
 
-        responseArray.push({
-            id,
-            label,
-            name,
-            image
-        });
+            $('.YVj9w', html).each(function () {
+                image = $(this).attr('src');
+            });
+
+            responseArray.push({
+                id,
+                label,
+                name,
+                image
+            });
+
+        }).catch(err => console.log(err));
     }
 }
 
