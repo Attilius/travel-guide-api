@@ -295,7 +295,7 @@ const cities = [
             },
             {
                 name: "One World Trade Center",
-                img: "https://unsplash.com/photos/bm5s7QmnfyI"
+                img: "https://unsplash.com/photos/m54ULqW64PQ"
             },
             {
                 name: "City tour with an old taxi",
@@ -668,7 +668,7 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
         const label = "attraction";
         const name = attractions[i].name;
         let image = ""
-        
+
         axios.get(attractions[i].img).then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
