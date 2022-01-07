@@ -206,6 +206,11 @@ const cities = [
                 fourth: ["Hotel"]
             }
         ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1569921894261-ecda0b2cc1af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80",
+            "",
+            ""
+        ],
         restaurantNames: [
             {
                 first: ["London", "Taste", "Chelsea", "Park", "The Shell", "The Hampshire", "Prince", "Paddington", "Magic", "Fine", "Little", "Trinity"],
