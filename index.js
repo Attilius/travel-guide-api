@@ -230,9 +230,9 @@ const cities = [
             return `${countryCode} ${cityCode}${result}`;
         },
         getRandomAddress: () => {
-            const typeOfPlaces = ["Ave","Rd.", "St.", "Way"];
+            const typeOfPlaces = ["Ave", "Rd.", "St.", "Way"];
             const namesOfStreet = ["King Edward's", "Churchill", "Wightman", "Suffolk", "Wellington", "Warwick", "Anne Boleyn", "Kingsbury", "Stamford", "Robinson", "Stonefield", "Richmond", "Victoria"];
-            const postCode = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            const postCode = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
             const firstIndex = Math.floor(Math.random() * postCode.length);
             const secondIndex = Math.floor(Math.random() * postCode.length);
             const thirdIndex = Math.floor(Math.random() * postCode.length);
@@ -778,54 +778,54 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         restaurants: []
     }
 
-        axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
-            .then((response) => {
-                const html = response.data;
-                const $ = cheerio.load(html);
+    axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
+        .then((response) => {
+            const html = response.data;
+            const $ = cheerio.load(html);
 
-                $('.YVj9w', html).each(function () {
-                    const image = $(this).attr('src');
-                    const tel = getRandomPhoneNumber(countryCode, cityCode);
-                    const address = getRandomAddress();
-                    const label = service;
+            $('.YVj9w', html).each(function () {
+                const image = $(this).attr('src');
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+                const label = service;
 
-                    if (service === "hotel") {
-                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
-                    } else {
-                        fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
-                    }
-                });
-
-                if (service === "attraction") {
-                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                if (service === "hotel") {
+                    fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+                } else {
+                    fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                 }
+            });
 
-                axios.get('https://www.randomtextgenerator.com/')
-                    .then((response) => {
-                        const html = response.data;
-                        const $ = cheerio.load(html);
+            if (service === "attraction") {
+                fillAttractionsArray(cities, travelGuide.attractions, cityName);
+            }
 
-                        switch (service) {
-                            case "attraction":
-                                res.json(getRandomText(travelGuide.attractions, html, $));
-                                break;
+            axios.get('https://www.randomtextgenerator.com/')
+                .then((response) => {
+                    const html = response.data;
+                    const $ = cheerio.load(html);
 
-                            case "hotel":
-                                res.json(getRandomText(travelGuide.hotels, html, $));
-                                break;
+                    switch (service) {
+                        case "attraction":
+                            res.json(getRandomText(travelGuide.attractions, html, $));
+                            break;
 
-                            case "restaurant":
-                                res.json(getRandomText(travelGuide.restaurants, html, $));
-                                break;
+                        case "hotel":
+                            res.json(getRandomText(travelGuide.hotels, html, $));
+                            break;
 
-                            default:
-                                res.json(`Error: /${service} Request is not exist!`);
-                                break;
-                        }
+                        case "restaurant":
+                            res.json(getRandomText(travelGuide.restaurants, html, $));
+                            break;
 
-                    }).catch(err => console.log(err));
+                        default:
+                            res.json(`Error: /${service} Request is not exist!`);
+                            break;
+                    }
 
-            }).catch(err => console.log(err));
+                }).catch(err => console.log(err));
+
+        }).catch(err => console.log(err));
 });
 
 app.listen(PORT, () => {
