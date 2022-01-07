@@ -130,7 +130,7 @@ const cities = [
         name: "London",
         country: "United Kingdom",
         country_code: "+44",
-        city_code: "(20)",
+        city_code: "20",
         attractions: [
             {
                 name: "Tower Bridge",
@@ -210,13 +210,12 @@ const cities = [
             }
         ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
-            const citycode = cityCode[Math.floor(Math.random() * 2)];
             let counter = 0;
             const numbers = [];
             let result = "";
 
-            while (counter < 9) {
-                if (numbers.length === 3 || numbers.length === 6) {
+            while (counter < 10) {
+                if (numbers.length === 1 || numbers.length === 5) {
                     numbers.push(" ");
                 } else {
                     numbers.push(Math.floor(Math.random() * 10).toString());
@@ -228,7 +227,7 @@ const cities = [
                 result += number;
             });
 
-            return `${countryCode} ${citycode} ${result}`;
+            return `${countryCode} ${cityCode}${result}`;
         },
         getRandomAddress: () => {
             const typeOfPlaces = ["Biv.", "Cd.", "Sk."];
