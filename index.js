@@ -931,6 +931,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
     const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
     const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
+    const hotelImages = cities.filter(city => city.name == cityName)[0].hotelImages;
     const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
     const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
     const travelGuide = {
