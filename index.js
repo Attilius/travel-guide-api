@@ -862,7 +862,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
     links.forEach(link => {
         axios.get(link)
             .then(() => {
-                
+
                 if (link.includes("hotel")) {
                     const label = "hotel";
                     let image = "";
