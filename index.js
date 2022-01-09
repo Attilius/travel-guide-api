@@ -945,10 +945,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
-
-
-
-                
                 const label = service;
 
                 if (service === "hotel") {
