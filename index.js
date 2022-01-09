@@ -947,7 +947,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             const $ = cheerio.load(html);
 
 
-                const image = $(this).attr('src');
+
                 const tel = getRandomPhoneNumber(countryCode, cityCode);
                 const address = getRandomAddress();
                 const label = service;
