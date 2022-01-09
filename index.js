@@ -954,10 +954,15 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const address = getRandomAddress();
                     fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                 }
-
             } 
+
             if (service === "restaurant") {
-                fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+                for (let i = 0; i < restaurantImages.length; i++) {
+                    const image = restaurantImages[i];
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
+                    fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+                }
             }
 
 
