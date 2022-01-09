@@ -955,7 +955,8 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                 }
 
-            } else {
+            } 
+            if (service === "restaurant") {
                 fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
             }
 
