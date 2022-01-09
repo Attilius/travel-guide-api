@@ -948,12 +948,17 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
 
 
 
-                const tel = getRandomPhoneNumber(countryCode, cityCode);
-                const address = getRandomAddress();
+                
                 const label = service;
 
                 if (service === "hotel") {
-                    fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+                    for (let i = 0; i < hotelImages.length; i++) {
+                        const image = hotelImages[i];
+                        const tel = getRandomPhoneNumber(countryCode, cityCode);
+                        const address = getRandomAddress();
+                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+                    }
+                    
                 } else {
                     fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                 }
