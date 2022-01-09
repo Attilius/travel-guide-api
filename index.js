@@ -945,19 +945,19 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         .then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
-                const label = service;
+            const label = service;
 
-                if (service === "hotel") {
-                    for (let i = 0; i < hotelImages.length; i++) {
-                        const image = hotelImages[i];
-                        const tel = getRandomPhoneNumber(countryCode, cityCode);
-                        const address = getRandomAddress();
-                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
-                    }
-                    
-                } else {
-                    fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+            if (service === "hotel") {
+                for (let i = 0; i < hotelImages.length; i++) {
+                    const image = hotelImages[i];
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
+                    fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                 }
+
+            } else {
+                fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+            }
 
 
             if (service === "attraction") {
