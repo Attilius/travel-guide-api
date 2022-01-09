@@ -954,7 +954,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const address = getRandomAddress();
                     fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                 }
-            } 
+            }
 
             if (service === "restaurant") {
                 for (let i = 0; i < restaurantImages.length; i++) {
@@ -964,7 +964,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                 }
             }
-
 
             if (service === "attraction") {
                 fillAttractionsArray(cities, travelGuide.attractions, cityName);
