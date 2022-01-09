@@ -2,7 +2,6 @@ const PORT = process.env.PORT || 3333;
 const express = require('express');
 const cheerio = require('cheerio');
 const axios = require('axios');
-const { response } = require('express');
 
 const app = express();
 
@@ -640,7 +639,7 @@ const cities = [
                 fourth: ["Hotel"]
             }
         ],
-        restaurantsImages: [
+        restaurantImages: [
             "https://images.unsplash.com/photo-1602833334025-5019f046b8f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
             "https://images.unsplash.com/photo-1559327334-6e37e626de2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
             "https://images.unsplash.com/photo-1580654842920-37b786f32bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -845,7 +844,9 @@ app.get('/addresses/all/:cityName', async (req, res) => {
     const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
     const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
     const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
+    const hotelImages = cities.filter(city => city.name == cityName)[0].hotelImages;
     const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
+    const restaurantImages = cities.filter(city => city.name == cityName)[0].restaurantImages;
     const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
     const travelGuide = {
         attractions: [],
@@ -860,25 +861,29 @@ app.get('/addresses/all/:cityName', async (req, res) => {
 
     links.forEach(link => {
         axios.get(link)
-            .then((response) => {
-                const html = response.data;
-                const $ = cheerio.load(html);
-
-                $('.YVj9w', html).each(function () {
-                    const image = $(this).attr('src');
-                    const tel = getRandomPhoneNumber(countryCode, cityCode);
-                    const address = getRandomAddress();
-
-                    if (link.includes("hotel")) {
-                        const label = "hotel";
+            .then(() => {
+                
+                if (link.includes("hotel")) {
+                    const label = "hotel";
+                    let image = "";
+                    for (let i = 0; i < hotelImages.length; i++) {
+                        const tel = getRandomPhoneNumber(countryCode, cityCode);
+                        const address = getRandomAddress();
+                        image = hotelImages[i];
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
-                    } else {
-                        const label = "restaurant";
+                    }
+
+                } else if (link.includes("restaurant")) {
+                    const label = "restaurant";
+                    let image = "";
+                    for (let i = 0; i < restaurantImages.length; i++) {
+                        const tel = getRandomPhoneNumber(countryCode, cityCode);
+                        const address = getRandomAddress();
+                        image = restaurantImages[i];
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
-                });
 
-                if (link.includes("attraction")) {
+                } else {
                     fillAttractionsArray(cities, travelGuide.attractions, cityName);
                 }
 
