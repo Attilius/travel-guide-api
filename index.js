@@ -946,7 +946,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             const html = response.data;
             const $ = cheerio.load(html);
 
-            $('.YVj9w', html).each(function () {
+
                 const image = $(this).attr('src');
                 const tel = getRandomPhoneNumber(countryCode, cityCode);
                 const address = getRandomAddress();
@@ -957,7 +957,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                 } else {
                     fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                 }
-            });
+
 
             if (service === "attraction") {
                 fillAttractionsArray(cities, travelGuide.attractions, cityName);
