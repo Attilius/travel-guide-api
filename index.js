@@ -902,12 +902,12 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                                 counter++;
                             }
 
-                            for (let i = 0; i < travelGuide.hotels.length; i++) {
-                                travelGuide.hotels[i].description = texts[i];
-                            }
-
                             for (let i = 0; i < travelGuide.attractions.length; i++) {
                                 travelGuide.attractions[i].description = texts[i];
+                            }
+
+                            for (let i = 0; i < travelGuide.hotels.length; i++) {
+                                travelGuide.hotels[i].description = texts[i];
                             }
 
                             for (let i = 0; i < travelGuide.restaurants.length; i++) {
