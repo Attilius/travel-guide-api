@@ -299,7 +299,7 @@ const cities = [
         },
         getRandomAddress: () => {
             const typeOfPlaces = ["Ave", "Rd.", "St.", "Way"];
-            const namesOfStreet = ["King Edward's", "Churchill", "Wightman", "Suffolk", "Wellington", "Warwick", "Anne Boleyn", "Kingsbury", "Stamford", "Robinson", "Stonefield", "Richmond", "Victoria"];
+            const namesOfStreet = ["King Edward's", "Churchill", "Wightman", "Suffolk", "Wellington", "Warwick", "Anne Boleyn", "Kingsbury", "Stamford", "Robinson", "Stonefield", "Richmond", "Victoria", "Baker"];
             const postCode = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
             const firstIndex = Math.floor(Math.random() * postCode.length);
             const secondIndex = Math.floor(Math.random() * postCode.length);
