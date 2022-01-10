@@ -243,7 +243,7 @@ const cities = [
         ],
         hotelNames: [
             {
-                first: ["Hotel", "The Royal", "Chelsea", "Millenium", "Intercontinental", "Tower", "Marlin", "The Prince", "Hilton", "Angel", "Wellington", "Rosewood", "Victoria"],
+                first: ["Hotel", "The Royal", "Chelsea", "Millenium", "Intercontinental", "Tower", "Marlin", "The Prince", "Hilton", "Angel", "Wellington", "Rosewood", "Victoria", "London"],
                 second: ["Hotel", "City", "London", "Grand", "Miracle", "Dremas", "Garden", "Hall", "Plaza"],
                 third: ["Hotel", "City", "London", "Grand", "Miracle", "Waldorf"],
                 fourth: ["Hotel"]
