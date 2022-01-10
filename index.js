@@ -898,7 +898,6 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                             while (counter < travelGuide.hotels.length || counter < travelGuide.attractions.length || counter < travelGuide.restaurants.length) {
                                 const text = $(this).text().trim();
                                 texts.push(text);
-
                                 counter++;
                             }
 
