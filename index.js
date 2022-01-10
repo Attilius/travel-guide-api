@@ -272,7 +272,7 @@ const cities = [
         restaurantNames: [
             {
                 first: ["London", "Taste", "Chelsea", "Park", "The Shell", "The Hampshire", "Prince", "Paddington", "Magic", "Fine", "Little", "Trinity", "Royal"],
-                second: ["Cafe", "Bistro", "Steakhouse", "Kitchen", "Palace", "Terrace", "Foods"],
+                second: ["Cafe", "Bistro", "Steakhouse", "Kitchen", "Palace", "Terrace", "Foods", "Inn"],
                 third: ["Restaurant", "Inn"],
                 fourth: ["Restaurant"]
             }
