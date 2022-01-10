@@ -691,7 +691,7 @@ const cities = [
         },
         getRandomAddress: () => {
             const typeOfPlaces = ["Avenue", "Boulevard", "Rue"];
-            const namesOfStreet = ["de Richelieu", "de Villiers", "La Fayette", "de la Chapelle", "Voltaire", "d'Oran", "Championnet", "Belliard", "Lafontaine", "Godefroy", "Emile Zola", "Victor Hugo", "des Marronniers"];
+            const namesOfStreet = ["de Richelieu", "de Villiers", "La Fayette", "de la Chapelle", "Voltaire", "d'Oran", "Championnet", "Belliard", "Lafontaine", "Godefroy", "Emile Zola", "Victor Hugo", "des Marronniers", "Jules Verne"];
             const zipCode = "750" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
             const houseNumber = Math.floor(Math.random() * 222) + 1;
             const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
