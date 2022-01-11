@@ -546,79 +546,79 @@ const cities = [
         attractions: [
             {
                 name: "Eiffel Tower",
-                img: "https://unsplash.com/photos/QAwciFlS1g4"
+                img: "https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Assemblée Nationale - Palais Bourbon",
-                img: "https://unsplash.com/photos/-foXddRnxfc"
+                img: "https://images.unsplash.com/photo-1604595818635-a840f9028d56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Louvre Museum, Rue de Rivoli",
-                img: "https://unsplash.com/photos/8S_dUIYfVkI"
+                img: "https://images.unsplash.com/photo-1610985296734-4030cece6149?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             },
             {
                 name: "L'Arc de Triomphe de l'Etoile",
-                img: "https://unsplash.com/photos/hsgNoiFYgSk"
+                img: "https://images.unsplash.com/photo-1520078176967-f827b3a1a899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Place Vendôme",
-                img: "https://unsplash.com/photos/jxLd50GtR0c"
+                img: "https://images.unsplash.com/photo-1518556991616-b220cd5df12e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Champs-Élysées",
-                img: "https://unsplash.com/photos/unk8y_XYgto"
+                img: "https://images.unsplash.com/photo-1504973522169-4705c9741e0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
             },
             {
                 name: "Tuileries Garden",
-                img: "https://unsplash.com/photos/6xJ9GUbbFEo"
+                img: "https://images.unsplash.com/photo-1500760258410-1a59fcd493c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "L'Arc de Triomphe de l'Etoile",
-                img: "https://unsplash.com/photos/milUxSbp4_A"
+                img: "https://images.unsplash.com/photo-1507666664345-c49223375e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
             },
             {
                 name: "Rue de Cremieux",
-                img: "https://unsplash.com/photos/I9RJT5tOXyM"
+                img: "https://images.unsplash.com/photo-1557592923-992b3dc4497d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Saint Etienne du Mont",
-                img: "https://unsplash.com/photos/_ptuPpue6E4"
+                img: "https://images.unsplash.com/photo-1565201482013-ca4becd61ec4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Fontaine des Mers, Place de la Concorde",
-                img: "https://unsplash.com/photos/nOazvDB3t1M"
+                img: "https://images.unsplash.com/photo-1572112553549-4151f756bebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             },
             {
                 name: "Jardin des Tuileries",
-                img: "https://unsplash.com/photos/NIGy5J-pQJs"
+                img: "https://images.unsplash.com/photo-1564227589927-2a13874d0a92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Notre Dame de Paris",
-                img: "https://unsplash.com/photos/qv9DvC2hh44"
+                img: "https://images.unsplash.com/photo-1555425748-f780612e5634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Route du Moulin Rouge",
-                img: "https://unsplash.com/photos/rdYzi6d7bLE"
+                img: "https://images.unsplash.com/photo-1580164109780-d3925e57abc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Versailles",
-                img: "https://unsplash.com/photos/CjpcbF_osZ0"
+                img: "https://images.unsplash.com/photo-1595841044697-86e94ea53c77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Cathédrale Notre-Dame de Paris",
-                img: "https://unsplash.com/photos/suRvdiwP9Pk"
+                img: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Saint-Germain-l'Auxerrois, Paris, Île-de-France",
-                img: "https://unsplash.com/photos/vxk-ghi-WZU"
+                img: "https://images.unsplash.com/photo-1504896287989-ff1fbde00199?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1333&q=80"
             },
             {
                 name: "Parc Monceau",
-                img: "https://unsplash.com/photos/ppSBbi47UoY"
+                img: "https://images.unsplash.com/photo-1605262964194-635866855c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1195&q=80"
             },
             {
                 name: "Sacre-Coeur",
-                img: "https://unsplash.com/photos/s7w0Zzc8SPk"
+                img: "https://images.unsplash.com/photo-1606944634516-5a86bd53fcaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
