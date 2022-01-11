@@ -322,79 +322,79 @@ const cities = [
         attractions: [
             {
                 name: "Brooklyn bridge tour",
-                img: "https://unsplash.com/photos/yg5pcRgyxtM"
+                img: "https://images.unsplash.com/photo-1587608741187-7697e7dd21d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Statue of Liberty National Monument",
-                img: "https://unsplash.com/photos/l0ySsmZ6ZG4"
+                img: "https://images.unsplash.com/photo-1590858148182-ad4bdfa495fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Grand Central Terminal",
-                img: "https://unsplash.com/photos/dF4qSZKJw_g"
+                img: "https://images.unsplash.com/photo-1567566371290-fe5e3f80691c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             },
             {
                 name: "St. Patrick's Cathedral",
-                img: "https://unsplash.com/photos/v8ppjpVTHVQ"
+                img: "https://images.unsplash.com/photo-1570670914894-0d7313e1dd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Sightseeing walk at night in Manhattan",
-                img: "https://unsplash.com/photos/raXnREhb-uI"
+                img: "https://images.unsplash.com/photo-1541270941907-3f7143c8c7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             },
             {
                 name: "Boat trip around the city",
-                img: "https://unsplash.com/photos/diV_Xm1G6Vo"
+                img: "https://images.unsplash.com/photo-1501194811830-ebb130b29b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1214&q=80"
             },
             {
                 name: "Times Square",
-                img: "https://unsplash.com/photos/TaCk3NspYe0"
+                img: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "The Flatiron Building",
-                img: "https://unsplash.com/photos/l20rwt8S4Fs"
+                img: "https://images.unsplash.com/photo-1567960197984-bce79cd5646e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "9/11 memorial museum",
-                img: "https://unsplash.com/photos/92Y9kKPoWB0"
+                img: "https://images.unsplash.com/photo-1512749182242-4e63d27f619f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Empire state building",
-                img: "https://unsplash.com/photos/bm5s7QmnfyI"
+                img: "https://images.unsplash.com/photo-1608094322829-62b9dcd9339e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "One World Trade Center",
-                img: "https://unsplash.com/photos/m54ULqW64PQ"
+                img: "https://images.unsplash.com/photo-1550640011-0e0b64e058a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
             },
             {
                 name: "City tour with an old taxi",
-                img: "https://unsplash.com/photos/hnckUVub7MY"
+                img: "https://images.unsplash.com/photo-1544389761-cd83f8d898bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Metropolitan Museum of Art, 5th Avenue",
-                img: "https://unsplash.com/photos/wRtN8AgpvLg"
+                img: "https://images.unsplash.com/photo-1576254232140-70c274d668c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Central Park North",
-                img: "https://unsplash.com/photos/vMLfRVkWItI"
+                img: "https://images.unsplash.com/photo-1631729779674-1f369e1116b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
             },
             {
                 name: "Rockefeller Center, Rockefeller Plaza",
-                img: "https://unsplash.com/photos/x4rPMOmQXoY"
+                img: "https://images.unsplash.com/photo-1615682143410-3b0a4aa1d62b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             },
             {
                 name: "Fifth Avenue",
-                img: "https://unsplash.com/photos/mw-8073ytdU"
+                img: "https://images.unsplash.com/photo-1617141303889-4c7494183e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "New York Public Library",
-                img: "https://unsplash.com/photos/nYToduYJH-c"
+                img: "https://images.unsplash.com/photo-1576164285450-6d26c5b1a2a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Broadway",
-                img: "https://unsplash.com/photos/2dqaasndUKE"
+                img: "https://images.unsplash.com/photo-1522101394434-b1cc92527c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
             },
             {
                 name: "Radio City Music Hall",
-                img: "https://unsplash.com/photos/nwdp4FopOYU"
+                img: "https://images.unsplash.com/photo-1542336423-0e6bee175b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
@@ -863,6 +863,10 @@ app.get('/addresses/all/:cityName', async (req, res) => {
         axios.get(link)
             .then(() => {
 
+                if (link.includes("attraction")) {
+                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                }
+
                 if (link.includes("hotel")) {
                     const label = "hotel";
                     let image = "";
@@ -873,7 +877,9 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
                     }
 
-                } else if (link.includes("restaurant")) {
+                }
+                
+                if (link.includes("restaurant")) {
                     const label = "restaurant";
                     let image = "";
                     for (let i = 0; i < restaurantImages.length; i++) {
@@ -883,8 +889,6 @@ app.get('/addresses/all/:cityName', async (req, res) => {
                         fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
                     }
 
-                } else {
-                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
                 }
 
                 axios.get('https://www.randomtextgenerator.com/')
