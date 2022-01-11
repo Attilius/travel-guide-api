@@ -18,63 +18,63 @@ const cities = [
         attractions: [
             {
                 name: "Ayasofya-i Kebîr Câmi-i Şerîfi",
-                img: "https://unsplash.com/photos/oibcDeiEYhY"
+                img: "https://images.unsplash.com/photo-1601163130717-627cde53c1de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Galata, Beyoğlu",
-                img: "https://unsplash.com/photos/IjLh_4OE5HY"
+                img: "https://images.unsplash.com/photo-1589656850652-8009782e060a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Sultan Ahmet Camii",
-                img: "https://unsplash.com/photos/3-QB-YKxTKY"
+                img: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1134&q=80"
             },
             {
                 name: "Music Instruments in the Grand Bazaar",
-                img: "https://unsplash.com/photos/4wlRmtvcic0"
+                img: "https://images.unsplash.com/photo-1560799262-3e0b884434b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Bosphorus Coast",
-                img: "https://unsplash.com/photos/A8ypl75BNmU"
+                img: "https://images.unsplash.com/photo-1558553866-6dbcb1d9233b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Dolmabahçe Sarayi",
-                img: "https://unsplash.com/photos/NSwyO3jcbrA"
+                img: "https://images.unsplash.com/photo-1556994526-7408107943e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Kadiköy, Istanbul, Turkey",
-                img: "https://unsplash.com/photos/oDGtMHERzeo"
+                img: "https://images.unsplash.com/photo-1559389864-340ac6773263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Old Bazaar, Istanbul, Turkey",
-                img: "https://unsplash.com/photos/fGxXDFvwsAw"
+                img: "https://images.unsplash.com/photo-1526586860017-748c7c448ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "The bridge of Istanbul connecting Asia and Europe.",
-                img: "https://unsplash.com/photos/reo4JMc4J0c"
+                img: "https://images.unsplash.com/photo-1576357079315-cf0d004de035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Scooter tour of Istanbul",
-                img: "https://unsplash.com/photos/ibWnBYTfdSg"
+                img: "https://images.unsplash.com/photo-1551040019-b3c378c11269?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Balat, Fatih",
-                img: "https://unsplash.com/photos/dAdp0IT0bZE"
+                img: "https://images.unsplash.com/photo-1617485402653-671b8ec105aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=823&q=80"
             },
             {
                 name: "Caddebostan Sahili",
-                img: "https://unsplash.com/photos/GE-SjTeG6Ig"
+                img: "https://images.unsplash.com/photo-1565035443508-9231522a03ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80"
             },
             {
                 name: "Carpet Shop, Istanbul, Turkey",
-                img: "https://unsplash.com/photos/1aURBvbvpQQ"
+                img: "https://images.unsplash.com/photo-1558105319-e8d93b893416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
             },
             {
                 name: "Cankurtaran, Istanbul Archaeological Museums",
-                img: "https://unsplash.com/photos/toVnNWNUUlA"
+                img: "https://images.unsplash.com/photo-1629820092061-bd05186cb8f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Beautiful sunset in Istanbul.",
-                img: "https://unsplash.com/photos/lCA-KQz53m0"
+                img: "https://images.unsplash.com/photo-1582631313764-62141d98b4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
