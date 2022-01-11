@@ -934,9 +934,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         restaurants: []
     }
 
-
-
-
     if (service === "all") {
         for (let i = 0; i < hotelImages.length; i++) {
             const label = "hotel";
@@ -945,6 +942,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             const address = getRandomAddress();
             fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
         }
+
         for (let i = 0; i < restaurantImages.length; i++) {
             const label = "restaurant";
             const image = restaurantImages[i];
@@ -952,6 +950,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             const address = getRandomAddress();
             fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
         }
+
         fillAttractionsArray(cities, travelGuide.attractions, cityName);
 
     }
@@ -992,6 +991,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     getRandomText(travelGuide.restaurants, html, $);
                     res.json(travelGuide);
                     break;
+                    
                 case "attraction":
                     res.json(getRandomText(travelGuide.attractions, html, $));
                     break;
@@ -1010,8 +1010,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             }
 
         }).catch(err => console.log(err));
-
-
 });
 
 app.listen(PORT, () => {
