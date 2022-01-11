@@ -827,7 +827,7 @@ app.get('/', (req, res) => {
 });
 
 // Request all addresses of city
-
+/*
 app.get('/addresses/all/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
     const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
@@ -913,7 +913,7 @@ app.get('/addresses/all/:cityName', async (req, res) => {
 
             }).catch(err => console.log(err));
     });
-});
+});*/
 
 //Request of hotels or restaurants or attractions
 
@@ -934,13 +934,30 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         restaurants: []
     }
 
-    axios.get(`https://unsplash.com/s/photos/${service}-${cityName}`)
-        .then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
-            const label = service;
+ 
+            
+
+            if (service === "all") {
+                for (let i = 0; i < hotelImages.length; i++) {
+                    const label = "hotel";
+                    const image = hotelImages[i];
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
+                    fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+                }
+                for (let i = 0; i < restaurantImages.length; i++) {
+                    const label = "restaurant";
+                    const image = restaurantImages[i];
+                    const tel = getRandomPhoneNumber(countryCode, cityCode);
+                    const address = getRandomAddress();
+                    fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+                }
+                fillAttractionsArray(cities, travelGuide.attractions, cityName);
+                
+            }
 
             if (service === "hotel") {
+                const label = service;
                 for (let i = 0; i < hotelImages.length; i++) {
                     const image = hotelImages[i];
                     const tel = getRandomPhoneNumber(countryCode, cityCode);
@@ -950,6 +967,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
             }
 
             if (service === "restaurant") {
+                const label = service;
                 for (let i = 0; i < restaurantImages.length; i++) {
                     const image = restaurantImages[i];
                     const tel = getRandomPhoneNumber(countryCode, cityCode);
@@ -968,6 +986,12 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     const $ = cheerio.load(html);
 
                     switch (service) {
+                        case "all":
+                            getRandomText(travelGuide.attractions, html, $);
+                            getRandomText(travelGuide.hotels, html, $);
+                            getRandomText(travelGuide.restaurants, html, $);
+                            res.json(travelGuide);
+                            break;
                         case "attraction":
                             res.json(getRandomText(travelGuide.attractions, html, $));
                             break;
@@ -987,7 +1011,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
 
                 }).catch(err => console.log(err));
 
-        }).catch(err => console.log(err));
+
 });
 
 app.listen(PORT, () => {
