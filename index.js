@@ -813,6 +813,13 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
         const name = attractions[i].name;
         const image = attractions[i].img;
 
+        responseArray.push({
+                id,
+                label,
+                name,
+                image
+        });
+
         axios.get(attractions[i].img).then((response) => {
             const html = response.data;
             const $ = cheerio.load(html);
@@ -821,12 +828,7 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
                 image = $(this).attr('src');
             });
 
-            responseArray.push({
-                id,
-                label,
-                name,
-                image
-            });
+            
 
         }).catch(err => console.log(err));
     }
