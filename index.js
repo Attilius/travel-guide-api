@@ -826,95 +826,6 @@ app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
 
-// Request all addresses of city
-/*
-app.get('/addresses/all/:cityName', async (req, res) => {
-    const cityName = req.params.cityName;
-    const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
-    const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
-    const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
-    const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
-    const hotelImages = cities.filter(city => city.name == cityName)[0].hotelImages;
-    const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
-    const restaurantImages = cities.filter(city => city.name == cityName)[0].restaurantImages;
-    const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
-    const travelGuide = {
-        attractions: [],
-        hotels: [],
-        restaurants: []
-    }
-    const links = [
-        `https://unsplash.com/s/photos/attraction-${cityName}`,
-        `https://unsplash.com/s/photos/hotel-${cityName}`,
-        `https://unsplash.com/s/photos/restaurant-${cityName}`
-    ];
-
-    links.forEach(link => {
-        axios.get(link)
-            .then(() => {
-
-                if (link.includes("attraction")) {
-                    fillAttractionsArray(cities, travelGuide.attractions, cityName);
-                }
-
-                if (link.includes("hotel")) {
-                    const label = "hotel";
-                    let image = "";
-                    for (let i = 0; i < hotelImages.length; i++) {
-                        const tel = getRandomPhoneNumber(countryCode, cityCode);
-                        const address = getRandomAddress();
-                        image = hotelImages[i];
-                        fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
-                    }
-
-                }
-                
-                if (link.includes("restaurant")) {
-                    const label = "restaurant";
-                    let image = "";
-                    for (let i = 0; i < restaurantImages.length; i++) {
-                        const tel = getRandomPhoneNumber(countryCode, cityCode);
-                        const address = getRandomAddress();
-                        image = restaurantImages[i];
-                        fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
-                    }
-
-                }
-
-                axios.get('https://www.randomtextgenerator.com/')
-                    .then((response) => {
-                        const html = response.data;
-                        const $ = cheerio.load(html);
-                        const texts = [];
-                        let counter = 0;
-
-                        $('#randomtext_box', html).each(function () {
-                            while (counter < travelGuide.hotels.length || counter < travelGuide.attractions.length || counter < travelGuide.restaurants.length) {
-                                const text = $(this).text().trim();
-                                texts.push(text);
-                                counter++;
-                            }
-
-                            for (let i = 0; i < travelGuide.attractions.length; i++) {
-                                travelGuide.attractions[i].description = texts[i];
-                            }
-
-                            for (let i = 0; i < travelGuide.hotels.length; i++) {
-                                travelGuide.hotels[i].description = texts[i];
-                            }
-
-                            for (let i = 0; i < travelGuide.restaurants.length; i++) {
-                                travelGuide.restaurants[i].description = texts[i];
-                            }
-                        });
-
-                        res.json(travelGuide);
-                    }).catch(err => console.log(err));
-
-            }).catch(err => console.log(err));
-    });
-});*/
-
 //Request of hotels or restaurants or attractions
 
 app.get('/addresses/:service/:cityName', async (req, res) => {
@@ -991,7 +902,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     getRandomText(travelGuide.restaurants, html, $);
                     res.json(travelGuide);
                     break;
-                    
+
                 case "attraction":
                     res.json(getRandomText(travelGuide.attractions, html, $));
                     break;
