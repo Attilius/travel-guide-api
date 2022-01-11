@@ -826,7 +826,7 @@ app.get('/', (req, res) => {
     res.json("Welcome to my Travel Guid API");
 });
 
-//Request of hotels or restaurants or attractions
+//Request of hotels or restaurants or attractions or all services
 
 app.get('/addresses/:service/:cityName', async (req, res) => {
     const cityName = req.params.cityName;
