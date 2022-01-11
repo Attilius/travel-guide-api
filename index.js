@@ -811,7 +811,7 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
         const id = i + 1;
         const label = "attraction";
         const name = attractions[i].name;
-        let image = ""
+        const image = attractions[i].img;
 
         axios.get(attractions[i].img).then((response) => {
             const html = response.data;
