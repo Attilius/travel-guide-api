@@ -168,63 +168,63 @@ const cities = [
         attractions: [
             {
                 name: "Tower Bridge",
-                img: "https://unsplash.com/photos/Zn_TEtx7Tqg"
+                img: "https://images.unsplash.com/photo-1592345279419-959d784e8aad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Parliament and Big Ben",
-                img: "https://unsplash.com/photos/iXqTqC-f6jI"
+                img: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Covent Garden",
-                img: "https://unsplash.com/photos/jCHWT477xB4"
+                img: "https://images.unsplash.com/photo-1510313407586-23591ad61500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Landscape of London",
-                img: "https://unsplash.com/photos/D68vlyckZhs"
+                img: "https://images.unsplash.com/photo-1562767332-ce0b1e2426bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "The London Eye",
-                img: "https://unsplash.com/photos/8Qqq7mlO1Vo"
+                img: "https://images.unsplash.com/photo-1587659901518-7020d4413085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
                 name: "Temperate House at Kew Gardens",
-                img: "https://unsplash.com/photos/K7TOE1L8Q2g"
+                img: "https://images.unsplash.com/photo-1585416847683-64c505faf145?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Buckingham Palace",
-                img: "https://unsplash.com/photos/0ji5tjZQ2l4"
+                img: "https://images.unsplash.com/photo-1554279652-51eee9372f32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             },
             {
                 name: "Natural History Museum London",
-                img: "https://unsplash.com/photos/iqeG5xA96M4"
+                img: "https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80"
             },
             {
                 name: "Millennium Bridge",
-                img: "https://unsplash.com/photos/LDJcJAm5syA"
+                img: "https://images.unsplash.com/photo-1441960114565-066d7a7b544b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Westminster Abbey",
-                img: "https://unsplash.com/photos/_bp_DfkaAJU"
+                img: "https://images.unsplash.com/photo-1561536537-3ef229d58c22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Sunset in London",
-                img: "https://unsplash.com/photos/VbUO94i6BU4"
+                img: "https://images.unsplash.com/photo-1505760236854-1d4519a11982?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Greenwich",
-                img: "https://unsplash.com/photos/Nhlc0L--zYA"
+                img: "https://images.unsplash.com/photo-1623868487630-6f30667f5229?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
             },
             {
                 name: "St. Paul's Cathedral",
-                img: "https://unsplash.com/photos/s-EkKaf208w"
+                img: "https://images.unsplash.com/photo-1541347991812-d791e8954560?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1134&q=80"
             },
             {
                 name: "London Taxi",
-                img: "https://unsplash.com/photos/rBE0dKPGt2k"
+                img: "https://images.unsplash.com/photo-1550431528-122aefbbd2a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1231&q=80"
             },
             {
                 name: "Spitalfields market in London",
-                img: "https://unsplash.com/photos/IVCI5Ed_GA0"
+                img: "https://images.unsplash.com/photo-1584347292382-e96007ec9ea1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
