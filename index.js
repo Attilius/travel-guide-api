@@ -819,18 +819,6 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
                 name,
                 image
         });
-
-        axios.get(attractions[i].img).then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
-
-            $('.YVj9w', html).each(function () {
-                image = $(this).attr('src');
-            });
-
-            
-
-        }).catch(err => console.log(err));
     }
 }
 
