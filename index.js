@@ -839,14 +839,14 @@ const getId = () => {
         "","S", "s", "T", 
         "","t", "U", "u", 
         "","V", "v", "W", 
-        "w", "X", "x", 
-        "Y", "y", "Z", 
-        "z"];
+        "","w", "X", "x", 
+        "","Y", "y", "Z", 
+        "","z", "@", "&"];
     let id = "";
 
     for (let i = 0; i < 12; i++) {
         const index = Math.floor(Math.random() * letters.length);
-        if (index % 3 === 0) {
+        if (index % 4 === 0) {
             id += Math.floor(Math.random() * 10);
         } else {
             id += letters[index];
