@@ -863,7 +863,6 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         }
 
         fillAttractionsArray(cities, travelGuide.attractions, cityName);
-
     }
 
     if (service === "hotel") {
