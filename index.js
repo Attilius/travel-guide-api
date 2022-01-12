@@ -770,7 +770,7 @@ const getRandomName = (paramArray) => {
 
 const fillResponseArray = (paramArray, paramName, label, image, tel, address) => {
     const name = getRandomName(paramName);
-    const id = paramArray.length + 1;
+    const id = getId();
     const web = `https://www.${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
     const email = `${label}@${name.replaceAll(/'/g, " ").split(" ").join('').toLowerCase()}.com`;
     if (image) {
@@ -808,7 +808,7 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
     const attractions = databaseArray.filter(city => city.name == cityName)[0].attractions;
 
     for (let i = 0; i < attractions.length; i++) {
-        const id = i + 1;
+        const id = getId();
         const label = "attraction";
         const name = attractions[i].name;
         const image = attractions[i].img;
@@ -820,6 +820,22 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
             image
         });
     }
+}
+
+const getId = () => {
+    const letters = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z"];
+    let id = "";
+
+    for (let i = 0; i < 12; i++) {
+        const index = Math.floor(Math.random() * letters.length);
+        if (index % 3 === 0) {
+            id += Math.floor(Math.random() * 10);
+        } else {
+            id += letters[index];
+        }
+    }
+
+    return id.trim();
 }
 
 app.get('/', (req, res) => {
