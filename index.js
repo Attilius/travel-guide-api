@@ -824,7 +824,7 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
 
 const getId = () => {
     const letters = [
-        "A", "a", "B", 
+        "","A", "a", "B", 
         "b", "C", "c", 
         "D", "d", "E", 
         "e", "F", "f", 
