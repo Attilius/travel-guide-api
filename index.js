@@ -841,16 +841,14 @@ const getId = () => {
         "","V", "v", "W", 
         "","w", "X", "x", 
         "","Y", "y", "Z", 
-        "","z", "@", "&"];
+        "","z", "@", "&"
+    ];
     let id = "";
 
     for (let i = 0; i < 12; i++) {
         const index = Math.floor(Math.random() * letters.length);
-        if (index % 4 === 0) {
-            id += Math.floor(Math.random() * 10);
-        } else {
-            id += letters[index];
-        }
+        if (index % 4 === 0) id += Math.floor(Math.random() * 10);
+        else id += letters[index];
     }
 
     return id.trim();
