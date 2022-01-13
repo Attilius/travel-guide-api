@@ -378,7 +378,7 @@ const cities = [
             },
             {
                 name: "Spitalfields market in London",
-                img: "https://images.unsplash.com/photo-1584347292382-e96007ec9ea1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                img: "https://images.unsplash.com/photo-1626677332862-6055ed53a549?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
