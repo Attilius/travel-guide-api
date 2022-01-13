@@ -377,7 +377,7 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1562987147-615e68d2e32e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             },
             {
-                name: "Spitalfields market in London",
+                name: "Carriage in the city",
                 img: "https://images.unsplash.com/photo-1626677332862-6055ed53a549?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
