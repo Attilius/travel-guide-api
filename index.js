@@ -315,6 +315,162 @@ const cities = [
 
     },
     {
+        name: "Montreal",
+        country: "Canada",
+        country_code: "+1",
+        city_code: ["438", "514"],
+        attractions: [
+            {
+                name: "Jacques-Cartier Bridge",
+                img: "https://images.unsplash.com/photo-1526669754135-c1babeb8c542?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+            },
+            {
+                name: "Old Port of Montreal",
+                img: "https://images.unsplash.com/photo-1532299039866-065669a2d5df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1276&q=80"
+            },
+            {
+                name: "Montreal Biosphere",
+                img: "https://images.unsplash.com/photo-1578494277722-4ebd3d3ab9b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+            },
+            {
+                name: "Basilique Notre Dame de Montréal",
+                img: "https://images.unsplash.com/photo-1461771465070-80531c6afc3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80"
+            },
+            {
+                name: "Le Plateau-Mont-Royal",
+                img: "https://images.unsplash.com/photo-1541789445041-eab5f7b1112d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+            },
+            {
+                name: "Sunrise in Montreal",
+                img: "https://images.unsplash.com/photo-1587127457386-1ab504456133?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "The Old Port of Montreal Ferris wheel.",
+                img: "https://images.unsplash.com/photo-1620064136919-62d3bb9b400f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Dorchester Square",
+                img: "https://images.unsplash.com/photo-1591612598236-a9942c2dc83c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Montreal Museum of Fine Arts",
+                img: "https://images.unsplash.com/photo-1635386491248-945d58b83d0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1257&q=80"
+            },
+            {
+                name: "Montréal Botanical Garden",
+                img: "https://images.unsplash.com/photo-1640477226039-3e0d76a13f2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Parc Angrignon",
+                img: "https://images.unsplash.com/photo-1572888656841-83cc7371f0f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Public Library",
+                img: "https://images.unsplash.com/photo-1536190966671-59537a3dea90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "St. Paul's Cathedral",
+                img: "https://images.unsplash.com/photo-1541347991812-d791e8954560?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1134&q=80"
+            },
+            {
+                name: "London Taxi",
+                img: "https://images.unsplash.com/photo-1550431528-122aefbbd2a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1231&q=80"
+            },
+            {
+                name: "Spitalfields market in London",
+                img: "https://images.unsplash.com/photo-1584347292382-e96007ec9ea1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.unsplash.com/photo-1549638441-b787d2e11f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1555108004-a9183c23169e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1522871465649-53a34924fdcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "https://images.pexels.com/photos/2869215/pexels-photo-2869215.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/6782574/pexels-photo-6782574.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3659683/pexels-photo-3659683.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2844474/pexels-photo-2844474.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3201758/pexels-photo-3201758.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/7545500/pexels-photo-7545500.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        ],
+        hotelNames: [
+            {
+                first: ["Hotel", "The Royal", "Le Méridien", "Millenium", "Mortagne", "Belverde", "Imperia", "Hilton", "Montreal"],
+                second: ["Hotel", "Le Méridien", "Montreal", "Grand", "Miracle", "Dremas", "Garden", "Hall", "Place", "Labelle", "Chateau", "Intercontinental"],
+                third: ["Hotel", "Centre", "Montreal", "Grand", "Quartier", "Marriott"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1494958732218-0c0990e683f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1220&q=80",
+            "https://images.unsplash.com/photo-1582143565907-6b8c074be35e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1525904971217-668a1229f701?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1626303551646-69dbd1ab24be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1530984662486-75aee21a673e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1185&q=80",
+            "https://images.unsplash.com/photo-1591712974917-a437dbb4d5eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+            "https://images.pexels.com/photos/3201921/pexels-photo-3201921.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.unsplash.com/photo-1626677385895-a37ef9c5e630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1595562421029-04bb49e93c60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.pexels.com/photos/5531035/pexels-photo-5531035.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/370984/pexels-photo-370984.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/776938/pexels-photo-776938.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        ],
+        restaurantNames: [
+            {
+                first: ["Montreal", "Taste", "Quebec", "Park", "Renoir", "Le Cartet", "Prince", "Paddington", "Magic", "Fine", "Little", "Le Mousso", "Royal", "Le Petit", "Delices"],
+                second: ["Cafe", "Bistro", "Steakhouse", "Kitchen", "Palace", "Terrasse", "Foods", "Inn", "Taverne"],
+                third: ["Restaurant", "Inn"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            const citycode = cityCode[Math.floor(Math.random() * 2)];
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 9) {
+                if (numbers.length === 3) {
+                    numbers.push("-");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode}-${citycode}-${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Ave", "Boul", "Rd.", "St."];
+            const namesOfStreet = ["Devon", "Sunset", "Strathcona", "Algonquin", "Kenilworth", "Deslauriers", "Lebeau", "Côte-de-Liesse", "Lethbridge", "Rockland", "Cornwall", "Côte-Vertu", "Jules Poitras", "Crépeau", "Laframboise"];
+            const postCode = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            const firstIndex = Math.floor(Math.random() * postCode.length);
+            const secondIndex = Math.floor(Math.random() * postCode.length);
+            const thirdIndex = Math.floor(Math.random() * postCode.length);
+            const fourthIndex = Math.floor(Math.random() * postCode.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+            const zipCode = `${postCode[firstIndex]}${Math.floor(Math.random() * 8) + 1}${postCode[secondIndex]} ${Math.floor(Math.random() * 8) + 1}${postCode[thirdIndex]}${postCode[fourthIndex]}`;
+            const houseNumber = Math.floor(Math.random() * 998) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+
+            return `${houseNumber} ${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]}, Montreal, Quebec, ${zipCode}, Canada`;
+        }
+
+    },
+    {
         name: "New-York",
         country: "United States Of America",
         country_code: "+1",
