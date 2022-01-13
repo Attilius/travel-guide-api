@@ -357,7 +357,7 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1635386491248-945d58b83d0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1257&q=80"
             },
             {
-                name: "Montréal Botanical Garden",
+                name: "Jardin botanique de Montréal",
                 img: "https://images.unsplash.com/photo-1640477226039-3e0d76a13f2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
