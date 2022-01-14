@@ -987,9 +987,9 @@ const cities = [
         restaurantNames: [
             {
                 first: ["Pizzeria", "Cesare", "Cafe", "La Tradizione", "Epicure", "La Table", "Bistrot", "Petite", "La Grande", "Le Chasseur", "Le Canard", "Paris"],
-                second: ["Restaurant", "Gourmandes", "Romana", "Alliance", "Fleur", "Ourse", "Magique", "Tulipes"],
-                third: ["Restaurant"],
-                fourth: ["Restaurant"]
+                second: ["Ristorante", "Gourmandes", "Romana", "Alliance", "Fleur", "Ourse", "Magique", "Tulipes"],
+                third: ["Ristorante"],
+                fourth: ["Ristorante"]
             }
         ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
