@@ -860,6 +860,169 @@ const cities = [
             return `${houseNumber} ${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]}, ${zipCode} Paris - France`;
         }
     },
+    {
+        name: "Rome",
+        country: "Italy",
+        country_code: "+39",
+        city_code: "06",
+        attractions: [
+            {
+                name: "Ponte Vittoria Emanuelle II",
+                img: "https://images.unsplash.com/photo-1518309542094-645272814997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Trevi Fountain",
+                img: "https://images.unsplash.com/photo-1529154036614-a60975f5c760?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+            },
+            {
+                name: "Colosseum in Rome",
+                img: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1096&q=80"
+            },
+            {
+                name: "Vatican City",
+                img: "https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+            },
+            {
+                name: "St. Peter's Basilica and Ponte Sant'Angelo",
+                img: "https://images.unsplash.com/photo-1629229537871-154c55f9cb14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Museo di Roma Architetto",
+                img: "https://images.unsplash.com/photo-1571141481336-b49088a2bf3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Piazza Venezia",
+                img: "https://images.unsplash.com/photo-1548585742-0fd962d98f62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Roman forum",
+                img: "https://images.unsplash.com/photo-1555508275-b5451b4c240a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Palazzo Doria Pamphilj",
+                img: "https://images.unsplash.com/photo-1579456409050-a17cf3856195?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Castel Sant`Angelo",
+                img: "https://images.unsplash.com/photo-1562066919-f42721760188?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Rome Altare della Patria",
+                img: "https://images.unsplash.com/photo-1433961050574-322241b350f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Scalinata di Trinità dei Monti",
+                img: "https://images.unsplash.com/photo-1543264106-2d5ac5087193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "The Pantheon in Rome",
+                img: "https://images.unsplash.com/photo-1605200723310-5df264c13e22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Chiostro del Bramante",
+                img: "https://images.unsplash.com/photo-1627379765769-35ad30c7796d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Sistine Chapel Ceiling",
+                img: "https://images.unsplash.com/photo-1576016770956-debb63d92058?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=80"
+            },
+            {
+                name: "San Nilo Abbey",
+                img: "https://images.unsplash.com/photo-1620237277725-ff02b4c3a36f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+            },
+            {
+                name: "Basilica di Santa Croce in Gerusalemme",
+                img: "https://images.unsplash.com/photo-1574538153391-71c701aa0555?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Chiesa del Sacro Cuore del Suffragio",
+                img: "https://images.unsplash.com/photo-1580839481564-9589f6cd1e46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+            },
+            {
+                name: "Piazza Navona",
+                img: "https://images.unsplash.com/photo-1587891770869-110104a6b5e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.unsplash.com/photo-1594741158704-5a784b8e59fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1543759922-f81ec58cf811?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+            "https://images.unsplash.com/photo-1571080891604-6529cd14a71a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1641495054009-ba69942349b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80",
+            "https://images.unsplash.com/photo-1543264106-2d5ac5087193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1571159534681-0f12b04ba81d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1618483474116-b338caf9798f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+            "https://images.unsplash.com/photo-1576920434129-3a7f00a8429b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1618483474126-4571febd432f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+        ],
+        hotelNames: [
+            {
+                first: ["Domus", "Hotel", "Maison", "Corso", "Casa"],
+                second: ["Giulia", "Palazzo", "Roma", "Domus", "Colosseo", "San Giovanni", "Principe", "Quirinale", "Lunetta", "Ottaviani"],
+                third: ["Maggiore", "Hotel", "Pirandello", "Palazzo", "Romoli", "Pietra"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1641924671908-43928ddba115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1588685582221-28183cab4f8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1596230003863-c7216ea8e07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1133&q=80",
+            "https://images.unsplash.com/photo-1507927822105-9a760e57a419?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1605200716925-7bc00504842f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1616362209401-0e51ad189ab3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1627379449673-4b64ed33ffc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1558447828-309b45e54554?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1607028850922-49844ad1abf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80",
+            "https://images.unsplash.com/photo-1641924672191-3527599c4bd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1641924671833-ab7c6c20f4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1615932736372-f3ce2c21db45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1601371339865-97612837fd8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1609949851943-ff5336d1129f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1380&q=80",
+            "https://images.unsplash.com/photo-1607375658859-39f31567ce13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1617562593428-9dfd3376a14e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1596826063192-380c2f9ec3dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            "https://images.unsplash.com/photo-1507927923899-e31ac1b6ff62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1534425582704-65e021820688?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        ],
+        restaurantNames: [
+            {
+                first: ["Pizzeria", "Les Collations", "Cafe", "La Grotte", "Epicure", "La Table", "Bistrot", "Petite", "La Grande", "Le Chasseur", "Le Canard", "Paris"],
+                second: ["Restaurant", "Gourmandes", "De Paris", "Alliance", "Fleur", "Ourse", "Magique", "Tulipes"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 11) {
+                if (numbers.length % 4 === 0 || numbers.length % 8 === 0) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode} ${result.trim()}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Piazza", "Via"];
+            const namesOfStreet = ["Cristoforo Colombo", "di Grotta Perfetta", "Andrea Mantegna", "Luigi Capucci", "Pellegrino Matteucci", "del Porto Fluviale", "Ettore Rolli", "Aurelio Saffi", "Oreste Regnoli", "Giacinto Carini", "Angelo Masina", "Garibaldi", "Giacomo Medici", "Luciano Manara"];
+            const zipCode = "001" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 222) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]} ${houseNumber}, ${zipCode} Roma, Italia`;
+        }
+    },
 ];
 
 //Functions
