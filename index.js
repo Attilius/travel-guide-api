@@ -986,7 +986,7 @@ const cities = [
         ],
         restaurantNames: [
             {
-                first: ["Pizzeria", "Les Collations", "Cafe", "La Grotte", "Epicure", "La Table", "Bistrot", "Petite", "La Grande", "Le Chasseur", "Le Canard", "Paris"],
+                first: ["Pizzeria", "Cesare", "Cafe", "La Grotte", "Epicure", "La Table", "Bistrot", "Petite", "La Grande", "Le Chasseur", "Le Canard", "Paris"],
                 second: ["Restaurant", "Gourmandes", "Romana", "Alliance", "Fleur", "Ourse", "Magique", "Tulipes"],
                 third: ["Restaurant"],
                 fourth: ["Restaurant"]
