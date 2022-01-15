@@ -1023,6 +1023,158 @@ const cities = [
             return `${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]} ${houseNumber}, ${zipCode} Roma, Italia`;
         }
     },
+    {
+        name: "Zurich",
+        country: "Switzerland",
+        country_code: "+41",
+        city_code: "44",
+        attractions: [
+            {
+                name: "Sechseläutenplatz - Zürich Opera House",
+                img: "https://images.unsplash.com/photo-1533153035980-17eb5c94558f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Lindenhof",
+                img: "https://images.pexels.com/photos/7899867/pexels-photo-7899867.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            },
+            {
+                name: "Walk in the fabulous city",
+                img: "https://www.utazastipp.hu/storage/article/zurich-orszag.png"
+            },
+            {
+                name: "Sunset in the city",
+                img: "https://images.pexels.com/photos/8585571/pexels-photo-8585571.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            },
+            {
+                name: "Grossmünster",
+                img: "https://www.hotelscombined.com/news/wp-content/uploads/sites/314/2017/02/image-1-GettyImages-1021372624-3-768x449.jpg"
+            },
+            {
+                name: "Water tour of the picturesque town",
+                img: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1106&q=80"
+            },
+            {
+                name: "Zürich Lake",
+                img: "https://images.unsplash.com/photo-1599082323832-2676eca28e86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            },
+            {
+                name: "Zurich HB Main Station, Bahnhofplatz",
+                img: "https://images.unsplash.com/photo-1585586813880-257f9b38d25d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Zurich Central",
+                img: "https://images.unsplash.com/photo-1558869584-c4b762c4b943?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Oberrieden",
+                img: "https://images.unsplash.com/photo-1551340971-d97098f4b103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80"
+            },
+            {
+                name: "Bahnhof Zürich Enge",
+                img: "https://images.unsplash.com/photo-1615980990642-a0c53141acd9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Zurich Zoo",
+                img: "https://images.unsplash.com/photo-1584706368162-73c7dab84d68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "The Fraumünster and the St. Peterskirche",
+                img: "https://images.unsplash.com/photo-1623481054648-191537ba3c3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "University of Zurich",
+                img: "https://images.unsplash.com/photo-1601840698412-cbecc8039e6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Veteran Cars",
+                img: "https://images.unsplash.com/photo-1566592174127-8f2110feb0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            },
+            {
+                name: "Münsterplatz",
+                img: "https://images.unsplash.com/photo-1566119241236-f69e721149ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            },
+            {
+                name: "Shop line",
+                img: "https://images.unsplash.com/photo-1560278652-d660200913e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.pexels.com/photos/6284232/pexels-photo-6284232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/5379219/pexels-photo-5379219.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3940733/pexels-photo-3940733.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/271739/pexels-photo-271739.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2029698/pexels-photo-2029698.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2952663/pexels-photo-2952663.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+        ],
+        hotelNames: [
+            {
+                first: ["Sterne", "Hotel", "Mercure", "Royal", "Krone"],
+                second: ["Altstadt", "Sorell", "Zürich", "Sterne", "Seefeld", "Stoller", "Swiss", "Marktgasse", "Plattenhof", "Helmhaus"],
+                third: ["Spirgarten", "Hotel", "Zürcherhof", "Sorell", "Wellenberg", "Landhaus"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1572097451629-e5c061b736fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1488992783499-418eb1f62d08?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1289&q=80",
+            "https://images.unsplash.com/photo-1560053608-13721e0d69e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1606066352252-93e4d325787b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1538334421852-687c439c92f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1569762848460-1e6301bdbea3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1622140739492-f82f386260b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+            "https://images.unsplash.com/photo-1554624219-4754a2ded336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1564759224907-65b945ff0e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1507914372368-b2b085b925a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1585644156285-d7f4665407a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1560278593-0785b4db4827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        ],
+        restaurantNames: [
+            {
+                first: ["Restaurant", "Pizzeria", "Köchlistube", "Café", "Le Chef", "Schwarzes", "Guten", "Bederhof", "Sternen", "La Penisola", "Weisses", "Zürich", "Rietberg"],
+                second: ["Restaurant", "Bernadette", "Zürich", "Végétale", "Linden", "Sonnenberg", "Glück", "Kreuz"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 10) {
+                if (numbers.length % 4 === 0 && numbers.length !== 8 || numbers.length % 7 === 0) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode} ${result.trim()}`;
+        },
+        getRandomAddress: () => {
+            const namesOfStreet = ["Badenerstrasse", "Rötelstrasse", "Fellenbergstrasse", "Schaffhauserstrasse", "Hofweisenstrasse", "Wasserwerkstrasse", "Limmattalstrasse", "Regensbergstrasse", "Dübendorfstrasse", "Winterthurerstrasse", "Leutschenbachstrasse", "Käshaldenstrasse", "Bärenbohlstrasse", "Rümlangerstrasse"];
+            const zipCode = "80" + Math.floor(Math.random() * 2).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 554) + 1;
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${namesOfStreet[indexOfName]} ${houseNumber}, ${zipCode} Zurich, Switzerland`;
+        }
+    },
 ];
 
 //Functions
