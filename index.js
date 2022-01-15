@@ -477,7 +477,7 @@ const cities = [
     {
         name: "Munich",
         country: "Germany",
-        country_code: "+1",
+        country_code: "+49",
         city_code: "(212)",
         attractions: [
             {
