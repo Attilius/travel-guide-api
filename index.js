@@ -619,9 +619,9 @@ const cities = [
             const numbers = [];
             let result = "";
 
-            while (counter < 8) {
-                if (numbers.length === 3) {
-                    numbers.push("-");
+            while (counter < 10) {
+                if (numbers.length % 4 === 0 && numbers.length !== 8 || numbers.length % 7 === 0) {
+                    numbers.push(" ");
                 } else {
                     numbers.push(Math.floor(Math.random() * 10).toString());
                 }
@@ -632,7 +632,7 @@ const cities = [
                 result += number;
             });
 
-            return `${countryCode} ${cityCode} ${result}`;
+            return `${countryCode}-${cityCode}-${result.trim()}`;
         },
         getRandomAddress: () => {
             const typeOfPlaces = ["Avenue", "Boulevard", "Street"];
