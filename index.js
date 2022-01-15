@@ -481,80 +481,56 @@ const cities = [
         city_code: "89",
         attractions: [
             {
-                name: "Brooklyn bridge tour",
-                img: "https://images.unsplash.com/photo-1587608741187-7697e7dd21d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Schleissheim",
+                img: "https://images.unsplash.com/photo-1561056731-62ffd605f586?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
             },
             {
-                name: "Statue of Liberty National Monument",
-                img: "https://images.unsplash.com/photo-1590858148182-ad4bdfa495fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Opernplatz",
+                img: "https://images.unsplash.com/photo-1617566041005-f820e8f553b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
             },
             {
-                name: "Grand Central Terminal",
-                img: "https://images.unsplash.com/photo-1567566371290-fe5e3f80691c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                name: "Englischer Garten",
+                img: "https://images.unsplash.com/photo-1588061728145-54ace02ab9cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "St. Patrick's Cathedral",
-                img: "https://images.unsplash.com/photo-1570670914894-0d7313e1dd88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "BMW Museum",
+                img: "https://images.unsplash.com/photo-1586163099117-33542fe96a69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Sightseeing walk at night in Manhattan",
-                img: "https://images.unsplash.com/photo-1541270941907-3f7143c8c7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                name: "Marienplatz",
+                img: "https://images.unsplash.com/photo-1586015078685-6462ea6d8ebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Boat trip around the city",
-                img: "https://images.unsplash.com/photo-1501194811830-ebb130b29b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1214&q=80"
+                name: "Horgarten - Court Garden - Diana Temple",
+                img: "https://images.unsplash.com/photo-1587988537442-f42b261e6df1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1182&q=80"
             },
             {
-                name: "Times Square",
-                img: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Olympiapark",
+                img: "https://images.unsplash.com/photo-1565985975283-61e060b5a781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "The Flatiron Building",
-                img: "https://images.unsplash.com/photo-1567960197984-bce79cd5646e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Bayerische Staatskanzlei",
+                img: "https://images.unsplash.com/photo-1583777349997-a9833b42fcaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
             },
             {
-                name: "9/11 memorial museum",
-                img: "https://images.unsplash.com/photo-1512749182242-4e63d27f619f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Nymphenburg Palace",
+                img: "https://images.unsplash.com/photo-1542445335-643f06b6e6a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
             },
             {
-                name: "Empire state building",
-                img: "https://images.unsplash.com/photo-1608094322829-62b9dcd9339e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Palace Münchner Residency",
+                img: "https://images.unsplash.com/photo-1543143519-b2ee4b77524e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
             },
             {
-                name: "One World Trade Center",
-                img: "https://images.unsplash.com/photo-1550640011-0e0b64e058a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
+                name: "Botanischer Garten München",
+                img: "https://images.unsplash.com/photo-1585213303783-2044a119f9e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1095&q=80"
             },
             {
-                name: "City tour with an old taxi",
-                img: "https://images.unsplash.com/photo-1544389761-cd83f8d898bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Park and trees in Munich",
+                img: "https://images.unsplash.com/photo-1585582449615-dae412dee542?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
             },
             {
-                name: "Metropolitan Museum of Art, 5th Avenue",
-                img: "https://images.unsplash.com/photo-1576254232140-70c274d668c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            },
-            {
-                name: "Central Park North",
-                img: "https://images.unsplash.com/photo-1631729779674-1f369e1116b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
-            },
-            {
-                name: "Rockefeller Center, Rockefeller Plaza",
-                img: "https://images.unsplash.com/photo-1615682143410-3b0a4aa1d62b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-            },
-            {
-                name: "Fifth Avenue",
-                img: "https://images.unsplash.com/photo-1617141303889-4c7494183e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            },
-            {
-                name: "New York Public Library",
-                img: "https://images.unsplash.com/photo-1576164285450-6d26c5b1a2a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-            },
-            {
-                name: "Broadway",
-                img: "https://images.unsplash.com/photo-1522101394434-b1cc92527c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-            },
-            {
-                name: "Radio City Music Hall",
-                img: "https://images.unsplash.com/photo-1542336423-0e6bee175b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Regierung von Oberbayern",
+                img: "https://images.unsplash.com/photo-1636826315439-acac01ffd85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
