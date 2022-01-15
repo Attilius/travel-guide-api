@@ -635,67 +635,12 @@ const cities = [
             return `${countryCode}-${cityCode}-${result.trim()}`;
         },
         getRandomAddress: () => {
-            const typeOfPlaces = ["Avenue", "Boulevard", "Street"];
-            const sides = ["East", "West"];
-            const zipCodesStart = ["10016", "10018", "10019", "10021", "10023"];
-            const namesOfBlvd = ["Madison", "Manhattan", "Lexington", "Riverside", "Malcolm"];
-            const zipCodesEnd = [];
-            const index = Math.floor(Math.random() * typeOfPlaces.length); // Set index for switch
-            const numberOfAvenue = Math.floor(Math.random() * 11) + 1;
-            const numberOfStreet = Math.floor(Math.random() * 189) + 1;
-            const houseNumber = Math.floor(Math.random() * 998) + 1;
-            let zipCodeEnd = "";
-            let address = "";
+            const namesOfStreet = ["Gabrielenstraße", "Dieselstraße", "Lothstraße", "Riesenfeldstraße", "Arnulfstraße", "Arabellastraße", "Bayerstraße", "Ungererstraße", "Wilhelmine-Reichard-Straße", "Baubergerstraße", "Wendl-Dietrich-Straße", "Vollmannstraße", "Effnerstraße", "Gotthardstraße"];
+            const zipCode = "D-8" + Math.floor(Math.random() * 2).toString() + Math.floor(Math.random() * 2).toString() + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 222) + 1;
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
 
-            while (zipCodesEnd.length < 4) {
-                if (!zipCodesEnd.length) {
-                    zipCodesEnd.push(Math.floor(Math.random() * 9) + 1).toString();
-                } else {
-                    zipCodesEnd.push(Math.floor(Math.random() * 10)).toString();
-                }
-            }
-
-            zipCodesEnd.forEach(code => {
-                zipCodeEnd += code;
-            });
-
-            // I'll check and adjust the end of serial number
-
-            const endOfNumbers = (number) => {
-                const numberStr = number.toString();
-
-                if (numberStr.slice(-1) === "1") {
-                    return number + "st"
-                } else if (numberStr.slice(-1) === "2") {
-                    return number + "nd"
-                } else if (numberStr.slice(-1) === "3") {
-                    return number + "rd"
-                } else {
-                    return number + "th"
-                }
-            }
-
-            // It choose and set the type of place and set return variable
-
-            switch (typeOfPlaces[index]) {
-                case "Avenue":
-                    address = `${houseNumber} ${endOfNumbers(numberOfAvenue)} Avenue, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break;
-
-                case "Boulevard":
-                    address = `${houseNumber} ${namesOfBlvd[Math.floor(Math.random() * 5)]} Boulevard, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break;
-
-                case "Street":
-                    address = `${houseNumber} ${sides[Math.floor(Math.random() * 2)]} ${endOfNumbers(numberOfStreet)} Street, New York City, NY ${zipCodesStart[Math.floor(Math.random() * 5)]}-${zipCodeEnd.trim()}`
-                    break;
-
-                default:
-                    break;
-            }
-
-            return address;
-
+            return `${namesOfStreet[indexOfName]} ${houseNumber}, ${zipCode} München, Deutschland`;
         }
     },
     {
