@@ -478,7 +478,7 @@ const cities = [
         name: "Munich",
         country: "Germany",
         country_code: "+49",
-        city_code: "(212)",
+        city_code: "89",
         attractions: [
             {
                 name: "Brooklyn bridge tour",
