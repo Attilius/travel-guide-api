@@ -608,10 +608,10 @@ const cities = [
         ],
         restaurantNames: [
             {
-                first: ["Manhattan", "Harlem", "Tiffany's", "Stella", "Giuseppe", "Luxory", "Thai", "Asia", "French", "Sea", "City", "Garden", "Secret", "Golden", "Liberty", "Park", "State", "Empire", "Gourmet", "Delicious", "American", "Papa Joe", "Taste of", "Lucky"],
-                second: ["Inn", "Kitchen", "Taste", "Restaurant", "Dream", "Coffe", "Magic", "Dreams", "Dinner", "Corner"],
-                third: ["Coffe", "Restaurant", "Inn", "Taste", "Dinner"],
-                fourth: ["Coffe", "Restaurant", "Inn", "Taste", "Dinner"]
+                first: ["Restaurant", "Ratskeller", "Mariannenhof", "Stollberg", "Münchner", "Pfistermühle", "Gaststätte", "Catrin", "Gartenlaube", "Hohenwart", "Heimgarten"],
+                second: ["Kitchen", "Bayerischer", "Restaurant", "Dantler", "Coffe", "Knödelküche", "Stubn", "Küche", "Fisch"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
             }
         ],
         getRandomPhoneNumber: (countryCode, cityCode) => {
@@ -1155,7 +1155,7 @@ const cities = [
         ],
         restaurantNames: [
             {
-                first: ["Ristorante","Pizzeria", "Cesare", "Cafe", "La Tradizione", "La Forchetta", "Cala", "Trattoria", "La Vecchia", "La Pecora", "Taverna", "Romana", "Pasta"],
+                first: ["Ristorante","Pizzeria", "Cesare", "Cafe", "La Tradizione", "La Forchetta", "Cala", "Trattoria", "Raffaella", "La Vecchia", "La Pecora", "Taverna", "Romana", "Pasta"],
                 second: ["Ristorante", "Angelica", "Romana", "Monti", "Luna", "d'Oro", "Boccaccia", "Fresca"],
                 third: ["Ristorante"],
                 fourth: ["Ristorante"]
