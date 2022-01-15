@@ -571,10 +571,10 @@ const cities = [
         ],
         hotelNames: [
             {
-                first: ["Union", "Hotel", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "The", "Garden", "Liberty", "Best", "Intercontinental", "Westhouse", "Millenium"],
-                second: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
-                third: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Of", "Stars", "Stella", "Hall", "Westhouse"],
-                fourth: ["Union", "Dreams", "Manhattan", "West", "Yorker", "Grand", "Square", "Harlem", "Hilton", "Dream", "Garden", "Liberty", "Stars", "Stella", "Hall", "Westhouse"]
+                first: ["Tulip", "Hotel", "Munich", "Platz", "Grand", "Neue", "Hilton", "Kreis", "Bayerische", "Trudering", "Prinzregent"],
+                second: ["Messe", "Munich", "Platz", "Grand", "Neue", "Hilton", "Bauer", "Kreis", "Residenz", "Seidlhof", "Hotel", "Trudering"],
+                third: ["Messe", "Munich", "Platz", "Grand", "Neue", "Hilton", "Bauer", "Kreis", "Residenz", "Seidlhof", "Hotel", "Trudering"],
+                fourth: ["Messe", "Munich", "Platz", "Grand", "Neue", "Hilton", "Bauer", "Kreis", "Residenz", "Seidlhof", "Hotel", "Trudering"]
             }
         ],
         restaurantImages: [
