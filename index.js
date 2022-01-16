@@ -15,12 +15,12 @@ const cities = [
         city_code: "2",
         attractions: [
             {
-                name: "Ayasofya-i Kebîr Câmi-i Şerîfi",
-                img: "https://images.unsplash.com/photo-1601163130717-627cde53c1de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Great Pyramid of Giza & Sfinx",
+                img: "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Galata, Beyoğlu",
-                img: "https://images.unsplash.com/photo-1589656850652-8009782e060a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Egyptian Art",
+                img: "https://images.unsplash.com/photo-1626436819821-d2855be474c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1157&q=80"
             },
             {
                 name: "Sultan Ahmet Camii",
