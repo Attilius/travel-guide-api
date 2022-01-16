@@ -23,12 +23,12 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1626436819821-d2855be474c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1157&q=80"
             },
             {
-                name: "Sultan Ahmet Camii",
-                img: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1134&q=80"
+                name: "Tour in Giza",
+                img: "https://images.unsplash.com/photo-1590598016308-7a5a32e88b95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Music Instruments in the Grand Bazaar",
-                img: "https://images.unsplash.com/photo-1560799262-3e0b884434b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Camel Pride",
+                img: "https://images.unsplash.com/photo-1590081159886-a60883672ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1004&q=80"
             },
             {
                 name: "Bosphorus Coast",
