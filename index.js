@@ -47,12 +47,12 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1566288623394-377af472d81b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "The bridge of Istanbul connecting Asia and Europe.",
-                img: "https://images.unsplash.com/photo-1576357079315-cf0d004de035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Museum of Egypt",
+                img: "https://images.pexels.com/photos/4353815/pexels-photo-4353815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             },
             {
-                name: "Scooter tour of Istanbul",
-                img: "https://images.unsplash.com/photo-1551040019-b3c378c11269?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Ahmed ibn tolon mosque",
+                img: "https://images.unsplash.com/photo-1616509754173-f3c54706127d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 name: "Balat, Fatih",
