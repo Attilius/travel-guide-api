@@ -63,8 +63,8 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1583426452197-db267897489e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "Carpet Shop, Istanbul, Turkey",
-                img: "https://images.unsplash.com/photo-1558105319-e8d93b893416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                name: "Lights on the market in Cairo",
+                img: "https://images.unsplash.com/photo-1574936293035-134adffbeb6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80"
             },
             {
                 name: "Cankurtaran, Istanbul Archaeological Museums",
