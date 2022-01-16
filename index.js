@@ -67,8 +67,8 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1574936293035-134adffbeb6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=950&q=80"
             },
             {
-                name: "Cankurtaran, Istanbul Archaeological Museums",
-                img: "https://images.unsplash.com/photo-1629820092061-bd05186cb8f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Sunset in Egypt",
+                img: "https://images.unsplash.com/photo-1581526946122-ac43c4d8cfb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             },
             {
                 name: "Beautiful sunset in Istanbul.",
