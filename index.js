@@ -71,8 +71,8 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1581526946122-ac43c4d8cfb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
             },
             {
-                name: "Beautiful sunset in Istanbul.",
-                img: "https://images.unsplash.com/photo-1582631313764-62141d98b4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Cityscape of Cairo",
+                img: "https://images.unsplash.com/photo-1640173006539-eacb3ebc24c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
         hotelImages: [
@@ -196,7 +196,7 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1526586860017-748c7c448ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "The bridge of Istanbul connecting Asia and Europe.",
+                name: "The bridge of Istanbul connecting Asia and Europe",
                 img: "https://images.unsplash.com/photo-1576357079315-cf0d004de035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
@@ -220,7 +220,7 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1629820092061-bd05186cb8f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "Beautiful sunset in Istanbul.",
+                name: "Beautiful sunset in Istanbul",
                 img: "https://images.unsplash.com/photo-1582631313764-62141d98b4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
         ],
