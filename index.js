@@ -31,12 +31,12 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1590081159886-a60883672ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1004&q=80"
             },
             {
-                name: "Bosphorus Coast",
-                img: "https://images.unsplash.com/photo-1558553866-6dbcb1d9233b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "The Mosque of Rifai and Sultan Hassan",
+                img: "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Dolmabahçe Sarayi",
-                img: "https://images.unsplash.com/photo-1556994526-7408107943e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Sfinx in Giza",
+                img: "https://images.unsplash.com/photo-1562679299-266edbefd6d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
             },
             {
                 name: "Kadiköy, Istanbul, Turkey",
