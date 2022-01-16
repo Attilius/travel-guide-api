@@ -55,12 +55,12 @@ const cities = [
                 img: "https://images.unsplash.com/photo-1616509754173-f3c54706127d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Balat, Fatih",
-                img: "https://images.unsplash.com/photo-1617485402653-671b8ec105aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=823&q=80"
+                name: "Cairo Bazaar",
+                img: "https://images.unsplash.com/photo-1538826190883-cae85065dfda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1141&q=80"
             },
             {
-                name: "Caddebostan Sahili",
-                img: "https://images.unsplash.com/photo-1565035443508-9231522a03ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80"
+                name: "Sunset in Giza",
+                img: "https://images.unsplash.com/photo-1583426452197-db267897489e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
                 name: "Carpet Shop, Istanbul, Turkey",
