@@ -161,6 +161,156 @@ const cities = [
 
     },
     {
+        name: "Lisbon",
+        country: "Portugal",
+        country_code: "+351",
+        city_code: "21",
+        attractions: [
+            {
+                name: "Praça do Comércio",
+                img: "https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Street with Elevator in Lisbon",
+                img: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
+            },
+            {
+                name: "Torre de Belem",
+                img: "https://images.unsplash.com/photo-1546375982-c22276aa12f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1187&q=80"
+            },
+            {
+                name: "Portas do Sol",
+                img: "https://images.unsplash.com/photo-1612179587665-70b70e8adfbf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Praça do Comércio",
+                img: "https://images.unsplash.com/photo-1583917328190-49b66e91bc67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Sé de Lisboa",
+                img: "https://images.unsplash.com/photo-1548707308-25b03cfae12c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Parque Eduardo VII",
+                img: "https://images.unsplash.com/photo-1605019025303-a0e3ff53c7af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
+            },
+            {
+                name: "Cityscape of Lisbon",
+                img: "https://images.unsplash.com/photo-1557910686-2cb749b87e68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Padrão dos Descobrimentos in Belém",
+                img: "https://images.unsplash.com/photo-1583254151169-cc48b62076cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Praça do Comércio",
+                img: "https://images.unsplash.com/photo-1565297929515-78632fdfbdb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
+            },
+            {
+                name: "Arcadas do Terreiro do Paço",
+                img: "https://images.unsplash.com/photo-1567256485317-f00ca1ba07e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Praza Rossio",
+                img: "https://images.unsplash.com/photo-1589674231546-9a4360a8b9b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            },
+            {
+                name: "Rua de São Paulo",
+                img: "https://images.unsplash.com/photo-1611761814203-5d44fa2c4d10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Jerónimos Monastery",
+                img: "https://images.unsplash.com/photo-1592814072894-3be483c61c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Panteão Nacional",
+                img: "https://images.unsplash.com/photo-1608208162866-0372ed8d598a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.unsplash.com/photo-1543490791-db8323d8e5b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1632843764566-04ae465c41bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1531911120215-9f628dc6e9fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1083&q=80",
+            "https://images.unsplash.com/photo-1531384074909-9a475c1b7a40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1558773286-cac6db7ac569?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1533743471820-07198f456843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1571501619463-71189edfbb3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1118&q=80",
+            "https://images.unsplash.com/photo-1481079015880-9cce04aad0dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.pexels.com/photos/1546649/pexels-photo-1546649.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/1615812/pexels-photo-1615812.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/172872/pexels-photo-172872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.unsplash.com/photo-1542475393-90b3d5cfe8bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        ],
+        hotelNames: [
+            {
+                first: ["Hotel", "Real", "Ascensor", "Pestana", "Selina", "Avenida", "Liberdade", "Fenicius", "Torel", "Casa", "Patio", "Johnies", "Olissippo", "Lisbon"],
+                second: ["Hotel", "Nossa", "Lisbon", "Colinas", "Almirante", "do Areeiro", "da Annunciada", "Chiado", "Palácio"],
+                third: ["Hotel", "Sana", "Lisbon", "Colinas", "Almirante", "Saldanha"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1618331822271-d21297ca4ee0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80",
+            "https://images.unsplash.com/photo-1509870449717-5609536a5393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+            "https://images.unsplash.com/photo-1616607006500-b08d26749c64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1558998708-ed5f8eaf1af1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80",
+            "https://images.unsplash.com/photo-1572019846776-8a8c27b0c868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1544777022-1dfc0fa595bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            "https://images.pexels.com/photos/1753121/pexels-photo-1753121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.unsplash.com/photo-1597506892627-7a2ac4e95db1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1521886366014-bebca51ec05c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1073&q=80",
+            "https://images.unsplash.com/photo-1567640981765-f45b9f290821?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+            "https://images.unsplash.com/photo-1570786273288-7d0453441a5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1213&q=80",
+            "https://images.unsplash.com/photo-1542320218927-930a7ade06d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1136&q=80",
+            "https://images.unsplash.com/photo-1550603101-c6e9eebe832b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1530036881959-2186be674963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+            "https://images.unsplash.com/photo-1512140865533-90c3e8fbcbde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+            "https://images.unsplash.com/photo-1619834092768-9ee9d433d8b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1612179652354-7e7429393bcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        ],
+        restaurantNames: [
+            {
+                first: ["Lisboa", "Feitoria", "Taberna", "Pateo", "Bairro", "Lídia", "Tapisco", "Restaurante", "Peixaria", "Madragoa", "Mesa", "Páteo", "Pinto", "Burrata", "Travessa"],
+                second: ["Café", "Bistro", "do Calhau", "Grosso", "de Palma", "Cantinho", "Cevicheira", "Lisboa"],
+                third: ["Restaurante"],
+                fourth: ["Restaurante"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 9) {
+                if (numbers.length === 1 || numbers.length === 5) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode}${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["Avenida", "Rua"];
+            const namesOfStreet = ["Correia Garção", "da Madalena", "Tomas Ribeiro", "da Liberdade", "São Sebastião da Pedreira", "Pinheiro Chagas", "Dr. António Cãndido", "Duque de Ávila", "João Crisóstomo", "Miguel Bambarda", "de Ponta Delgada", "Carlos José Barreiros", "José Falcão", "Cavaleiro de Oliveira", "Marques da Silva"];
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+            const zipCode = "1000-" + `${Math.floor(Math.random() * 3)}${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}`;
+            const houseNumber = Math.floor(Math.random() * 198) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+
+            return `${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]} ${houseNumber} ${zipCode} Lisboa - Portugal`;
+        }
+
+    },
+    {
         name: "London",
         country: "United Kingdom",
         country_code: "+44",
