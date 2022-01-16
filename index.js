@@ -9,6 +9,152 @@ const app = express();
 
 const cities = [
     {
+        name: "Cairo",
+        country: "Egypt",
+        country_code: "+20",
+        city_code: "2",
+        attractions: [
+            {
+                name: "Ayasofya-i Kebîr Câmi-i Şerîfi",
+                img: "https://images.unsplash.com/photo-1601163130717-627cde53c1de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Galata, Beyoğlu",
+                img: "https://images.unsplash.com/photo-1589656850652-8009782e060a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Sultan Ahmet Camii",
+                img: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1134&q=80"
+            },
+            {
+                name: "Music Instruments in the Grand Bazaar",
+                img: "https://images.unsplash.com/photo-1560799262-3e0b884434b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Bosphorus Coast",
+                img: "https://images.unsplash.com/photo-1558553866-6dbcb1d9233b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Dolmabahçe Sarayi",
+                img: "https://images.unsplash.com/photo-1556994526-7408107943e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Kadiköy, Istanbul, Turkey",
+                img: "https://images.unsplash.com/photo-1559389864-340ac6773263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Old Bazaar, Istanbul, Turkey",
+                img: "https://images.unsplash.com/photo-1526586860017-748c7c448ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "The bridge of Istanbul connecting Asia and Europe.",
+                img: "https://images.unsplash.com/photo-1576357079315-cf0d004de035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Scooter tour of Istanbul",
+                img: "https://images.unsplash.com/photo-1551040019-b3c378c11269?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Balat, Fatih",
+                img: "https://images.unsplash.com/photo-1617485402653-671b8ec105aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=823&q=80"
+            },
+            {
+                name: "Caddebostan Sahili",
+                img: "https://images.unsplash.com/photo-1565035443508-9231522a03ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80"
+            },
+            {
+                name: "Carpet Shop, Istanbul, Turkey",
+                img: "https://images.unsplash.com/photo-1558105319-e8d93b893416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+            },
+            {
+                name: "Cankurtaran, Istanbul Archaeological Museums",
+                img: "https://images.unsplash.com/photo-1629820092061-bd05186cb8f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Beautiful sunset in Istanbul.",
+                img: "https://images.unsplash.com/photo-1582631313764-62141d98b4bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.pexels.com/photos/695193/pexels-photo-695193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/860922/pexels-photo-860922.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/261395/pexels-photo-261395.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/271815/pexels-photo-271815.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2291599/pexels-photo-2291599.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.unsplash.com/photo-1641285598519-c19fa349b3d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1599683953107-c13b26b50173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1595426400050-ecc7d2750aec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1568100637285-30c0ba65357b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1530125154546-09490519466d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1597390871277-666712598c1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1215&q=80"
+        ],
+        hotelNames: [
+            {
+                first: ["Hotel", "Pyramisa", "Al Nabila", "Al Ahram", "Sonesta", "Nile", "Timo", "Yilsam", "Safir", "Radamis", "Al Masa", "Shahrazad", "Isis"],
+                second: ["Hotel", "Pyramisa", "Cairo", "Nile", "Hayat", "Maadi", "Garden", "Lamar", "Plaza", "Isis"],
+                third: ["Hotel", "Pyramisa", "Cairo", "Nile", "Hayat", "Taksim"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1631561411148-1d397c56f35e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://www.tripsavvy.com/thmb/zv4BSEkZbXpZDIqPmcUlVt5F8Mk=/1440x960/filters:no_upscale():max_bytes(150000):strip_icc()/caimn-restaurant-0046-hor-clsc-070472bdff1c48a2aaa3fab9917c8baa.jpg",
+            "https://sceneeats.com/Content/Admin/Uploads/Articles/ArticlesMainPhoto/3239/9bf4c0f5-65db-4856-8e04-0a7159465ad5.jpg",
+            "https://static.wixstatic.com/media/5eff48_30669344f0d54ad7a2342ecbabff00a1~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_90,usm_0.66_1.00_0.01/5eff48_30669344f0d54ad7a2342ecbabff00a1~mv2.jpg",
+            "https://sceneeats.com/Content/Admin/Uploads/Articles/ArticlesMainPhoto/3180/6a42653e-c23a-429d-bc8a-1247e5349a2f.jpg",
+            "https://seoimgak.mmtcdn.com/blog/sites/default/files/images/Fine%20dining%20experience%20in%20Egypt.jpg",
+            "https://www.tripsavvy.com/thmb/GmmPVczm3KWIwSD7jg0e8dYEKkA=/960x640/filters:no_upscale():max_bytes(150000):strip_icc()/AlKhal-508089bef5c0471797573a0f0279d839.jpg",
+            "https://sceneeats.com/Content/Admin/Uploads/Articles/ArticlesMainPhoto/4844/b7d91224-1178-43ba-b675-88c03b42e4db.jpg",
+            "https://scenenow.com/Content/editor_api/images/shutterstock_769278799-d5733201-22a4-47b7-b36f-0e23afc3a62a.jpg",
+            "https://scenenow.com/Content/editor_api/images/machboos-deyay-w1280-636998893975966294-4d0d647b-3759-40df-b994-780d4c2748cd.jpg",
+            "https://scenenow.com/Content/editor_api/images/3662eb9a-7c75-48cc-a8b8-1c6a8e436223-fa602753-1495-4d31-9f43-23b375b702dc.jpg",
+            "https://cairoscene.com/Content/Admin/Uploads/Articles/ArticlesMainPhoto/828729/0b383388-91ba-4735-880c-e11331925249.jpg",
+            "https://www.thecairoscene.online////Content/Admin/Uploads/Articles/ArticleImages/37e29d15-6356-498b-8f96-fcfe75437310.jpg",
+            "https://www.thecairoscene.online////Content/Admin/Uploads/Articles/ArticleImages/1de146b1-d398-4ed9-8d1c-7d3ae104d9a2.jpg",
+            "https://www.thecairoscene.online////Content/Admin/Uploads/Articles/ArticleImages/98077889-3fb7-46b8-a65a-137064ba59d0.png"
+        ],
+        restaurantNames: [
+            {
+                first: ["Cairo", "Nile", "Taboula", "Zitouni", "Le Pacha", "Sea", "Tajoury", "Geno", "Serena", "El Reda", "Mamushka", "Tamara", "Ayadina"],
+                second: ["Cafe", "Elna", "Bar & Grill", "Oriental", "Cruise", "El Foly"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 9) {
+                if (numbers.length === 4) {
+                    numbers.push("-");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode}-${result}`;
+        },
+        getRandomAddress: () => {
+            const typeOfPlaces = ["St."];
+            const namesOfStreet = ["Al Mansoureya", "Al Haram", "Ahmet Barakat", "Ali Farid", "Abd El-Dayem", "Ali Mohammed", "Gamal El-Deen El-Banna", "Moustafa Al Tamboli", "Omar Ibn El-Khattab", "Ali Abd El-Aziz", "Kerdasa Drain", "Hadayek Al Ahram", "Adel Boreei"];
+            const zipCode = "11" + Math.floor(Math.random() * 3 + 3).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 111) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${houseNumber} ${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]} Cairo, ${zipCode} Egypt`;
+        }
+
+    },
+    {
         name: "Istanbul",
         country: "Turkey",
         country_code: "+90",
