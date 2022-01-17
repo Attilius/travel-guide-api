@@ -144,8 +144,8 @@ const cities = [
             const numbers = [];
             let result = "";
 
-            while (counter < 12) {
-                if (numbers.length % 3 === 0) {
+            while (counter < 10) {
+                if (numbers.length % 4 === 0 && numbers.length !== 8 || numbers.length === 7) {
                     numbers.push(" ");
                 } else {
                     numbers.push(Math.floor(Math.random() * 10).toString());
