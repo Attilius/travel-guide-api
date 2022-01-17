@@ -15,81 +15,65 @@ const cities = [
         city_code: "21",
         attractions: [
             {
-                name: "Museu Nacional d'Art de Catalunya",
-                img: "https://images.unsplash.com/photo-1595954421407-ad5e012b25e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1333&q=80"
+                name: "Parthenon",
+                img: "https://images.unsplash.com/photo-1555993539-1732b0258235?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Serra de Collserola Natural Park",
-                img: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Odeon of Herodes Atticus",
+                img: "https://images.unsplash.com/photo-1590746197887-4420dda1e540?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Sagrada Família",
-                img: "https://images.unsplash.com/photo-1587789202069-f57c846b85db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Monastiraki",
+                img: "https://images.unsplash.com/photo-1583656696771-2afded31a36c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Plaza de España",
-                img: "https://images.unsplash.com/photo-1589708532758-ddd0753b0f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Academy of Athens",
+                img: "https://images.unsplash.com/photo-1616940672075-f455c5cac055?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Arc de Triomf",
-                img: "https://images.unsplash.com/photo-1583395838144-09c70d270bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
+                name: "Acropolis",
+                img: "https://images.unsplash.com/photo-1589177900075-9d13b4451617?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
             },
             {
-                name: "Passeig de Lluís Companys",
-                img: "https://images.unsplash.com/photo-1547482802-54e4e97a1637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Mount Lycabettus",
+                img: "https://images.unsplash.com/photo-1579019689750-670379352ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1381&q=80"
             },
             {
-                name: "Park Güell",
-                img: "https://images.unsplash.com/photo-1583974123663-ee1f9e96d40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Cityscape in Attica, Athens",
+                img: "https://images.unsplash.com/photo-1622633296463-a1b4b6fd2f01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Sunrise in Barcelona",
-                img: "https://images.unsplash.com/photo-1530525269243-f7a307660475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                name: "Cityscape in Athens",
+                img: "https://images.unsplash.com/photo-1578755566447-bfa2542aabbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Call de Barcelona",
-                img: "https://images.unsplash.com/photo-1583120213626-4d843a50249c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Záppeio, Artistic scenery",
+                img: "https://images.unsplash.com/photo-1582749197356-d9a9777fa2f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1057&q=80"
             },
             {
-                name: "Cityscape design architecture Antoni Gaudi",
-                img: "https://images.unsplash.com/photo-1622227921985-2065ba2f7bc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Change of Guards",
+                img: "https://images.unsplash.com/photo-1624015910206-98bb397d347b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Plaça Reial, Barcelona",
-                img: "https://images.unsplash.com/photo-1614603900412-a534d70ee399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "National Graden of Athens in Attica",
+                img: "https://images.unsplash.com/photo-1623857792451-ebae98588584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Gothic Quarter, Barcelona",
-                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Panathenaic Stadium",
+                img: "https://images.unsplash.com/photo-1543067124-5999180262de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "Beach of Barcelona",
-                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Boat tour",
+                img: "https://images.unsplash.com/photo-1636311617107-b600e66cc2b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Catedral Barcelona",
-                img: "https://images.unsplash.com/photo-1545337182-e95b51e002f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "National Archaeological Museum of Athens",
+                img: "https://images.unsplash.com/photo-1639646347805-8fca962aa573?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1255&q=80"
             },
             {
-                name: "Recinte Modernista de Sant Pau",
-                img: "https://images.unsplash.com/photo-1617178851643-570a8a247d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            },
-            {
-                name: "Templo del Sagrado Corazón de Jesus, Barcelona, España",
-                img: "https://images.unsplash.com/photo-1566413913096-90c4d2fd8bf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-            },
-            {
-                name: "Torre Glòries",
-                img: "https://images.unsplash.com/photo-1590097593920-717a71561a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
-            },
-            {
-                name: "Parc Monceau",
-                img: "https://images.unsplash.com/photo-1605262964194-635866855c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1195&q=80"
-            },
-            {
-                name: "Cascada Fountain at Parc de la Ciutadella",
-                img: "https://images.unsplash.com/photo-1631152709941-dc09aff215e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
-            },
+                name: "Landscape in Athens",
+                img: "https://images.pexels.com/photos/4116181/pexels-photo-4116181.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            }
         ],
         hotelImages: [
             "https://images.unsplash.com/photo-1582757345040-9e0d1ebbeefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
