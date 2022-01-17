@@ -94,15 +94,16 @@ const cities = [
         hotelImages: [
             "https://images.unsplash.com/photo-1582757345040-9e0d1ebbeefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
             "https://images.unsplash.com/photo-1604312142123-28b543fb4cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "",
-            "https://images.unsplash.com/photo-1614632044762-0a6694a82eb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1561067071-abb91a885309?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1486592078633-ba2de0255862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1590761397801-2ff9a6461c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1628454661162-ce62aae98391?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1512920186713-b2539975097a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1595685842822-7893ddb30176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            "https://images.pexels.com/photos/3845517/pexels-photo-3845517.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/6899347/pexels-photo-6899347.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/6444971/pexels-photo-6444971.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/7546720/pexels-photo-7546720.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2030119/pexels-photo-2030119.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/4857772/pexels-photo-4857772.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/6980665/pexels-photo-6980665.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3209036/pexels-photo-3209036.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/6958136/pexels-photo-6958136.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/7166559/pexels-photo-7166559.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
         ],
         hotelNames: [
             {
