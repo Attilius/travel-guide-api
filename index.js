@@ -12,7 +12,7 @@ const cities = [
         name: "Barcelona",
         country: "Spain",
         country_code: "+34",
-        city_code: "(1)",
+        city_code: "93",
         attractions: [
             {
                 name: "Eiffel Tower",
