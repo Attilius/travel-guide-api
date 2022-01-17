@@ -9,6 +9,172 @@ const app = express();
 
 const cities = [
     {
+        name: "Athens",
+        country: "Greece",
+        country_code: "+30",
+        city_code: "21",
+        attractions: [
+            {
+                name: "Museu Nacional d'Art de Catalunya",
+                img: "https://images.unsplash.com/photo-1595954421407-ad5e012b25e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1333&q=80"
+            },
+            {
+                name: "Serra de Collserola Natural Park",
+                img: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Sagrada Família",
+                img: "https://images.unsplash.com/photo-1587789202069-f57c846b85db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Plaza de España",
+                img: "https://images.unsplash.com/photo-1589708532758-ddd0753b0f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Arc de Triomf",
+                img: "https://images.unsplash.com/photo-1583395838144-09c70d270bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
+            },
+            {
+                name: "Passeig de Lluís Companys",
+                img: "https://images.unsplash.com/photo-1547482802-54e4e97a1637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Park Güell",
+                img: "https://images.unsplash.com/photo-1583974123663-ee1f9e96d40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Sunrise in Barcelona",
+                img: "https://images.unsplash.com/photo-1530525269243-f7a307660475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+            },
+            {
+                name: "Call de Barcelona",
+                img: "https://images.unsplash.com/photo-1583120213626-4d843a50249c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Cityscape design architecture Antoni Gaudi",
+                img: "https://images.unsplash.com/photo-1622227921985-2065ba2f7bc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Plaça Reial, Barcelona",
+                img: "https://images.unsplash.com/photo-1614603900412-a534d70ee399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Gothic Quarter, Barcelona",
+                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Beach of Barcelona",
+                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Catedral Barcelona",
+                img: "https://images.unsplash.com/photo-1545337182-e95b51e002f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Recinte Modernista de Sant Pau",
+                img: "https://images.unsplash.com/photo-1617178851643-570a8a247d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            },
+            {
+                name: "Templo del Sagrado Corazón de Jesus, Barcelona, España",
+                img: "https://images.unsplash.com/photo-1566413913096-90c4d2fd8bf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            },
+            {
+                name: "Torre Glòries",
+                img: "https://images.unsplash.com/photo-1590097593920-717a71561a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+            },
+            {
+                name: "Parc Monceau",
+                img: "https://images.unsplash.com/photo-1605262964194-635866855c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1195&q=80"
+            },
+            {
+                name: "Cascada Fountain at Parc de la Ciutadella",
+                img: "https://images.unsplash.com/photo-1631152709941-dc09aff215e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+            },
+        ],
+        hotelImages: [
+            "https://images.unsplash.com/photo-1582757345040-9e0d1ebbeefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+            "https://images.unsplash.com/photo-1604312142123-28b543fb4cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "",
+            "https://images.unsplash.com/photo-1614632044762-0a6694a82eb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1561067071-abb91a885309?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1486592078633-ba2de0255862?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1590761397801-2ff9a6461c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1628454661162-ce62aae98391?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1512920186713-b2539975097a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1455587734955-081b22074882?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1595685842822-7893ddb30176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+        ],
+        hotelNames: [
+            {
+                first: ["Athenaeum", "Hotel", "Selina", "Acropolis", "Tiare", "Canida", "Elia"],
+                second: ["Eridanus", "Utopia", "Athens", "Grand", "Palace", "Medousa", "Poseidon", "Chroma", "Emmantia", "Ikaros", "Thanasis"],
+                third: ["Ermou", "Hotel", "Platinum", "Utopia", "Nefeli", "Faliro"],
+                fourth: ["Hotel"]
+            }
+        ],
+        restaurantImages: [
+            "https://images.unsplash.com/photo-1558267748-a210b34249c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1603963679475-aea4713b6d0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1641672572132-70e463585fd1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.unsplash.com/photo-1559423581-ebd9a0ffce25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1603787598212-5d54120ec6ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1603793436110-587b49fdce5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1621123733623-8f8debe25752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+            "https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/533183/pexels-photo-533183.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2878745/pexels-photo-2878745.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2068296/pexels-photo-2068296.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/236887/pexels-photo-236887.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3531700/pexels-photo-3531700.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/299347/pexels-photo-299347.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/725997/pexels-photo-725997.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/4087611/pexels-photo-4087611.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/7245480/pexels-photo-7245480.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2290743/pexels-photo-2290743.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/2433978/pexels-photo-2433978.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            "https://images.pexels.com/photos/3843224/pexels-photo-3843224.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        ],
+        restaurantNames: [
+            {
+                first: ["Arcadia", "Efcharis", "Oineas", "Lithos", "Feyrouz", "Takis", "Réthemnos", "Nolita", "Scorpina", "Accordion", "Avraam", "Stromboli"],
+                second: ["Restaurant", "Prunas", "Savvas", "Athens", "Tavern", "Greek", "Kriti", "Cholargos", "Helena"],
+                third: ["Restaurant"],
+                fourth: ["Restaurant"]
+            }
+        ],
+        getRandomPhoneNumber: (countryCode, cityCode) => {
+            let counter = 0;
+            const numbers = [];
+            let result = "";
+
+            while (counter < 10) {
+                if (numbers.length === 1 || numbers.length === 5) {
+                    numbers.push(" ");
+                } else {
+                    numbers.push(Math.floor(Math.random() * 10).toString());
+                }
+                counter++;
+            }
+
+            numbers.forEach(number => {
+                result += number;
+            });
+
+            return `${countryCode} ${cityCode}${result.trim()}`;
+        },
+        getRandomAddress: () => {
+            const zips = ["104", "105", "106", "111", "112", "113", "114", "115", "116", "117", "118", "122", "143", "161", "176", "177", "179", "310"];
+            const typeOfPlaces = ["Str."];
+            const namesOfStreet = ["Michalakopoulu", "Mikras Asias", "Kokkinopoulu", "Alekou Panagouli", "Periandrou", "Ionos Dragoumi", "Vasilissis Sofias", "Xenokratous", "Timoleontos Filimonos", "Sevastoupoelos", "Makedonias", "Ellispontou", "Anatolikis Romilias", "Polimnias"];
+            const zipCode = zips[Math.floor(Math.random() * zips.length)] + " " + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 198) + 1;
+            const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
+            const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
+
+            return `${houseNumber} ${namesOfStreet[indexOfName]} ${typeOfPlaces[indexOfType]} ${zipCode}, Athens, Greece`;
+        }
+    },
+    {
         name: "Barcelona",
         country: "Spain",
         country_code: "+34",
