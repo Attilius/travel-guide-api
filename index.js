@@ -10,7 +10,7 @@ const app = express();
 const cities = [
     {
         name: "Barcelona",
-        country: "France",
+        country: "Spain",
         country_code: "+33",
         city_code: "(1)",
         attractions: [
