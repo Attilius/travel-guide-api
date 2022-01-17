@@ -160,14 +160,14 @@ const cities = [
             return `${countryCode} ${cityCode} ${result.trim()}`;
         },
         getRandomAddress: () => {
-            const typeOfPlaces = ["Avenue", "Boulevard", "Rue"];
-            const namesOfStreet = ["de Richelieu", "de Villiers", "La Fayette", "de la Chapelle", "Voltaire", "d'Oran", "Championnet", "Belliard", "Lafontaine", "Godefroy", "Emile Zola", "Victor Hugo", "des Marronniers", "Jules Verne"];
-            const zipCode = "750" + Math.floor(Math.random() * 3).toString() + Math.floor(Math.random() * 10).toString();
-            const houseNumber = Math.floor(Math.random() * 222) + 1;
+            const typeOfPlaces = ["Avenida", "Carrer", "Ronda", "Via"];
+            const namesOfStreet = ["de Muntaner", "del Bisbe Sivilla", "de Calatrava", "de Dalmases", "de Pau Alcover", "de la Nena Casas", "de Lázaro Cárdenas", "de les Escoles Pies", "d'Amigó", "de Casanova", "de la Diputació", "d'Ortigosa", "de les Corts Catalanes", "de Sardenya"];
+            const zipCode = "080" + Math.floor(Math.random() * 6).toString() + Math.floor(Math.random() * 10).toString();
+            const houseNumber = Math.floor(Math.random() * 498) + 1;
             const indexOfType = Math.floor(Math.random() * typeOfPlaces.length);
             const indexOfName = Math.floor(Math.random() * namesOfStreet.length);
 
-            return `${houseNumber} ${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]}, ${zipCode} Paris - France`;
+            return `${typeOfPlaces[indexOfType]} ${namesOfStreet[indexOfName]} ${houseNumber}, ${zipCode}, Barcelona España`;
         }
     },
     {
