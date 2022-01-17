@@ -15,80 +15,80 @@ const cities = [
         city_code: "93",
         attractions: [
             {
-                name: "Eiffel Tower",
-                img: "https://images.unsplash.com/photo-1431274172761-fca41d930114?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Museu Nacional d'Art de Catalunya",
+                img: "https://images.unsplash.com/photo-1595954421407-ad5e012b25e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1333&q=80"
             },
             {
-                name: "Assemblée Nationale - Palais Bourbon",
-                img: "https://images.unsplash.com/photo-1604595818635-a840f9028d56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Serra de Collserola Natural Park",
+                img: "https://images.unsplash.com/photo-1578912996078-305d92249aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "Louvre Museum, Rue de Rivoli",
-                img: "https://images.unsplash.com/photo-1610985296734-4030cece6149?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                name: "Sagrada Família",
+                img: "https://images.unsplash.com/photo-1587789202069-f57c846b85db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "L'Arc de Triomphe de l'Etoile",
-                img: "https://images.unsplash.com/photo-1520078176967-f827b3a1a899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Plaza de España",
+                img: "https://images.unsplash.com/photo-1589708532758-ddd0753b0f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Place Vendôme",
-                img: "https://images.unsplash.com/photo-1518556991616-b220cd5df12e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Arc de Triomf",
+                img: "https://images.unsplash.com/photo-1583395838144-09c70d270bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80"
             },
             {
-                name: "Champs-Élysées",
-                img: "https://images.unsplash.com/photo-1504973522169-4705c9741e0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+                name: "Passeig de Lluís Companys",
+                img: "https://images.unsplash.com/photo-1547482802-54e4e97a1637?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Tuileries Garden",
-                img: "https://images.unsplash.com/photo-1500760258410-1a59fcd493c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Park Güell",
+                img: "https://images.unsplash.com/photo-1583974123663-ee1f9e96d40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "L'Arc de Triomphe de l'Etoile",
-                img: "https://images.unsplash.com/photo-1507666664345-c49223375e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+                name: "Sunrise in Barcelona",
+                img: "https://images.unsplash.com/photo-1530525269243-f7a307660475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
             },
             {
-                name: "Rue de Cremieux",
-                img: "https://images.unsplash.com/photo-1557592923-992b3dc4497d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Call de Barcelona",
+                img: "https://images.unsplash.com/photo-1583120213626-4d843a50249c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Saint Etienne du Mont",
-                img: "https://images.unsplash.com/photo-1565201482013-ca4becd61ec4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                name: "Cityscape design architecture Antoni Gaudi",
+                img: "https://images.unsplash.com/photo-1622227921985-2065ba2f7bc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Fontaine des Mers, Place de la Concorde",
-                img: "https://images.unsplash.com/photo-1572112553549-4151f756bebc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                name: "Plaça Reial, Barcelona",
+                img: "https://images.unsplash.com/photo-1614603900412-a534d70ee399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Jardin des Tuileries",
-                img: "https://images.unsplash.com/photo-1564227589927-2a13874d0a92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Gothic Quarter, Barcelona",
+                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Notre Dame de Paris",
-                img: "https://images.unsplash.com/photo-1555425748-f780612e5634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Beach of Barcelona",
+                img: "https://images.unsplash.com/photo-1614635461269-a2c915307aef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Route du Moulin Rouge",
-                img: "https://images.unsplash.com/photo-1580164109780-d3925e57abc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Catedral Barcelona",
+                img: "https://images.unsplash.com/photo-1545337182-e95b51e002f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Versailles",
-                img: "https://images.unsplash.com/photo-1595841044697-86e94ea53c77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Recinte Modernista de Sant Pau",
+                img: "https://images.unsplash.com/photo-1617178851643-570a8a247d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             },
             {
-                name: "Cathédrale Notre-Dame de Paris",
-                img: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Templo del Sagrado Corazón de Jesus, Barcelona, España",
+                img: "https://images.unsplash.com/photo-1566413913096-90c4d2fd8bf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
             },
             {
-                name: "Saint-Germain-l'Auxerrois, Paris, Île-de-France",
-                img: "https://images.unsplash.com/photo-1504896287989-ff1fbde00199?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1333&q=80"
+                name: "Torre Glòries",
+                img: "https://images.unsplash.com/photo-1590097593920-717a71561a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
             },
             {
                 name: "Parc Monceau",
                 img: "https://images.unsplash.com/photo-1605262964194-635866855c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1195&q=80"
             },
             {
-                name: "Sacre-Coeur",
-                img: "https://images.unsplash.com/photo-1606944634516-5a86bd53fcaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                name: "Cascada Fountain at Parc de la Ciutadella",
+                img: "https://images.unsplash.com/photo-1631152709941-dc09aff215e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
             },
         ],
         hotelImages: [
