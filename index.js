@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const app = express();
 
-// Database
+// Database array
 
 const cities = [
     {
@@ -2011,19 +2011,15 @@ const fillResponseArray = (paramArray, paramName, label, image, tel, address) =>
 }
 
 const getRandomText = (responseArray, html, $) => {
-    const texts = [];
-    let counter = 0;
-    $('#randomtext_box', html).each(function () {
-        while (counter < responseArray.length) {
-            const text = $(this).text().trim();
-            texts.push(text);
 
-            counter++;
-        }
+    $('#randomtext_box', html).each(function () {
+            const text = $(this).text().trim();
+
         for (let i = 0; i < responseArray.length; i++) {
-            responseArray[i].description = texts[i];
+            responseArray[i].description = text;
         }
     });
+
     return responseArray;
 }
 
@@ -2120,7 +2116,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         fillAttractionsArray(cities, travelGuide.attractions, cityName);
     }
 
-    if (service === "hotel") {
+    if (service === "hotels") {
         const label = service;
         for (let i = 0; i < hotelImages.length; i++) {
             const image = hotelImages[i];
@@ -2130,7 +2126,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         }
     }
 
-    if (service === "restaurant") {
+    if (service === "restaurants") {
         const label = service;
         for (let i = 0; i < restaurantImages.length; i++) {
             const image = restaurantImages[i];
@@ -2140,7 +2136,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
         }
     }
 
-    if (service === "attraction") {
+    if (service === "attractions") {
         fillAttractionsArray(cities, travelGuide.attractions, cityName);
     }
 
@@ -2157,15 +2153,15 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
                     res.json(travelGuide);
                     break;
 
-                case "attraction":
+                case "attractions":
                     res.json(getRandomText(travelGuide.attractions, html, $));
                     break;
 
-                case "hotel":
+                case "hotels":
                     res.json(getRandomText(travelGuide.hotels, html, $));
                     break;
 
-                case "restaurant":
+                case "restaurants":
                     res.json(getRandomText(travelGuide.restaurants, html, $));
                     break;
 
