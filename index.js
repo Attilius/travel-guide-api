@@ -2117,7 +2117,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     }
 
     if (service === "hotels") {
-        const label = service;
+        const label = "hotel";
         for (let i = 0; i < hotelImages.length; i++) {
             const image = hotelImages[i];
             const tel = getRandomPhoneNumber(countryCode, cityCode);
@@ -2127,7 +2127,7 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     }
 
     if (service === "restaurants") {
-        const label = service;
+        const label = "restaurant";
         for (let i = 0; i < restaurantImages.length; i++) {
             const image = restaurantImages[i];
             const tel = getRandomPhoneNumber(countryCode, cityCode);
@@ -2139,6 +2139,8 @@ app.get('/addresses/:service/:cityName', async (req, res) => {
     if (service === "attractions") {
         fillAttractionsArray(cities, travelGuide.attractions, cityName);
     }
+
+// Request of dummy text
 
     axios.get('https://www.randomtextgenerator.com/')
         .then((response) => {
