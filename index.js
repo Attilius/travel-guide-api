@@ -844,7 +844,7 @@ const cities = [
             "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
             "https://images.unsplash.com/photo-1590490360836-2e3b067c082b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
             "https://images.unsplash.com/photo-1515604629270-64435270c79d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
             "https://images.unsplash.com/photo-1613171278211-4b6abbe48ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
             "https://images.unsplash.com/photo-1603544971333-fea84b77f366?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1154&q=80",
             "https://images.unsplash.com/photo-1581320464802-86f62510e96b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -1734,7 +1734,7 @@ const cities = [
         ],
         restaurantNames: [
             {
-                first: ["Ristorante","Pizzeria", "Cesare", "Cafe", "La Tradizione", "La Forchetta", "Cala", "Trattoria", "Raffaella", "La Vecchia", "La Pecora", "Taverna", "Romana", "Pasta"],
+                first: ["Ristorante", "Pizzeria", "Cesare", "Cafe", "La Tradizione", "La Forchetta", "Cala", "Trattoria", "Raffaella", "La Vecchia", "La Pecora", "Taverna", "Romana", "Pasta"],
                 second: ["Ristorante", "Angelica", "Romana", "Monti", "Luna", "d'Oro", "Boccaccia", "Fresca"],
                 third: ["Ristorante"],
                 fourth: ["Ristorante"]
@@ -2013,7 +2013,7 @@ const fillResponseArray = (paramArray, paramName, label, image, tel, address) =>
 const getRandomText = (responseArray, html, $) => {
 
     $('#randomtext_box', html).each(function () {
-            const text = $(this).text().trim();
+        const text = $(this).text().trim();
 
         for (let i = 0; i < responseArray.length; i++) {
             responseArray[i].description = text;
@@ -2043,24 +2043,24 @@ const fillAttractionsArray = (databaseArray, responseArray, cityName) => {
 
 const getId = () => {
     const letters = [
-        "","A", "a", "B", 
-        "","b", "C", "c", 
-        "","D", "d", "E", 
-        "","e", "F", "f", 
-        "","G", "g", "H", 
-        "","h", "I", "i", 
-        "","J", "j", "K", 
-        "","k", "L", "l", 
-        "","M", "m", "N", 
-        "","n", "O", "o", 
-        "","P", "p", "Q", 
-        "","q", "R", "r", 
-        "","S", "s", "T", 
-        "","t", "U", "u", 
-        "","V", "v", "W", 
-        "","w", "X", "x", 
-        "","Y", "y", "Z", 
-        "","z", "@", "&"
+        "", "A", "a", "B",
+        "", "b", "C", "c",
+        "", "D", "d", "E",
+        "", "e", "F", "f",
+        "", "G", "g", "H",
+        "", "h", "I", "i",
+        "", "J", "j", "K",
+        "", "k", "L", "l",
+        "", "M", "m", "N",
+        "", "n", "O", "o",
+        "", "P", "p", "Q",
+        "", "q", "R", "r",
+        "", "S", "s", "T",
+        "", "t", "U", "u",
+        "", "V", "v", "W",
+        "", "w", "X", "x",
+        "", "Y", "y", "Z",
+        "", "z", "@", "&"
     ];
     let id = "";
 
@@ -2080,99 +2080,110 @@ app.get('/', (req, res) => {
 //Request of hotels or restaurants or attractions or all services
 
 app.get('/addresses/:service/:cityName', async (req, res) => {
+
     const cityName = req.params.cityName;
-    const service = req.params.service;
-    const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
-    const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
-    const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
-    const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
-    const hotelImages = cities.filter(city => city.name == cityName)[0].hotelImages;
-    const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
-    const restaurantImages = cities.filter(city => city.name == cityName)[0].restaurantImages;
-    const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
-    const travelGuide = {
-        attractions: [],
-        hotels: [],
-        restaurants: []
-    }
+    const city_names = [];
 
-    if (service === "all") {
-        for (let i = 0; i < hotelImages.length; i++) {
-            const label = "hotel";
-            const image = hotelImages[i];
-            const tel = getRandomPhoneNumber(countryCode, cityCode);
-            const address = getRandomAddress();
-            fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+    cities.forEach(city => {
+        city_names.push(city.name);
+    });
+
+    if (!city_names.includes(cityName)) {
+        res.json(`Error: Bad Request {/${req.params.cityName}} Please specify a valid city name for example: /Athens, /Barcelona, /Cairo, /Istanbul, /Lisbon, /London, /Montreal, /Munich, /New-York, /Paris, /Rome, /Zurich`);
+    } else {
+        const service = req.params.service;
+        const countryCode = cities.filter(city => city.name == cityName)[0].country_code;
+        const cityCode = cities.filter(city => city.name == cityName)[0].city_code;
+        const getRandomPhoneNumber = cities.filter(city => city.name == cityName)[0].getRandomPhoneNumber;
+        const getRandomAddress = cities.filter(city => city.name == cityName)[0].getRandomAddress;
+        const hotelImages = cities.filter(city => city.name == cityName)[0].hotelImages;
+        const hotelNames = cities.filter(city => city.name == cityName)[0].hotelNames;
+        const restaurantImages = cities.filter(city => city.name == cityName)[0].restaurantImages;
+        const restaurantNames = cities.filter(city => city.name == cityName)[0].restaurantNames;
+        const travelGuide = {
+            attractions: [],
+            hotels: [],
+            restaurants: []
         }
 
-        for (let i = 0; i < restaurantImages.length; i++) {
-            const label = "restaurant";
-            const image = restaurantImages[i];
-            const tel = getRandomPhoneNumber(countryCode, cityCode);
-            const address = getRandomAddress();
-            fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
-        }
-
-        fillAttractionsArray(cities, travelGuide.attractions, cityName);
-    }
-
-    if (service === "hotels") {
-        const label = "hotel";
-        for (let i = 0; i < hotelImages.length; i++) {
-            const image = hotelImages[i];
-            const tel = getRandomPhoneNumber(countryCode, cityCode);
-            const address = getRandomAddress();
-            fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
-        }
-    }
-
-    if (service === "restaurants") {
-        const label = "restaurant";
-        for (let i = 0; i < restaurantImages.length; i++) {
-            const image = restaurantImages[i];
-            const tel = getRandomPhoneNumber(countryCode, cityCode);
-            const address = getRandomAddress();
-            fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
-        }
-    }
-
-    if (service === "attractions") {
-        fillAttractionsArray(cities, travelGuide.attractions, cityName);
-    }
-
-// Request of dummy text
-
-    axios.get('https://www.randomtextgenerator.com/')
-        .then((response) => {
-            const html = response.data;
-            const $ = cheerio.load(html);
-
-            switch (service) {
-                case "all":
-                    getRandomText(travelGuide.attractions, html, $);
-                    getRandomText(travelGuide.hotels, html, $);
-                    getRandomText(travelGuide.restaurants, html, $);
-                    res.json(travelGuide);
-                    break;
-
-                case "attractions":
-                    res.json(getRandomText(travelGuide.attractions, html, $));
-                    break;
-
-                case "hotels":
-                    res.json(getRandomText(travelGuide.hotels, html, $));
-                    break;
-
-                case "restaurants":
-                    res.json(getRandomText(travelGuide.restaurants, html, $));
-                    break;
-
-                default:
-                    res.json(`Error: /${service} Request is not exist!`);
-                    break;
+        if (service === "all") {
+            for (let i = 0; i < hotelImages.length; i++) {
+                const label = "hotel";
+                const image = hotelImages[i];
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+                fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
             }
 
-        }).catch(err => console.log(err));
+            for (let i = 0; i < restaurantImages.length; i++) {
+                const label = "restaurant";
+                const image = restaurantImages[i];
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+                fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+            }
+
+            fillAttractionsArray(cities, travelGuide.attractions, cityName);
+        }
+
+        if (service === "hotels") {
+            const label = "hotel";
+            for (let i = 0; i < hotelImages.length; i++) {
+                const image = hotelImages[i];
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+                fillResponseArray(travelGuide.hotels, hotelNames, label, image, tel, address);
+            }
+        }
+
+        if (service === "restaurants") {
+            const label = "restaurant";
+            for (let i = 0; i < restaurantImages.length; i++) {
+                const image = restaurantImages[i];
+                const tel = getRandomPhoneNumber(countryCode, cityCode);
+                const address = getRandomAddress();
+                fillResponseArray(travelGuide.restaurants, restaurantNames, label, image, tel, address);
+            }
+        }
+
+        if (service === "attractions") {
+            fillAttractionsArray(cities, travelGuide.attractions, cityName);
+        }
+
+        // Request of dummy text
+
+        axios.get('https://www.randomtextgenerator.com/')
+            .then((response) => {
+                const html = response.data;
+                const $ = cheerio.load(html);
+
+                switch (service) {
+                    case "all":
+                        getRandomText(travelGuide.attractions, html, $);
+                        getRandomText(travelGuide.hotels, html, $);
+                        getRandomText(travelGuide.restaurants, html, $);
+                        res.json(travelGuide);
+                        break;
+
+                    case "attractions":
+                        res.json(getRandomText(travelGuide.attractions, html, $));
+                        break;
+
+                    case "hotels":
+                        res.json(getRandomText(travelGuide.hotels, html, $));
+                        break;
+
+                    case "restaurants":
+                        res.json(getRandomText(travelGuide.restaurants, html, $));
+                        break;
+
+                    default:
+                        res.json(`Error: /${service} Request is not exist! Please specify a valid service name for example: /all, /attractions, /hotels, /restaurants`);
+                        break;
+                }
+
+            }).catch(err => console.log(err));
+    }
 });
 
 app.listen(PORT, () => {
