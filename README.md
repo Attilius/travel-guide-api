@@ -16,7 +16,7 @@ Valid optional services are:
 Valid optional city names are:
 
 | /Athens | /Barcelona | /Cairo | /Istanbul | /Lisbon | /London | /Montreal | /Munich | /New-York | /Paris | /Rome | /Zurich |
-| ------- | ---------- | ------ | --------- | :------ | ------- | --------- | ------- | --------- | ------ | ----- | ------- |
+| ------- | ---------- | ------ | --------- | ------- | ------- | --------- | ------- | --------- | ------ | ----- | ------- |
 
 ## **For example, for Laravel 6 + Vue.js**
 
