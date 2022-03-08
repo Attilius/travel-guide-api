@@ -1,13 +1,30 @@
 # travel-guide-api
+
 This api giving data of restaurants, and hotels and attractions from several cities for a web application.
 
 ## **Using for this api:**
 
- Add this endpoint part of api for your application.
+Add this endpoint part of api for your application.
 
 `https://travelguide-api.herokuapp.com/addresses/{service}/{cityName}`
 
+Valid optional services are:
+
+| /all | /attractions | /hotels | /restaurants |
+| ---- | ------------ | ------- | ------------ |
+
+Valid optional city names are:
+
+| /Athens | /Barcelona | /Cairo | /Istanbul | /Lisbon | /London | /Montreal | /Munich | /New-York | /Paris | /Rome | /Zurich |
+| ------- | ---------- | ------ | --------- | :------ | ------- | --------- | ------- | --------- | ------ | ----- | ------- |
+
 ## **For example, for Laravel 6 + Vue.js**
+
+I use a program called zttp which written in php.
+
+## **Installation: **
+
+**`composer require kitetail/zttp`**
 
 Setting in Laravel 6: `routes/api.php`
 
@@ -35,6 +52,7 @@ export default {
             cityName: ""
         }
     },
+
     methods: {
         fetchData() {
             fetch(`/api/travel-guide?service=${this.service}&cityName=${this.cityName}`)
