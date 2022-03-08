@@ -22,7 +22,7 @@ Valid optional city names are:
 
 I use a program called zttp which written in php.
 
-## **Installation: **
+## Installation: 
 
 **`composer require kitetail/zttp`**
 
