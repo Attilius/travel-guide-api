@@ -4,7 +4,7 @@ This api giving data of restaurants, and hotels and attractions from several cit
 
 ## **Using for this api:**
 
-Add this endpoint part of api for your application.
+Add this URL part of api for your application.
 
 `https://travelguide-api.herokuapp.com/addresses/{service}/{cityName}`
 
