@@ -26,6 +26,8 @@ I use a program called zttp which written in php.
 
 **`composer require kitetail/zttp`**
 
+
+
 Setting in Laravel 6: `routes/api.php`
 
 ```php
@@ -42,7 +44,7 @@ Route::get('/travel-guide', function () {
 });
 ```
 
-Setting in Vue.js:
+Setting in Vue.js: `resources/assets/js/components/TravelGuide.vue`
 
 ```javascript
 export default {
